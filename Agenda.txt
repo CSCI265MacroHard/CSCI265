@@ -3,3 +3,4 @@ Agenda 09.24.2024
 - How to use the github Project manager
 - Process of making assets for the 3D hub world.
 - Create all the tasks we need for the next phase in the github project manager and assign tasks to each member.
+- set up branches and make a version controll plan (Question from quiz 1)
