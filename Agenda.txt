@@ -1,3 +1,10 @@
+Agenda 09.26.2024
+
+- set up branches and make a version controll plan 
+- test branch model and document
+- How to use the github Project manager
+- Create all the tasks we need for the next phase in the github project manager and assign tasks to each member.
+
 Agenda 09.24.2024
 
 - How to use the github Project manager
