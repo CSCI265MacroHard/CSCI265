@@ -24,6 +24,8 @@ Standards
 - All Documents will be Proofread by each member at least once to make it final.
 - Documents will be discussed by all members in due time and to avoid conflict all members must bring there concerns up immediatly.
 
+Processes
+- TBA
 any templates or guidelines you'll be following (a url/link is fine if you're following an existing industry standard),
 any rules/tools to be used in spelling and grammar checking,
 how you'll check/proofread each other's writing to ensure it follows the standards,
