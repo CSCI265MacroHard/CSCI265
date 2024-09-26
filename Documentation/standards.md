@@ -19,10 +19,10 @@ Each section includes discussion of how those standards/processes will be enforc
 
 ## Documentation standards and processes
 Standards
--Documentation will be done according to the Professor David Wessels choice in terms of file types and formatting.
--There will be no tools used for grammer checking.
--All Documents will be Proofread by each member at least once to make it final.
--Documents will be discussed by all members in due time and to avoid conflict all members must bring there concerns up immediatly.
+- Documentation will be done according to the Professor David Wessels choice in terms of file types and formatting.
+- There will be no tools used for grammer checking.
+- All Documents will be Proofread by each member at least once to make it final.
+- Documents will be discussed by all members in due time and to avoid conflict all members must bring there concerns up immediatly.
 
 any templates or guidelines you'll be following (a url/link is fine if you're following an existing industry standard),
 any rules/tools to be used in spelling and grammar checking,
