@@ -8,7 +8,8 @@
 
 The following person has been designated the main contact person for questions from the reader:
 
- - NameA, their@emailaddy
+ - Alister Lawson, alisteremail@gmail.com
+   
 
 ## Introduction and overview
 
