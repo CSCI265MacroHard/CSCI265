@@ -9,6 +9,7 @@
 The following person has been designated the main contact person for questions from the reader:
 
  - Alister Lawson, alisteremail@gmail.com
+ - yo mama
    
 
 ## Introduction and overview
