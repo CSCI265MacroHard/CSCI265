@@ -54,6 +54,6 @@ Standards
 - If anybody does not adhere to the version control system proposed or make a mistake they will have to spin the wheel of punishments and bare a fitting punishment.
 
 Processes
-  
+- TBA
 Detail the version control standards and processes to be followed, how they will be enforced, and how they will be reviewed for updating if/as needed.
 
