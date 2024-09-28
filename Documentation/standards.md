@@ -25,9 +25,9 @@ Standards
 - Documents will be discussed by all members in due time and to avoid conflict all members must bring there concerns up immediatly.
 
 Processes
--The Documentation will be divided to be an equal load upon all members.
--The Documentation will be worked on seperatly or as a group as needed.
--All Documents will be proofread by every member during a meeting.
+- The Documentation will be divided to be an equal load upon all members.
+- The Documentation will be worked on seperatly or as a group as needed.
+- All Documents will be proofread by every member during a meeting.
 
 
 ## Coding standards and processes
