@@ -25,13 +25,10 @@ Standards
 - Documents will be discussed by all members in due time and to avoid conflict all members must bring there concerns up immediatly.
 
 Processes
-- TBA
-any templates or guidelines you'll be following (a url/link is fine if you're following an existing industry standard),
-any rules/tools to be used in spelling and grammar checking,
-how you'll check/proofread each other's writing to ensure it follows the standards,
-how you'll coordinate putting the parts together if different people are writing different sections of a document (and ensure it can all be done in time for the submission deadlines)
+-The Documentation will be divided to be an equal load upon all members.
+-The Documentation will be worked on seperatly or as a group as needed.
+-All Documents will be proofread by every member during a meeting.
 
-Detail the documentation standards and processes to be followed (can provide links to existing industry standards), how they will be enforced, and how they will be reviewed for updating if/as needed.
 
 ## Coding standards and processes
 
