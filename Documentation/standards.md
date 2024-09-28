@@ -41,9 +41,19 @@ Standards
 - The team will then split up and work separatly on each game within the arcade.
 - After each game is working as intended, the Visual head will take over and create Sprite's and other front end work for each game.
 - The Final playtest will be done by team members in order to test for any bugs in each game and the hub world as well.
-Detail the coding standards and processes to be followed (can provide links to existing industry standards), how they will be enforced, and how they will be reviewed for updating if/as needed.
 
 ## Version control standards and processes
+Standards
+- The Version Control will be handled by Marek understudied by Bruce.
+- The Version control will work in a 5 Branch System.
+ - The Master Branch will be our Main branch with only working versions.
+ - The Feature Branch will be the working branch for members to work on indivisual features.
+ - The Development Branch is an amalgamation of multiple features from the feature branch.
+ - The Release Branch will have Developed versions of the product ready for testing.
+ - The Hotfix Branch is for sudden hotfixes to be made to the master branch when and if neccessary. If a hotfix is made this version will be sent to the next version of the Master Branch and Development Branch.
+- If anybody does not adhere to the version control system proposed or make a mistake they will have to spin the wheel of punishments and bare a fitting punishment.
 
+Processes
+  
 Detail the version control standards and processes to be followed, how they will be enforced, and how they will be reviewed for updating if/as needed.
 
