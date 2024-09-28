@@ -31,7 +31,16 @@ Processes
 
 
 ## Coding standards and processes
+Standards
+- The team is going to work with the game engine named Godot(Link: https://godotengine.org ).
+- The team will be using GDScript within Godot for all programming realted work.
+- GDScipt has it's own coding standards with indentation and Syntax.
 
+  Processes
+- The Team will be working together on the 3D Arcade hub world and complete this within Godot.
+- The team will then split up and work separatly on each game within the arcade.
+- After each game is working as intended, the Visual head will take over and create Sprite's and other front end work for each game.
+- The Final playtest will be done by 
 Detail the coding standards and processes to be followed (can provide links to existing industry standards), how they will be enforced, and how they will be reviewed for updating if/as needed.
 
 ## Version control standards and processes
