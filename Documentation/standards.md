@@ -7,6 +7,10 @@
 ## Key contact person and email
 
  - Alister Lawson, AlisterLawson64@gmail.com (Main Contact)
+ - Bruce Fernandes, bruce2005.ind@gmail.com secondary contact
+ - Jamie Mano, jamieysabelmano1018@gmail.com
+ - Marek Bettzig, bettzig@hotmail.de
+ - Nick Biagioni, viud2l_1061684@d2l.viu.ca
 
 ## Content
 
