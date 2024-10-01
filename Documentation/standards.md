@@ -54,6 +54,14 @@ Standards
 - If anybody does not adhere to the version control system proposed or make a mistake they will have to spin the wheel of punishments and bare a fitting punishment.
 
 Processes
-- TBA
-Detail the version control standards and processes to be followed, how they will be enforced, and how they will be reviewed for updating if/as needed.
+- The Version Control is handled by Marek and Bruce.
+- To Develop a feature, pull from developer branch.
+- Develop your feature in the local feature branch.
+- Pull from developer once more to check that you are up to date.(If not fix inconsistencies. 
+- Communicate that you will make a push, Marek or Bruce will merge the new feature into the developer branch.
+- After the development of multiple features is complete, a pull request will be made from the Release branch.
+- The Release branch will then be tested and edited to fix any bugs. If bugs are too big then it will be pushed back to the development branch.
+- Upon all tests being completed, the version will be sent to the main/master branch and development branch for new features.
+- If the main/master branch has a massive problem/bug it will be pulled into the hotfix branch and the fix will be made as soon as possible. After this, the new version will be pushed into both the main and development branch.
+- The development branch will now be taking the hotfix and incorporate this with any new features added.
 
