@@ -9,7 +9,7 @@ Project for CSCI 265 with Alister, Bruce, Jamie, Marek and Nick
 
 Our Project making an immersive arcade for the world to enjoy
 
-[Link to project planner](https://github.com/users/xBruix/projects/1/views/1)
+### [Link to project planner](https://github.com/users/xBruix/projects/1/views/1)
 
 ## Branch Strategy and Versioncontroll
 
