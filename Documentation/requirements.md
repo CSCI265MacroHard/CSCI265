@@ -13,7 +13,7 @@ The following person has been designated the main contact person for questions f
  - Jamie Mano, jamieysabelmano1018@gmail.com
  - Marek Bettzig, bettzig@hotmail.de
  - Nick Biagioni, viud2l_1061684@d2l.viu.ca
-
+ - your mother
 # Table of Contents
 
 1. [ Known issues/omissions ](#section1)
