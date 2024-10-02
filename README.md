@@ -15,10 +15,10 @@ Our Project making an immersive arcade for the world to enjoy
 
 - There are two branches that always exist.
     - the main branch contains the stable versions of the game.
-    - the dev branch conains the game as it gets developed with all completed features.
+    - the dev branch contains the game as it gets developed with all completed features.
 - there are any number of feature branches that contain the active developing process, that branch and merge with the dev branch.
 - there is up to one testing branch that contains a branch of the dev branch with all features that are meant for the next game update. It merges into the dev and main branch.
-- there is up to one Hotfix branch that is use to quickly fix any small bug that are present in the main branch. It merges into the merges with the main and dev branch.
+- there is up to one Hotfix branch that is used to quickly fix any small bug that are present in the main branch. It merges into the merges with the main and dev branch.
 
 ![image not found](Documentation/pics/branchStrategy.png)
 [additional information and image source](https://nvie.com/posts/a-successful-git-branching-model/)
