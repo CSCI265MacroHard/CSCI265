@@ -20,7 +20,7 @@ Our Project making an immersive arcade for the world to enjoy
 - there is up to one testing branch that contains a branch of the dev branch with all features that are meant for the next game update. It merges into the dev and main branch.
 - there is up to one Hotfix branch that is use to quickly fix any small bug that are present in the main branch. It merges into the merges with the main and dev branch.
 
-![image not found](Documentation\pics\branchStrategy.png)
+![image not found](Documentation/pics/branchStrategy.png)
 [additional information and image source](https://nvie.com/posts/a-successful-git-branching-model/)
 
 ## Instructions for working within the repo separated by task
