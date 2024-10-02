@@ -117,7 +117,7 @@ git branch testname
 git checkout testname
 git push origin testname:testname
 ```
-### testing update
+### Testing update
 To make an update to the testing branch, go to your local testing branch and fix any bugs. Then commit the changes to the branch. Push the local branch to the remote repo.
 ```
 ### Example Commandline Inputs/Steps ###
@@ -129,7 +129,7 @@ git add .
 git commit -m "message"
 git push origin testname:testname
 ```
-### testing done
+### Testing done
 If testing is complete, send a Discord message that you are about to update to the next stable version. Then pull the latest version of the dev branch. Go to your testing branch and merge the dev branch into your testing branch. Push your updated testing branch to the remote repo. Then go to GitHub and make merge requests to merge the testing branch into the dev branch and main branch. Bruce or Marek will check the requests and approve them if everything is correct. They will also delete the branch to keep the repo clean. Marek or Bruce will send a message in the Discord that the stable version has been updated.
 ```
 ### Example Commandline Inputs/Steps ###
