@@ -1,3 +1,10 @@
+Agenda 10.03.2024
+
+- finish requirements.md
+- finish standard.md
+- test branch protection
+- setup game version 0.1
+
 Agenda 10.01.2024
 
 - finish requirements.md
