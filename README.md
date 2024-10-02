@@ -1,5 +1,5 @@
 ### @ Dave Wessels
-The dev branch of the repo is always the most up-to-date branch. Please refer to this branch when grading our group project.
+The dev branch of the repo is always the most up-to-date branch. Please refer to this branch when grading our group project. All Markdown files for the different phases can be found in the "Documentation" folder.
 
 # CSCI265
 Project for CSCI 265 with Alister, Bruce, Jamie, Marek and Nick
