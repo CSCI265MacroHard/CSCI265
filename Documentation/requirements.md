@@ -51,56 +51,56 @@ No errors and changes to the plan and interface were raised, but the group made 
 
 The arcade will attempt to replicate the feeling of 90s arcades without explicitly copying the floor plan and decor of a specific location. Instead we will be drawing inspiration from many images, memories, and references to create a general "vibe" of a 90s arcade that could have existed. This way we can appeal to individuals nostalgic for old arcades without them scrutinizing the accuracy of a specific location.
 
-Since we have limited time and rescources to complete the project, the program won't be a hyper-realistic representation of an arcade. Instead we plan on goin for low resolution textures and low polygon-count models. This lends itself to an asthetic that should still appeal to our nostaligic audience while also making it more accessible to those with lower end hardware.
+Since we have limited time and resources to complete the project, the program won't be a hyper-realistic representation of an arcade. Instead, we plan on going for low-resolution textures and low polygon-count models. This lends itself to an aesthetic that should still appeal to our nostalgic audience while also making it more accessible to those with lower-end hardware.
 
-The arcade itself is our product so we are dealing with two target audiences; the users who want to go to an arcade to play games, and the arcade game developers who will be placing their games within the hub world we create. Since we are also developing games in our spare time we are hoping to ship the arcade with a base catalog of games to play.
+The arcade itself is our product so we are dealing with two target audiences; the users who want to go to an arcade to play games, and the arcade game developers who will be placing their games within the hub world we create. Since we are also developing games in our spare time we are hoping to ship the arcade with a base catalogue of games to play.
 
-The individuals in our group are all interested in game development and with recent drama surrounding what was considered by many to be the most accessible game engine, unity, we decided to take a risk investing time into learning a much more experimental software to develop on: the Godot game engine. There are many drawbacks to using software that hasn't matured or been around long enough to have a lot of 3rd party support, but, there is a lot of freedom that comes with the open source nature of the software. 
+The individuals in our group are all interested in game development and with the recent drama surrounding what was considered by many to be the most accessible game engine, unity, we decided to take a risk investing time into learning a much more experimental software to develop on: the Godot game engine. There are many drawbacks to using software that hasn't matured or been around long enough to have a lot of 3rd party support, but, there is a lot of freedom that comes with the open source nature of the software. 
 
 ## 4. Game flow, objectives, and plot-line <a name="section4"></a>
 
-The arcade itself in it's most base form could be described as a very intricate 3-dimensional video-game browser and launcher.
+The arcade itself in its most base form could be described as a very intricate 3-dimensional video-game browser and launcher.
 
 Starting up the software will place the user at the entryway of a 3D arcade environment with a prompt of the controls used to navigate and interact with objects.
 
-arcades will have a token cost to play that is displayed on the front. when you interact with the machine it will automatically subtract the cost from the players balance.
+arcades will have a token cost to play that is displayed on the front. when you interact with the machine it will automatically subtract the cost from the player's balance.
 
 The arcade will have various arcade machines the user can walk up to and interact with to start up the machine's respective game. 
 
 Ideally the arcade layout will be easy to adjust to accomodate more game machines and various historical arcade recreations but that would be done by game developers with access to the documentation, not the end user.
 
-Initially we will ship the program with various arcade machine styles that launch into games: we plan to include example games with basic sprites and features as a starting point for prospective arcade game developers as well as to practice developing in the godot engine. planned games to ship with include but aren't limited to:
+Initially, we will ship the program with various arcade machine styles that launch into games: we plan to include example games with basic sprites and features as a starting point for prospective arcade game developers as well as to practice developing in the godot engine. planned games to ship with include but aren't limited to:
  - A street fighter clone:
     - 2D sprites made from cropped images of dev team members to represent game characters.
-    - 2 player support with a controller connected or shared keyboard.
+    - 2-player support with a controller connected or shared keyboard.
  - Pool (or snooker)
-   - experimentation of godot's built-in physics engine.
+   - experimentation of Godot's built-in physics engine.
    - demonstration that arcade game machines can also represent physical games instead of just video games
 
-Individual games are great but what made arcade-goers want to keep playing and come back everytime was how all the games were tied together by a universal form of progression: tickets. Ticket count will be tracked. Tickets will be awarded to the player once they have completed an arcade game and returned to the arcade.
+Individual games are great but what made arcade-goers want to keep playing and come back every time was how all the games were tied together by a universal form of progression: tickets. Ticket count will be tracked. Tickets will be awarded to the player once they have completed an arcade game and returned to the arcade.
 
 The player may optionally navigate to the jukebox object and interact with it to select ambient music.
 
 The player may then navigate to the shop and spend their tickets on upgrades to the arcade upgrades include but are not limited to:
  - Energy drinks which slow down the gamespeed of arcade games for greater accuracy and time to react.
- - Alchoholic Beverages to increase game speed and add random inputs (goodbye E rating)
+ - Alcoholic Beverages to increase game speed and add random inputs (goodbye E rating)
  - Unlocking new arcade machines
  - Cheat codes to input into certain games for configured effects
  - New tracks to play on the jukebox.
  - more tokens to play more games.
 
-The player has complete agency over which features they want to interact with within the program just as arcade goers have agency to play whatever aracade games they desire. then when the arcade goers are done they leave and go home. when the player attempts to leave the aracade through the door they will be prompted asking if they would like to close the program and if they select yes it will end.
+The player has complete agency over which features they want to interact with within the program just as arcade goers have agency to play whatever arcade games they desire. then when the arcade goers are done they leave and go home. when the player attempts to leave the arcade through the door they will be prompted asking if they would like to close the program and if they select yes it will end.
 
 ## 5. Key features, with detailed requirements for each <a name="section5"></a>
 
 ### Arcade Machines
 
-Arcade machines are the key piece of this program and they have several functions for both end users and game developers. All aracade machines will have designs to best represent the games that they launch into and ambient sounds taken from samples within the game.
+Arcade machines are the key piece of this program and they have several functions for both end users and game developers. All arcade machines will have designs to best represent the games that they launch into and ambient sounds taken from samples within the game.
  
 As an end user, the purpose is that they may visually see on the arcade machine's design what game it hosts. from there they may decide to navigate to the machine to interact with it. Interacting with the machine will take them into the game to play until they reach a game ended screen which will put them back into the arcade with tickets. the tickets will be awarded based on the performance of the game which will scale differently depending on the difficulty of the game.
 
-As a game developer there are 2 pieces of functionality that are important, the arcade machine launches into whatever game they have created with optional parameters to modify the game based on what progress the user has made through ticket purchases.
-once in the game the developer must have an end screen that returns the player to the arcade with a single variable that contains the players performance that can be converted into tickets for the player.
+As a game developer, there are 2 pieces of functionality that are important, the arcade machine launches into whatever game they have created with optional parameters to modify the game based on what progress the user has made through ticket purchases.
+once in the game, the developer must have an end screen that returns the player to the arcade with a single variable that contains the player's performance that can be converted into tickets for the player.
 
 ### Audio system
 Chaotic environmental sounds are a pivotal part of arcade experiences.​ To replicate this, Cyber Cyber City uses a proximity-based sound system.​ Any noise-emitting object within the scene will have a detection radius that plays sound louder as the player gets closer.​ To keep this effect from becoming overwhelming/disorientating, only the absolute closest emitter of any given type can output at max (emulating sensory focus on a single object),  and linear interpolation will be used to smooth out transitions between sounds within the space.​ If such an environmental/directional audio system proves too much, we will opt to use static ambience.​	
@@ -111,13 +111,13 @@ The arcade will contain a jukebox that plays music. More music can be unlocked t
 ### Ticket Shop
 The ticket shop is accessible at all times, however; there isn't much point in visiting it until the player has earned tickets to spend.
 
-since the amount of games within the arcade is dynamic and the ticket shop sells cheat codes and unlocks for each one the ticket shop will also need to accomodate a wide range of stock. in order to do this the ticket shop will have a simple, scalable design that is familiar.
+since the amount of games within the arcade is dynamic and the ticket shop sells cheat codes and unlocks for each one the ticket shop will also need to accommodate a wide range of stock. to do this the ticket shop will have a simple, scalable design that is familiar.
 
 The shop user interface will feature a scroll bar that appears when the shop contains too many items to fit on the screen this way the icons for shop items do not have to be scaled down to fit.
 
 The shop user interface can be navigated entirely with a keyboard or by clicking with a mouse. When the user is prepared to purchase an item there will be a pop-up to confirm their decision. 
 
-Game developers will be able to add generic purchaseable upgrades based on templates so they can quickly integrate their games into the arcade's ecosystem.
+Game developers will be able to add generic purchasable upgrades based on templates so they can quickly integrate their games into the arcade's ecosystem.
 generic upgrades will include:
  - (insert game name) Score doubler
  - (insert game name) Rapid fire
@@ -125,7 +125,7 @@ generic upgrades will include:
 
 ### Arcade Environment
 
-the arcade itself is a 3 dimensional room filled with arcade machines the room will be lit just enough to easily navigate and see objects but also dim enough to replicate those dingy 90s arcades. it's a careful balance.
+the arcade itself is a 3-dimensional room filled with arcade machines the room will be lit just enough to easily navigate and see objects but also dim enough to replicate those dingy 90s arcades. it's a careful balance.
 
 The walls have collision so that users bump into them instead of walking through them. there won't be any vertical movement so jumping and gravity aren't necessary unless support for multi-floor arcades is needed.
 
@@ -135,14 +135,14 @@ ambient sounds will play from the arcade machines and from the NPCs and jukebox.
 ### Movement and controls
 Users are placed directly into the 3D environment upon launching the program so an initial popup will show the controls to navigate the map. The controls within the arcade will be WASD to move forward, back and strafe left and right with the mouse to look around and left click to interact. there will also be an alternative control scheme for if the user has a controller connected.
 
-Once the user has interacted with an arcade machine and entered a game, it is up to the game developer to inform the user of the game's controls, this will be displayed through a controls screen accessible within the arcade game. The control layout on the keyboard/controller for the arcade games should also be consistent between games, for example the primary "A button" should be the same assigned key across all games. If the arcade game is multiplayer the other player may use a second controller connected or both players may share a keyboard for controls.
+Once the user has interacted with an arcade machine and entered a game, it is up to the game developer to inform the user of the game's controls, this will be displayed through a controls screen accessible within the arcade game. The control layout on the keyboard/controller for the arcade games should also be consistent between games, for example, the primary "A button" should be the same assigned key across all games. If the arcade game is multiplayer the other player may use a second controller connected or both players may share a keyboard for controls.
 
 
 ### Non-Player Characters 
 NPCs are an important part of the immersion. NPCs will have certain behaviours and interactions. These behaviours include:
 
- - Congradulating a player for good performance on an arcade game. "wow nice job", "you're so good at (insert game name)", "can you teach me how to be that good?"
- - Commenting on a player's poor performance in an arcade game. "you suck", "you should never play (insert game name) again", "better luck next time"
+ - Congratulating a player for good performance on an arcade game. "wow nice job", "you're so good at (insert game name)", "can you teach me how to be that good?"
+ - Commenting on a player's poor performance in an arcade game. "you suck", "You should never play (insert game name) again", "Better luck next time"
  - Occupying arcade machines temporarily blocking the player from accessing them.
  - Giving the player tickets if they are short to buy something
  - Roaming the Arcade.
@@ -159,7 +159,7 @@ If the product has limitations that the user wouldn't expect then those should b
 
 This might be much like our original proposal but in far greater detail: we want to thoroughly explain/describe all aspects of the product's functionality: all the features and every aspect of its behaviour.
 
-Here the reader should should be able to find the answer for any question along the lines of
+Here the reader should be able to find the answer to any question along the lines of
 - How do I use feature X?
 - How do I enter data value Y?
 - What are the limits (if any) on what I enter for Z?
@@ -174,20 +174,14 @@ Provide visual depictions of every screen, menu, drop-down, pop-up, etc.  This i
 
 Accompany each visual depiction with a clear description of what it shows and what each visible option represents.
 
-Provide a navigation guide/map and description that show how all the screens/menus etc relate to one another: i.e. clearly showing/describing how the user navigates from screen-to-screen and which screens/choices lead to which others.
-
-## Use cases/scenarios
-
-Provide use cases detailing the different ways someone might actually want to use the product (e.g. a "sign in" use case, a "check balance" use case, a "make a deposit" use case, etc).
-
-Provide scenarios that illustrate the use cases in a practical example.  (E.g. Bob has $30 to deposit and wants to deposit it, check the balance, and if there is enough then transfer $100 to his savings account, ... then walk through the Bob's actions from sign-in to sign-out.)
+Provide a navigation guide/map and description that show how all the screens/menus etc relate to one another: i.e. clearly showing/describing how the user navigates from screen to screen and which screens/choices lead to which others.
 
 ## Non-functional requirements <a name="section8"></a>
 
 Since this project includes the works of multiple different games by different developers, there are a few restrictions and standards that the games within in the arcade must follow to ensure the systems of the arcade can be implemented correctly.
 
 - Client games will have and communicate the following variables:   
-    - Some form of score keeping and ScorePoint output.
+    - Some form of scorekeeping and ScorePoint output.
     - Score scaling info for ticket payout (I.e. are the 'points per minute' static, grow linearly or exponentially, etc.)(can be measured and implemented during testing)
     - Token cost per play (extra variable that enables easier/dynamic balancing of arcade cabinet's 'tickets per token' value)(can be implemented in testing)
     - In-scope controls and control documentation (e.g. if the 'A button' is assigned to a certain key, games should be consistent with this.)
@@ -206,16 +200,16 @@ Other non-functional requirements to keep in mind include:
 
 ## Feature prioritization <a name="section7"></a>
 
-As the group presented our proposal from Phase 1, there's a lot to wrap around initiating an arcade environment. This includes building each component from scratch, but assets that are available online could also help. However, a great deal of uncertainty to what elements are able to complete in just a 4-month duration are still a problem.
+As the group presented our proposal from Phase 1, there's a lot to wrap around initiating an arcade environment. This includes building each component from scratch, but assets that are available online could also help. However, a great deal of uncertainty to what elements are able to complete in just a 4-month duration is still a problem.
 
 Core Aspects
-As highlighted briefly from the last presentation on risks, we are scaling down the process to a point where the group found these aspects as a success:
+As highlighted briefly from the last presentation on risks, we are scaling down the process to a point where the group found these aspects a success:
 
 - at least 3 games, 
-- at least 2-3 Non Playable Character (NPC) to initiate the arcade vibe,
+- at least 2-3 Non-Playable Characters (NPC) to initiate the arcade vibe,
 - a working booth for token exchange,
 - background retro music,
-- game progress are saved, and
+- game progress is saved,
 - a workable arcade environment (2D).
 
 Secondary Features
@@ -224,7 +218,7 @@ In case the group still have time to make more features:
 
 - more NPCs that could interact,
 - more games,
-- 3D arcade environment (this is being working progress already but a falldown for a 2D is applicable),
+- 3D arcade environment (this is being worked on, with progress already, but a falldown for a 2D is applicable),
 - a good UX for the game and booth, and
 - higher detailed character visuals for games (the group was thinking of lower bit).
 
