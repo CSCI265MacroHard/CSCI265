@@ -51,7 +51,7 @@ No errors and changes to the plan and interface were raised, but the group made 
 
 The arcade will attempt to replicate the feeling of 90s arcades without explicitly copying the floor plan and decor of a specific location. Instead we will be drawing inspiration from many images, memories, and references to create a general "vibe" of a 90s arcade that could have existed. This way we can appeal to individuals nostalgic for old arcades without them scrutinizing the accuracy of a specific location.
 
-Since we have a limited time and rescources to complete the project, the program won't be a hyper-realistic representation of an arcade. Instead we plan on goin for low resolution textures and low polygon-count models. This lends itself to an asthetic that should still appeal to our nostaligic audience while also making it more accessible to those with lower end hardware.
+Since we have limited time and rescources to complete the project, the program won't be a hyper-realistic representation of an arcade. Instead we plan on goin for low resolution textures and low polygon-count models. This lends itself to an asthetic that should still appeal to our nostaligic audience while also making it more accessible to those with lower end hardware.
 
 The arcade itself is our product so we are dealing with two target audiences; the users who want to go to an arcade to play games, and the arcade game developers who will be placing their games within the hub world we create. Since we are also developing games in our spare time we are hoping to ship the arcade with a base catalog of games to play.
 
@@ -102,8 +102,11 @@ As an end user, the purpose is that they may visually see on the arcade machine'
 As a game developer there are 2 pieces of functionality that are important, the arcade machine launches into whatever game they have created with optional parameters to modify the game based on what progress the user has made through ticket purchases.
 once in the game the developer must have an end screen that returns the player to the arcade with a single variable that contains the players performance that can be converted into tickets for the player.
 
-### Audio
-The arcade will contain a jukebox that plays music. More music can be unlocked at the ticket shop. all music used will be outsourced to another VIU student not in the class.
+### Audio system
+Chaotic environmental sounds are a pivotal part of arcade experiences.​ To replicate this, Cyber Cyber City uses a proximity-based sound system.​ Any noise-emitting object within the scene will have a detection radius that plays sound louder as the player gets closer.​ To keep this effect from becoming overwhelming/disorientating, only the absolute closest emitter of any given type can output at max (emulating sensory focus on a single object),  and linear interpolation will be used to smooth out transitions between sounds within the space.​ If such an environmental/directional audio system proves too much, we will opt to use static ambience.​	
+The arcade will contain a jukebox that plays music. More music can be unlocked through the ticket shop. The music present will be outsourced, either from online libraries or from other VIU students not in the class. 
+
+![Audio System Diagram](pics/audio_system.png)
 
 ### Ticket Shop
 The ticket shop is accessible at all times, however; there isn't much point in visiting it until the player has earned tickets to spend.
@@ -129,11 +132,10 @@ The walls have collision so that users bump into them instead of walking through
 ambient sounds will play from the arcade machines and from the NPCs and jukebox. 
 
 
-### Movement
+### Movement and controls
 Users are placed directly into the 3D environment upon launching the program so an initial popup will show the controls to navigate the map. The controls within the arcade will be WASD to move forward, back and strafe left and right with the mouse to look around and left click to interact. there will also be an alternative control scheme for if the user has a controller connected.
 
-once the user has interacted with an arcade machine and entered a game, it is up to the game developer to inform the user of the game's controls if they vary from the arcade's controls. if the arcade game is multiplayer the other player may use a second controller connected or both players may share a keyboard for controls.
-
+Once the user has interacted with an arcade machine and entered a game, it is up to the game developer to inform the user of the game's controls, this will be displayed through a controls screen accessible within the arcade game. The control layout on the keyboard/controller for the arcade games should also be consistent between games, for example the primary "A button" should be the same assigned key across all games. If the arcade game is multiplayer the other player may use a second controller connected or both players may share a keyboard for controls.
 
 
 ### Non-Player Characters 
