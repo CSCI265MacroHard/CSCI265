@@ -27,6 +27,8 @@ Each section includes discussion of how those standards/processes will be enforc
 - All documents will be proofread by each member at least once to make it final.
 - Documents will be discussed by all members in due time and to avoid conflict all members must bring there concerns up immediatly.
 - Team will use the documentation "pics" folder to store images for documentation.
+- All presentations for the different phases are saved in the "presentation" folder
+- The mechanism for submitting document content/revisions is via a 'Pull request', as described in the version controlsection later in this document.
 
 ### Processes
 - The Documentation will be divided to be an equal load upon all members.
