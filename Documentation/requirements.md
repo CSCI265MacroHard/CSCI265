@@ -90,12 +90,10 @@ The player has complete agency over which features they want to interact with wi
 
 Arcade machines are the key piece of this program and they have several functions for both end users and game developers. All aracade machines will have designs to best represent the games that they launch into and ambient sounds taken from samples within the game.
  
-    As an end user, the purpose is that they may visually see on the arcade machine's design what game it hosts. from there they may decide to navigate to the machine to interact with it. Interacting with the machine will take them into the game to play until they reach a game ended screen which will put them back into the arcade with tickets. the tickets will be awarded based on the performance of the game which will scale differently depending on the difficulty of the game.
+As an end user, the purpose is that they may visually see on the arcade machine's design what game it hosts. from there they may decide to navigate to the machine to interact with it. Interacting with the machine will take them into the game to play until they reach a game ended screen which will put them back into the arcade with tickets. the tickets will be awarded based on the performance of the game which will scale differently depending on the difficulty of the game.
 
--
-
-    As a game developer there are 2 pieces of functionality that are important, the arcade machine launches into whatever game they have created with optional parameters to modify the game based on what progress the user has made through ticket purchases.
-    once in the game the developer must have an end screen that returns the player to the arcade with a single variable that contains the players performance that can be converted into tickets for the player.
+As a game developer there are 2 pieces of functionality that are important, the arcade machine launches into whatever game they have created with optional parameters to modify the game based on what progress the user has made through ticket purchases.
+once in the game the developer must have an end screen that returns the player to the arcade with a single variable that contains the players performance that can be converted into tickets for the player.
 
 ### Audio
 The arcade will contain a jukebox that plays music. More music can be unlocked at the ticket shop. all music used will be outsourced to another VIU student not in the class.
