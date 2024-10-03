@@ -40,6 +40,13 @@ As movements are already pre-determined for the arcade, the actual interface of 
 
 No errors and changes to the plan and interface were raised, but the group made notes on blame, pull, and push on git in case a member did such corrupt a document.
 
+## 2. Game Overview  <a name="section2"></a>
+**Cyber Cyber City** seeks to bring you back the the 80s/90s with a historically inaccurate, first person simulation of an arcade. While the early 80s hosted the golden age of [Video Game Arcades](https://en.wikipedia.org/wiki/Amusement_arcade) , the decline into the late 90s lead to the rise of the [Redemption Game](https://en.wikipedia.org/wiki/Redemption_game#:~:text=Redemption%20games%20are%20typically%20arcade,a%20central%20location%20for%20prizes.), where players could be awarded tickets proportional to their score and then redeem said tickets for prizes.
+ 
+ **Cyber Cyber City** brings ~~the best of~~ both eras together, taking the elegance of traditional arcade video games along with the excitement of the pseudo-gambling redemption games, blending them into a primitive, engaging, and immersive experience where players can enjoy classic-style video games while being awarded tickets based on performance.
+
+  Central within the  **Cyber Cyber City** arcade is the prize booth/ticket shop, where players will be able to spend their hard earned tickets for prizes, unlocks, and collectables. The over-arching objective for our players may be to try unlocking/collecting everything within the prize booth/ticket shop, however, motivating the player to just have fun and diversely explore all the games available will be our objective as developers.
+
 ## 3. Target audience and motivation <a name="section3"></a>
 
 The arcade will attempt to replicate the feeling of 90s arcades without explicitly copying the floor plan and decor of a specific location. Instead we will be drawing inspiration from many images, memories, and references to create a general "vibe" of a 90s arcade that could have existed. This way we can appeal to individuals nostalgic for old arcades without them scrutinizing the accuracy of a specific location.
@@ -173,12 +180,27 @@ Provide use cases detailing the different ways someone might actually want to us
 
 Provide scenarios that illustrate the use cases in a practical example.  (E.g. Bob has $30 to deposit and wants to deposit it, check the balance, and if there is enough then transfer $100 to his savings account, ... then walk through the Bob's actions from sign-in to sign-out.)
 
-## Non-functional requirements
+## Non-functional requirements <a name="section8"></a>
 
-Detail any requirements beyond the actual feature set previously required, e.g.
-- safety/security/privacy requirements
-- performance requirements (response times, throughput, memory footprint)
-- software quality requirements
+Since this project includes the works of multiple different games by different developers, there are a few restrictions and standards that the games within in the arcade must follow to ensure the systems of the arcade can be implemented correctly.
+
+- Client games will have and communicate the following variables:   
+    - Some form of score keeping and ScorePoint output.
+    - Score scaling info for ticket payout (I.e. are the 'points per minute' static, grow linearly or exponentially, etc.)(can be measured and implemented during testing)
+    - Token cost per play (extra variable that enables easier/dynamic balancing of arcade cabinet's 'tickets per token' value)(can be implemented in testing)
+    - In-scope controls and control documentation (e.g. if the 'A button' is assigned to a certain key, games should be consistent with this.)
+
+- Client games must adhere to a set size/memory limit. (TBD) 
+
+- Client games must hit performance/optimization thresholds(TBD) as measured/monitored by the [Godot Performance class](https://docs.godotengine.org/en/stable/classes/class_performance.html), including: 
+    - Video memory used via 'Monitor RENDER_VIDEO_MEM_USED'
+    - Static memory used via 'Monitor MEMORY_STATIC'
+    - Ensure that the game has relatively consistent physics processing via 'Monitor TIME_PHYSICS_PROCESS'
+
+Other non-functional requirements to keep in mind include:
+- consistent texture sizes
+- consistent 3D object model complexity
+- consistent audio file size
 
 ## Feature prioritization <a name="section7"></a>
 
