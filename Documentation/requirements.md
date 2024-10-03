@@ -1,8 +1,8 @@
 # CSCI 265 Requirements and specifications (Phase 2)
 
-## Team name: YOUR TEAM NAME HERE
+## Team name: MacroHard
 
-## Project/product name: YOUR PRODUCT NAME HERE
+## Project/product name: 'Cyber' Cyber City
 
 ## Contact person and email
 
