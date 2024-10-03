@@ -163,11 +163,29 @@ This section should be intuitive to follow if the reader is simply reading throu
 
 ## User interface and navigation
 
-Provide visual depictions of every screen, menu, drop-down, pop-up, etc.  This isn't intended to be a to-the-pixel exact representation, but it is expected to show all the visible elements and options, and their approximate positions and appearance.
+### GUI
 
-Accompany each visual depiction with a clear description of what it shows and what each visible option represents.
+The inclusion of GUIs will be kept to a minumum to ensure the user's immersion isn't ruined with popups. The exception to this will be the ticket shop since accomodating a dynamic stock of items will be easier to represent with a 2D interface that overlays the screen. 
 
-Provide a navigation guide/map and description that show how all the screens/menus etc relate to one another: i.e. clearly showing/describing how the user navigates from screen-to-screen and which screens/choices lead to which others.
+### Currencies information display
+
+Within the main arcade scene there the player will have their ticket count displayed in the top right corner of the screen. The player's token count will be displayed in the top left corner.
+
+The token and ticket displays will not be visible when the player has entered a game.
+
+### Navigation
+
+Navigation to interact with features will be physically represented by walking up to and looking at a feature then pressing a select button.
+
+Exiting the program will have a similar method by walking up to the entrance doorway of the arcade and interacting with it. 
+
+### Ticket shop interface
+
+The ticket shop interface will be a 2D dimensional grid of squares with a scroll bar. Within each square will be a display of a product and it's price in tickets. The user can interact with a box purchase the item within. if there are more items than can be fit on one page a scroll bar will be automatically enabled.
+
+### Jukebox interface
+
+The jukebox interface will be a simplified version of the ticket shop interface but instead of multiple rows and columns of boxes it will be a single column that can be scrolled through to select songs names that appear stacked on top of eachother.
 
 ## Use cases/scenarios
 
@@ -218,8 +236,17 @@ As the project itself sounds like a stretch already for just one semester, these
 
 ## Glossary
 
-Define any product-specific terms and any terms that are unlikely to be known to the 'average' reader (e.g. a random second-year CS student).
+The terms "User" and "player" are referring to the end user of the product, an audience who are using the final software combined with games, for the purposes of recreation or historical research.
+
+The terms "developers" and "game developers" refer to the audience who will use the arcade software to host their games for the end user.
+
+### Acronyms
+ - NPCs | non-player characters.
+ - 3D and 2D | three dimensional and two dimensional respectively. Usually referring to an object's appearance.
+ - GUI | graphical user interface, generally a 2D overlay that displays information.
 
 ## Appendices
 
-If additional supported documents are needed then append them here
+ Godot Documentation: https://docs.godotengine.org/en/stable/index.html#
+
+GDScript Coding Standards: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html
