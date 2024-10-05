@@ -63,7 +63,7 @@ The arcade itself in its most base form could be described as a very intricate 3
 
 Starting up the software will place the user at the entryway of a 3D arcade environment with a prompt of the controls used to navigate and interact with objects.
 
-arcades will have a token cost to play that is displayed on the front. when you interact with the machine it will automatically subtract the cost from the player's balance.
+Arcades will have a token cost to play that is displayed on the front. when you interact with the machine it will automatically subtract the cost from the player's balance.
 
 The arcade will have various arcade machines the user can walk up to and interact with to start up the machine's respective game. 
 
@@ -174,7 +174,7 @@ The ticket shop interface will be a 2D dimensional grid of squares with a scroll
 
 The jukebox interface will be a simplified version of the ticket shop interface but instead of multiple rows and columns of boxes it will be a single column that can be scrolled through to select songs names that appear stacked on top of eachother.
 
-## Non-functional requirements <a name="section7"></a>
+## 7. Non-functional requirements <a name="section7"></a>
 
 Since this project includes the works of multiple different games by different developers, there are a few restrictions and standards that the games within in the arcade must follow to ensure the systems of the arcade can be implemented correctly.
 
@@ -196,7 +196,7 @@ Other non-functional requirements to keep in mind include:
 - consistent 3D object model complexity
 - consistent audio file size
 
-## Feature prioritization <a name="section8"></a>
+## 8. Feature prioritization <a name="section8"></a>
 
 As the group presented our proposal from Phase 1, there's a lot to wrap around initiating an arcade environment. This includes building each component from scratch, but assets that are available online could also help. However, a great deal of uncertainty to what elements are able to complete in just a 4-month duration is still a problem.
 
