@@ -44,7 +44,7 @@ Each section includes discussion of how those standards/processes will be enforc
 - We will be referencing the [GDScipt style guide](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html).
 
 ### Processes
-- The team will be referencing the [Godot documentation](https://docs.godotengine.org/en/stable/index.html)for all coding.
+- The team will be referencing the [Godot documentation](https://docs.godotengine.org/en/stable/index.html) for all coding.
 - The team will be working together on the 3D Arcade hub world and complete this within Godot.
 - The team will then split up and work separatly on each game within the arcade.
 - After each game is working as intended, the visual head will take over and create sprites and other front end work for each game.
