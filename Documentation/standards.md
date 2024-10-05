@@ -39,12 +39,12 @@ Each section includes discussion of how those standards/processes will be enforc
 ## Coding standards and processes
 ### Standards
 - Everyone will be working using the software Godot 4.3.
-- The team is going to work with the game engine named Godot(Link: https://godotengine.org ).
+- The team is going to work with the game engine named [Godot](https://godotengine.org).
 - The team will be using GDScript within Godot for all programming realted work.
 - We will be referencing the [GDScipt style guide](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html).
 
-  ### Processes
-- The team will be referencing the [Godot documentation](https://docs.godotengine.org/en/stable/index.html) for all coding.
+### Processes
+- The team will be referencing the [Godot documentation](https://docs.godotengine.org/en/stable/index.html)for all coding.
 - The team will be working together on the 3D Arcade hub world and complete this within Godot.
 - The team will then split up and work separatly on each game within the arcade.
 - After each game is working as intended, the visual head will take over and create sprites and other front end work for each game.
@@ -71,4 +71,3 @@ Each section includes discussion of how those standards/processes will be enforc
 - Upon all tests being completed, the version will be sent to the Main/Master Branch and Development Branch for new features.
 - If the Main/Master Branch has a massive problem/bug it will be pulled into the Hotfix Branch and the fix will be made as soon as possible. After this, the new version will be pushed into both the main and Development Branch.
 - The Development Branch will now be taking the hotfix and incorporating this with any new features added.
-
