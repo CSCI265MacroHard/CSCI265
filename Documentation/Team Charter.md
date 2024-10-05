@@ -42,7 +42,7 @@ The roles will be listed as follows:
 	- lead programmer
 	- understudy version control​
 	- understudy godot specialist
-    	- lead audio design
+	- lead audio design
  - Jamie:​
 	- programmer
 	- lead visual design
