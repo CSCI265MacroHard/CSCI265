@@ -1,4 +1,3 @@
-
 # <a name="section1"></a> CSCI 265 Product Design (Phase 3)
 
 ## Team name: MacroHard
@@ -49,10 +48,12 @@ Our program will be composed of many different scenes that are responsible for d
 - The Arcade Scene
 - The Player Scene
 - NPC Template Scene
-- Arcade Template Scene
+- Arcade Game Template Scene
+- Ticket Shop Scene
 - Premade NPC Scenes
 - Premade Arcade Machine Scenes
-- Builtin Game Scenes
+- Built-in Game Scenes
+- Externally Stored Arcade Games
   
 (talk about how all these scenes are connected but each will have it's own chapter as well) 
 
@@ -82,13 +83,22 @@ The steps to initializing the software will mostly serve to accomodate any games
 text....
 
 ## 4.2 Player Scene
+
+The Player scene is composed of 3 parts:
+
+- The movement module
+  - user inputs to character velocity
+  - user input to camera rotation
+  - collision
+- raycasting module
+  - calling the object that the raycast collides with's interact() function
+- The player data
+  - Ticket count storage
+  - Token count storage
+  - Game Scores
 text....
 
-# 5. Data design <a name="section7"></a>
-text....
-## 5.1 file structure
-text....
-## 5.2 scene tree structure
+# 5. File structure <a name="section7"></a>
 text....
 
 # 6. Game state and flow of play <a name="section8"></a>
