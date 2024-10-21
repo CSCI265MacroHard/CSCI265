@@ -14,7 +14,7 @@ The following person has been designated the main contact person for questions f
  - Marek Bettzig, bettzig@hotmail.de
  - Nick Biagioni, viud2l_1061684@d2l.viu.ca
 
-# Table of Contents (TODO)
+# Table of Contents
 
 1. [ Known issues/omissions ](#section1)
 
@@ -130,7 +130,7 @@ Player data will be stored as... and changed by...(todo)
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 7. NPC Scenes (TODO) <a name="section7"></a>
+# 7. NPC Scenes <a name="section7"></a>
 
 There will be a two NPC scene types designed for the software:
 
@@ -162,7 +162,7 @@ When interacted with, he will bring about a tutorial of sorts for the player to 
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 8. Arcade Machines (TOTO) <a name="section8"></a>
+# 8. Arcade Machines <a name="section8"></a>
 
 There will be two kinds of arcade machines. while nearly functionally identical to the user, under the hood they behave differently:
 
@@ -184,6 +184,7 @@ The arcade only needs to send data when the arcade game is launched and only nee
 In order to send data as it launches it will send it within the launch arguements. 
 
 The main arcade will assume the external arcade game is running and pause itself. While paused it will only run a looping function that scans a temp file for updates. This temp file is how the arcade game sends data back to the main arcade application.
+
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
 # 9. Ticket Shop (TODO) <a name="section9"></a>
@@ -211,7 +212,7 @@ Blutsauger Superschlager is a minimalist, rogue-lite survival action game, heavi
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 11. File structure (TODO) <a name="section11"></a>
+# 11. File structure <a name="section11"></a>
 As we build each our game on our own, we are implementing a sorted by file type structure (see the diagram below). This will be easier for us to access assets, resources, scenes, and scripts as we implement our game. All the images used will be in the Assests, other files used will be in the Resources, scenes used will be in the Scenes, and scripts will in Scripts. As this would be easier for a protoype, this will be difficult to implement when games come all together where changes made for one game inadvertently affect other games, introducing bugs or inconsistencies.
 
 Hence, with the final file structure, we are implementing a sorted by feature file type structure. Instead of having all scripts, scenes, assets, and resources in their own folders for each game, we would be having all of those in their own folders for all games in the arcade. With files related to UI, all of those will be in UI folder with their own Assets, Resources, Scripts, and Scenes inside. This would be followed for every files inside the arcade (see the diagram below).
@@ -220,7 +221,7 @@ With this implementation, it will be easier for us to expand and modify individu
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 12. Initializing the program (ALISTER) <a name="section12"></a>
+# 12. Initializing the program <a name="section12"></a>
 
 When the program launches there will be a setup process before the user may interact with the software.
 
@@ -287,7 +288,26 @@ The layout generation should be complete after this step and, should we end up u
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
 # 13. Game state and flow of play <a name="section13"></a>
-text....
+
+The player starts the game with a certain amount of tickets, which are used to play the arcade machines. To do so, the player walks up to an arcade machine and interacts with it, entering the game scene. A ticket is then consumed as payment to play. After completing a game, the player is rewarded with tokens. The number of tokens received is based on the player's performance (i.e., their high score).
+
+Tokens can be used at the ticket shop in the arcade, where they can be traded for more tickets to continue playing, or for upgrades to the arcade games. These upgrades make the games faster or easier, helping the player win more tokens more quickly. This forms the core gameplay loop of Cyber Cyber City.
+
+Additionally, tickets can be found around the arcade or obtained by interacting with NPCs, preventing the game from soft-locking if the player runs out of tickets and cannot buy more.
+
+In short, the typical game flow looks like this:
+
+- 1. Game starts
+- 2. Player plays an arcade game
+- 3. Player receives tokens
+- 4. Player buys more tickets at the ticket shop
+- 5. Player plays more games
+- 6. Player earns more tokens
+- 7. Player buys upgrades for games
+- 8. Player unlocks new games
+- 9. Repeat from step 2
+
+The game can be exited by walking to the exit of the arcade. Inside the arcade, there is also a jukebox that plays music, opens the settings menu, and allows players to save and load their game.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
