@@ -63,7 +63,7 @@ text....
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 3. Core design influences (TODO) <a name="section3"></a>
+# 3. Core design influences <a name="section3"></a>
 
 When developing a game in Godot, several key design influences shape how you structure, build, and optimize the game. Here are some important factors:
 
