@@ -387,6 +387,12 @@ The terms "User" and "player" are referring to the end user of the product, an a
 
 The terms "developers" and "game developers" refer to the audience who will use the arcade software to host their games for the end user.
 
+ - Scenes refer to godot's defintion of classes 
+
+ - nodes refer to elements within godot's scene usually these elements define behaviours of the scene.
+
+ - Vectors are a built in data type in GdScript they can store any data type in a 2, 3 ,or 4 element vector.
+
 ### Acronyms
  - NPCs | non-player characters.
  - 3D and 2D | three dimensional and two dimensional respectively. Usually referring to an object's appearance.
