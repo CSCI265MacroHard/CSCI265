@@ -64,7 +64,37 @@ text....
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
 # 3. Core design influences (TODO) <a name="section3"></a>
-text....
+
+When developing a game in Godot, several key design influences shape how you structure, build, and optimize the game. Here are some important factors:
+
+1. Godot's Node System
+Godot uses a node-based system where everything in the game—like objects, characters, or UI—are nodes. These nodes are organized in a tree structure, with each node having a specific role (like controlling movement or visuals). Understanding this system is essential for keeping the project organized.
+- Scene Instancing: Scenes are collections of nodes that can be reused. This is helpful for managing 3D assets like characters or environments and helps with modular development.
+
+2. GDScript and Visual Scripting
+Godot provides two main ways to script the game:
+- GDScript: Godot’s built-in scripting language is designed to work closely with the engine. It’s easy to use and makes testing and updating features quick, allowing fast iterations during development.
+- Visual Scripting: For those who prefer not to write code, Godot’s visual scripting lets you create logic using nodes and connections. This is useful for designers or those less familiar with coding.
+
+3. Scene Graph and Transformations
+Every 3D object in Godot has a transform that controls its position, rotation, and scale. Objects are arranged in a hierarchy, meaning when you move or rotate a parent object, its children follow. This system helps organize complex scenes and animations.
+- Spatial Nodes: The main building blocks for 3D objects are spatial nodes. Managing these nodes well is important for the structure and performance of your game.
+
+4. Physics and Collision
+Godot has a built-in physics engine that handles how objects interact:
+- Collision Detection: The engine supports different kinds of physics bodies (like rigid bodies or static objects), allowing for realistic interactions.
+- Collision Layers and Masks: By using collision layers and masks, you can control which objects interact, helping to improve performance and avoid unnecessary calculations.
+
+5. Lighting and Shadows
+Lighting is a key part of any 3D game’s design:
+- Dynamic and Baked Lighting: Godot allows for both real-time lighting (with shadows) and pre-baked lighting. Pre-baked lighting can save performance, while real-time lighting adds more dynamic effects.
+
+6. Retro Aesthetic and Cardboard-Style NPCs
+In our project, we chose a retro aesthetic and cardboard-style NPCs to simplify asset creation and save time.
+- Retro Look: We used pixelated graphics because they are faster to create. This retro style also gives the game a nostalgic feel, fitting within the project's scope.
+- Cardboard-Style NPCs: To deal with limited resources, we used cardboard-like NPCs. These simple, low-detail characters match the retro theme and let us focus on gameplay without worrying about high-detail models.
+
+These design influences help shape how the game is built, keeping it simple, efficient, and focused on core gameplay elements.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
@@ -212,7 +242,7 @@ When it detects a change in the temp file it will copy the data and then clear t
 
 The Arcade will feature built-in games developed by us in our personal time. here we are providing a brief description of the games and their token cost/ticket reward but it is not our plan to document them in detail since they are all solo projects
 
-### Jetris / The Pinaytrix (Jamie)
+### Jetris / The Pinaytrix
 Jetris is a clone of the classic Tetris, featuring falling tetromino blocks that players rotate and move to create complete horizontal lines. When a line is cleared, it disappears, and the blocks above shift down. As the game progresses, the speed increases, challenging players to keep up. The game ends when the blocks stack up to the top. Jetris includes classic features like score-based line clears and a next-piece preview. More features will be added once the implementation of the game is done like background music and cool animations.
 
 ### 2Cool4Pool / Poking balls with a stick (pool)
