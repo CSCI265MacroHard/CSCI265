@@ -144,22 +144,21 @@ template npcs serve as a  developer rescource for us to quickly duplicate then c
 - a placeholder interact function
 - a placeholder player performance reaction function
 
-These will be implimented as...(todo)
+These Template NPC's will be implemented for a plethora of use cases. They will be used to help poor and struggling players with handouts. They can act as marketing for developers as well and more.
+
 
 ### Custom NPCs:
 
 ### BruceNPC:
-When interacted with will... by...
+-When Interacted with, he will change from a standing sprite to a speaking sprite where he will chat with you about games in the arcade. He will simply ask questions and record the answers later to be used as feedback for improvements of the arcade.
+-If the player picks specific dialogue, Bruce will react by giving a special record to add to the jukebox
 
-Will react when the player... by...
 ### NateNPC:
-When interacted with will... by...
+-When interacted with, he will change from a hunched over sprite to a scared sprite. He will start a dialogue which will span for a long long long time.
+-If the player tries to leave the dialogue, Nate will then follow the player for some time
 
-Will react when the player... by...
 ### AlisterNPC:
-When interacted with will... by...
-
-Will react when the player... by...
+When interacted with, he will bring about a tutorial of sorts for the player to get to grips with how to play games in the arcade and help with information on the arcade.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
