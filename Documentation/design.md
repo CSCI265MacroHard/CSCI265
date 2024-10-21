@@ -150,7 +150,6 @@ The arcade scene will include all nodes that control it's environment as well as
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
 # 6. Player Scene (TODO) <a name="section6"></a>
-
 The Player scene is composed of 3 parts:
 
 - The movement module
@@ -162,21 +161,22 @@ The Player scene is composed of 3 parts:
 - The player data
   - Ticket count storage
   - Token count storage
-  - Game Scores
 
-### Movement
-Directional Movement will be achieved by taking user input and converting it into a vector to be used as velocity withing godot's builtin physics engine. it will work by taking button presses and... (todo)
+### 6.1 Movement
+Directional Movement will be achieved by taking user input and converting it into a vector to be used as velocity withing godot's builtin physics engine. The vector will be generated as by taking the directions the player is pressing as inputs and converting as a directional sum in the form of a vector. so say they press left and up it would convert that to a vector: [x: (-1* speed, z): (1 * speed), y: 0]
 
-Camera movement will be achieved by converting player inputs into a 3d rotational vector to rotate a camera node. it will work by either mouse movement or joystick input and... (todo)
+Camera movement will be achieved by converting player inputs into a 3d rotational vector to rotate a camera node. it will work by either mouse movement or joystick input. More research is needed on how to impliment this since there have been problems identified as [Gimbal Lock](https://en.wikipedia.org/wiki/Gimbal_lock). This will be updated later when a solution is found.
 
 Collision will mostly be handled by Godot's physics engine however we will have to ensure that all player movement is done by setting the player scene's velocity rather than position since setting position bypasses the physics engine.
 
-### Raycast
-The raycast will be a rotational child to the player's camera node so that it always collides with whatever is on the center of the screen. players will be able to interact with objects by... (todo)
+### 6.2 Raycast
+The raycast will be a rotational child to the player's camera node so that it always collides with whatever is on the center of the screen. Players will be able to interact with objects by calling a godot's builtin function that takes whatever object the raycast collides with and calling it's defined interact function. It will need rejection of objects without an interact function defined.
 
-### Player Data
+### 6.3 Player Data
 
-Player data will be stored as... and changed by...(todo)
+Player data will be stored as as variables within a script attached to the root node of the player scene so they are easily called and referenced by the parent and sibling scenes.
+
+Ticket count will be stored as an interger and token count will be stored as an interger.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
