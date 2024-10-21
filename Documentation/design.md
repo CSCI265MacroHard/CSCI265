@@ -165,19 +165,26 @@ Will react when the player... by...
 
 # 8. Arcade Machines (TOTO) <a name="section8"></a>
 
-There will be two kinds of arcade machines while nearly functionally identical to the user, under the hood they behave differently:
+There will be two kinds of arcade machines. while nearly functionally identical to the user, under the hood they behave differently:
 
 - Premade, Pre-placed Arcade Machines
 - Instanced Arcade Machines
 
-### Premade Arcade Machines
-Premade Arcade Machines Will have built-in games (See Built-In Games) and built-in textures and models...(todo)
+### 8.1 Premade Arcade Machines
+Premade Arcade Machines Will have built-in games (See chapter 10) and built-in textures and models
 
-also talk about token cost and ticket reward system
+Premade Arcade Machines will be defined during development and use a completely different interact function that loads a new godot scene that contains the built-in game, since it is loading a new scene, the main arcade simulation ends, so we will store the player's data within the temp file. When the game is complete and the player is send back to the arcade the arcade will load the player's data from the temp file. The player data stored will include; position, ticket count, token count, and purchased upgrades.
 
-### Instanced Arcade Machines
-Instanced arcade machines will use imported games and assets (see Initializing the program). they will...(todo)
+### 8.2 Instanced Arcade Machines
+Instanced arcade machines will use imported games and assets (see chapter 12). 
 
+Because the games that are played on the instanced arcade machines are stored externally as an executable, they will be run as a separate program. in order to communicate between the two programs we have developed a two way communication loop.
+
+The arcade only needs to send data when the arcade game is launched and only needs to recieve data when the arcade game is closed. 
+
+In order to send data as it launches it will send it within the launch arguements. 
+
+The main arcade will assume the external arcade game is running and pause itself. While paused it will only run a looping function that scans a temp file for updates. This temp file is how the arcade game sends data back to the main arcade application.
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
 # 9. Ticket Shop (TODO) <a name="section9"></a>
