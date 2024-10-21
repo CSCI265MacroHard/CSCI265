@@ -380,4 +380,13 @@ The arcade is currently still in a prototype stage. To transition it into the fi
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 15. Glossary (TODO) <a name="section15"></a>
+# 15. Glossary <a name="section15"></a>
+
+The terms "User" and "player" are referring to the end user of the product, an audience who are using the final software combined with games, for the purposes of recreation or historical research.
+
+The terms "developers" and "game developers" refer to the audience who will use the arcade software to host their games for the end user.
+
+### Acronyms
+ - NPCs | non-player characters.
+ - 3D and 2D | three dimensional and two dimensional respectively. Usually referring to an object's appearance.
+ - GUI | graphical user interface, generally a 2D overlay that displays information.
