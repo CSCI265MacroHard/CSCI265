@@ -137,16 +137,24 @@ For ease of development and to reduce coupling, most transfering of variables, r
 
 The arcade scene will include all nodes that control it's environment as well as connections to builtin and imported arcade games. include:
 
-- 3D Environment and Lighting@
-- The Gridmap@ (just What a gridmap does, functionality in other chapters)
-- Audio@
-- Built-in NPCs (functionality in other chapters)
-- Built-in Arcade Machines (functionality in other chapters)
-- Instanced Arcade Machines (functionality in other chapters)
-- Ticket Shop (functionality in other chapters)
-- Exit Door@
-
-(write how all nodes with @ next to them work)
+- **3D Environment:**
+    - **Lighting:** 
+        - To save performance, static meshes in the arcade have pre-baked [Lighting/Shadows](https://docs.godotengine.org/en/stable/tutorials/3d/lights_and_shadows.html). 
+        - Dynamic elements(NPCs, player) may have real-time lighting, performance dependant, if too costly, radial shadows cast under the object can be used.
+    - **The Gridmap:** 
+        - [GridMaps](https://docs.godotengine.org/en/stable/classes/class_gridmap.html) allow for a set of objects (called a [MeshLibrary](https://docs.godotengine.org/en/stable/classes/class_meshlibrary.html#class-meshlibrary)) to be placed upon a matrix within the game scene. 
+        - The Arcade environment will be assembled out of these objects, enabling easier/automated future expansions.
+        - Mesh libraries contain an object's collision, material, and mesh properties and are best for static environmental use.
+    - **Audio:**
+        - Godot's [AudioStreamPlayer3D](https://docs.godotengine.org/en/stable/classes/class_audiostreamplayer3d.html) has directional/positional audio by default, based on the relative position of the camera within the 3D space.
+        - Variables like 'Max Distance', 'Emission Angle', and 'Attenuation Model' will be used to ensure the player doesn't have an overwhelming amount of sounds playing at once, while keeping the experience immersive/realistic.
+- **Exit Door:** 
+    -   A physical door within the arcade that acts as an 'exit game' button when interacted with (prompts user if they want to quit).
+- Other components important to the Arcade Scene:
+    - [**Built-in NPCs**](#section7)
+    - [**Premade Arcade Machines**](#81-premade-arcade-machines) 
+    - [**Instanced Arcade Machines**](#82-instanced-arcade-machines) 
+    - [**Ticket Shop**](#section9) 
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
