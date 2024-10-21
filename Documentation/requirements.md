@@ -208,7 +208,7 @@ As highlighted briefly from the last presentation on risks, we are scaling down 
 - a working booth for token exchange,
 - background retro music,
 - game progress is saved,
-- a workable arcade environment (2D).
+- a workable arcade environment (3D).
 
 ### Secondary Features
 
@@ -216,7 +216,6 @@ In case the group still have time to make more features:
 
 - more NPCs that could interact,
 - more games,
-- 3D arcade environment (this is being worked on, with progress already, but a falldown for a 2D is applicable),
 - a good UX for the game and booth, and
 - higher detailed character visuals for games (the group was thinking of lower bit).
 
