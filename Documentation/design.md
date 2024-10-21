@@ -213,7 +213,11 @@ Blutsauger Superschlager is a minimalist, rogue-lite survival action game, heavi
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
 # 11. File structure (TODO) <a name="section11"></a>
-text....
+As we build each our game on our own, we are implementing a sorted by file type structure (see the diagram below). This will be easier for us to access assets, resources, scenes, and scripts as we implement our game. All the images used will be in the Assests, other files used will be in the Resources, scenes used will be in the Scenes, and scripts will in Scripts. As this would be easier for a protoype, this will be difficult to implement when games come all together where changes made for one game inadvertently affect other games, introducing bugs or inconsistencies.
+
+Hence, with the final file structure, we are implementing a sorted by feature file type structure. Instead of having all scripts, scenes, assets, and resources in their own folders for each game, we would be having all of those in their own folders for all games in the arcade. With files related to UI, all of those will be in UI folder with their own Assets, Resources, Scripts, and Scenes inside. This would be followed for every files inside the arcade (see the diagram below).
+
+With this implementation, it will be easier for us to expand and modify individual features without affecting unrelated parts. In addition, with expanding range of games, this will be a problem for what we are implementing in our prototype structure where files are sorted by type, can become overwhelming as you add more scripts, assets, or scenes, making it harder to keep track of which files belong to which feature. Overall, with sorted by file feature, it will be easier to debug, simplified testing and optimization, better scalability, easier version control, and better extrenal integration with developers uploading their games.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
