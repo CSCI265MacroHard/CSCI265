@@ -22,13 +22,29 @@ The following person has been designated the main contact person for questions f
 
 3. [ Core design influences ](#section3)
 
-4. [ Architectural design ](#section5)
+4. [ Architectural design ](#section4)
 
-5. [ Data design ](#section7)
+5. [ Arcade Scene ](#section5)
 
-6. [ Game state and flow of play ](#section8)
+6. [ Player Scene ](#section6)
 
-7. [ Transition to physical design ](#section9)
+7. [ NPC Scenes ](#section7)
+
+8. [ Arcade Machines ](#section8)
+
+9. [ Ticket Shop ](#section9)
+
+10. [ Built In Games ](#section10)
+
+11. [ File structure ](#section11)
+
+12. [ Initializing the program ](#section12)
+
+13. [ Game state and flow of play ](#section13)
+
+14. [ Transition to physical design ](#section14)
+
+15. [ Glossary ](#section15)
 
 
 # 1. Known issues/omissions (TODO) <a name="section1"></a>
@@ -46,7 +62,7 @@ text....
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-## 4. Architectural Design (TODO) <a name="section4"></a>
+# 4. Architectural Design (TODO) <a name="section4"></a>
 
 Our program will be composed of many different scenes* that are responsible for different parts of the system. these components will be separated by scene and all will be contained within the main Arcade scene's tree
 
@@ -66,7 +82,7 @@ text....
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-## 5. Arcade Scene (TODO) <a name="section5"></a>
+# 5. Arcade Scene (TODO) <a name="section5"></a>
 
 The arcade scene will include all nodes that control it's environment as well as connections to builtin and imported arcade games. include:
 
@@ -83,7 +99,7 @@ The arcade scene will include all nodes that control it's environment as well as
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-## 6. Player Scene (TODO) <a name="section6"></a>
+# 6. Player Scene (TODO) <a name="section6"></a>
 
 The Player scene is composed of 3 parts:
 
@@ -114,7 +130,7 @@ Player data will be stored as... and changed by...(todo)
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-## 7. NPC Scenes (TODO) <a name="section7"></a>
+# 7. NPC Scenes (TODO) <a name="section7"></a>
 
 There will be a two NPC scene types designed for the software:
 
@@ -147,7 +163,7 @@ Will react when the player... by...
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-## 8. Arcade Machines (TOTO) <a name="section8"></a>
+# 8. Arcade Machines (TOTO) <a name="section8"></a>
 
 There will be two kinds of arcade machines while nearly functionally identical to the user, under the hood they behave differently:
 
@@ -164,7 +180,7 @@ Instanced arcade machines will use imported games and assets (see Initializing t
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-### 9. Ticket Shop (TODO) <a name="section9"></a>
+# 9. Ticket Shop (TODO) <a name="section9"></a>
 
 The ticket shop implimentation will be...(todo)
 
@@ -174,7 +190,7 @@ The interface will work by using arrays blah blah blah... i don't know (todo)
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-## 10. Built In Games (TODO EVERYONE) <a name="section10"></a>
+# 10. Built In Games (TODO EVERYONE) <a name="section10"></a>
 
 The Arcade will feature built-in games developed by us in our personal time. here we are providing a brief description of the games and their token cost/ticket reward but it is not our plan to document them in detail since they are all solo projects
 
@@ -184,8 +200,8 @@ The Arcade will feature built-in games developed by us in our personal time. her
 (Pool clone)
 ### Bruce The Bruiser's Bollywood Beatdown Bonanza - a Bharat Brawl (Bruce)
 (Street fighter clone)
-### Blutsauger Superschlager (Marek)
-(Vampire survivors clone)
+### Blutsauger Superschlager 
+Blutsauger Superschlager is a minimalist, rogue-lite survival action game, heavily inspired by Vampire Survivors. Players face waves of monsters in a pixel-art world, controlling a character who automatically attacks while focusing on dodging enemies and collecting power-ups. Defeated enemies drop gems that grant experience points, which can be used to unlock new abilities, weapons, and upgrades. The gameplay emphasizes strategic movement and quick decision-making as enemy hordes grow in size and strength over time. Though it's a clone of Vampire Survivors, its fast-paced combat and addictive progression system offer a familiar yet thrilling challenge.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
@@ -194,7 +210,7 @@ text....
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-## 12. Initializing the program (ALISTER) <a name="section12"></a>
+# 12. Initializing the program (ALISTER) <a name="section12"></a>
 
 When the program launches there will be a setup process before the user may interact with the software.
 
@@ -213,8 +229,9 @@ text....
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 14. Transition to physical design (TODO) <a name="section14"></a>
-text....
+# 14. Transition to physical design <a name="section14"></a>
+
+The arcade is currently still in a prototype stage. To transition it into the finished game, the listed design choices will be converted into a feature list. Each feature on the list will encapsulate a specific function of the game, clearly defined in its description. By listing features in this way, it won’t matter which team member works on them, as long as they adhere to the defined description. This workflow will shift the project to a feature-based implementation, aligning more closely with the agile work model we aspire to. The feature list will be managed in GitHub’s project manager, which is already being used for planning the documentation. After that, the feature descriptions can also be used to create standardized tests for all new functions and releases. Another key focus for the next phase of the project is developing a framework for integrating games into the arcade. Once the first game is implemented, the process will be documented and standardized.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
