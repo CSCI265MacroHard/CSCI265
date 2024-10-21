@@ -211,8 +211,9 @@ The Arcade will feature built-in games developed by us in our personal time. her
 ### Jetris / The Pinaytrix (Jamie)
 Jetris is a clone of the classic Tetris, featuring falling tetromino blocks that players rotate and move to create complete horizontal lines. When a line is cleared, it disappears, and the blocks above shift down. As the game progresses, the speed increases, challenging players to keep up. The game ends when the blocks stack up to the top. Jetris includes classic features like score-based line clears and a next-piece preview. More features will be added once the implementation of the game is done like background music and cool animations.
 
-### 2Cool4Pool / Poking balls with a stick (pool)
-(Pool clone)
+### 2Cool4Pool
+2Cool4Pool is a bird's eye view recreation of pool. With an easy to understand set of rules but deceptively complex physics, there is a low skill floor but a high skill ceiling. The token cost to play pool will be 1 and the amount of tickets earned will be based on how many turns it took you to sink all the balls.
+
 ### Scrap 
 Scrap is a 2-D fighting game with two players. One player on the left and the other on the right. They must fight to the death. characters can string combos with multiple attacks and players will have the option of a combo breaker once per round. different characters will have different attacks and combos allowing for modular content where matchups can be different.
 
