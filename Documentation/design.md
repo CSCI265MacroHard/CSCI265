@@ -112,7 +112,7 @@ These design influences help shape how the game is built, keeping it simple, eff
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 4. Architectural Design (TODO) <a name="section4"></a>
+# 4. Architectural Design <a name="section4"></a>
 
 Our program will be composed of many different scenes* that are responsible for different parts of the system. these components will be separated by scene and all will be contained within the main Arcade scene's tree.
 
@@ -150,7 +150,7 @@ The arcade scene will include all nodes that control it's environment as well as
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 6. Player Scene (TODO) <a name="section6"></a>
+# 6. Player Scene <a name="section6"></a>
 The Player scene is composed of 3 parts:
 
 - The movement module
