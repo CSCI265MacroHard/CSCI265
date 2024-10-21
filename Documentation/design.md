@@ -150,15 +150,16 @@ These Template NPC's will be implemented for a plethora of use cases. They will 
 ### Custom NPCs:
 
 ### BruceNPC:
--When Interacted with, he will change from a standing sprite to a speaking sprite where he will chat with you about games in the arcade. He will simply ask questions and record the answers later to be used as feedback for improvements of the arcade.
--If the player picks specific dialogue, Bruce will react by giving a special record to add to the jukebox
+- When Interacted with, he will change from a standing sprite to a speaking sprite where he will introduce himself as the shopkeeper.
+- He will react with a shop menu with the different powerups, add-ons and other purchasable items for tickets.
+- For more information go to Ticket Shop, Chapter 9.
 
 ### NateNPC:
--When interacted with, he will change from a hunched over sprite to a scared sprite. He will start a dialogue which will span for a long long long time.
--If the player tries to leave the dialogue, Nate will then follow the player for some time
+- When Interacted with, he will change from a standing sprite to a speaking sprite where he will chat with you about games in the arcade. He will simply ask questions and record the answers later to be used as feedback for improvements of the arcade.
+- If the player picks specific dialogue, Bruce will react by giving a special record to add to the jukebox
 
 ### AlisterNPC:
-When interacted with, he will bring about a tutorial of sorts for the player to get to grips with how to play games in the arcade and help with information on the arcade.
+- When interacted with, he will bring about a tutorial of sorts for the player to get to grips with how to play games in the arcade and help with information on the arcade.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
@@ -188,11 +189,11 @@ The main arcade will assume the external arcade game is running and pause itself
 
 # 9. Ticket Shop (TODO) <a name="section9"></a>
 
-The ticket shop implimentation will be...(todo)
-
-The player's ticket amount will go down after... which is stored in...(see player scene chapter)... (todo)
-
-The interface will work by using arrays blah blah blah... i don't know (todo)
+- Ticket Shop will be implemented with BruceNPC, he will open a shop menu when interacted with.
+- The Ticket amount will go down upon making a purchase and Prices will be set by MacroHard
+- Purchasable items include buffs/power ups for games, new games, new background music.
+- The UI will be done with a 2D tilemap and arrays in order to create interactable buttons to hit to purchase items.
+- Before making a purchase, a confirmation message box will pop up so you can confirm your purchase.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
@@ -204,8 +205,9 @@ The Arcade will feature built-in games developed by us in our personal time. her
 (tetris clone)
 ### 2Cool4Pool / Poking balls with a stick (pool)
 (Pool clone)
-### Bruce The Bruiser's Bollywood Beatdown Bonanza - a Bharat Brawl (Bruce)
-(Street fighter clone)
+### Scrap 
+Scrap is a 2-D fighting game with two players. One player on the left and the other on the right. They must fight to the death. characters can string combos with multiple attacks and players will have the option of a combo breaker once per round. different characters will have different attacks and combos allowing for modular content where matchups can be different.
+
 ### Blutsauger Superschlager 
 Blutsauger Superschlager is a minimalist, rogue-lite survival action game, heavily inspired by Vampire Survivors. Players face waves of monsters in a pixel-art world, controlling a character who automatically attacks while focusing on dodging enemies and collecting power-ups. Defeated enemies drop gems that grant experience points, which can be used to unlock new abilities, weapons, and upgrades. The gameplay emphasizes strategic movement and quick decision-making as enemy hordes grow in size and strength over time. Though it's a clone of Vampire Survivors, its fast-paced combat and addictive progression system offer a familiar yet thrilling challenge.
 
