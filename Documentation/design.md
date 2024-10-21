@@ -58,7 +58,7 @@ In this section, we list any currently known errors, omissions, or other issues 
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 2. Product overview (TODO) <a name="section2"></a>
+# 2. Product overview <a name="section2"></a>
 Welcome to the Virtual Arcade, a cutting-edge online gaming platform that brings the thrill of arcade gaming directly to you. With a diverse selection of classic and modern games and immersive environments, the Virtual Arcade offers an unparalleled gaming experience for players of all ages.
 
 - Access a wide range of games, from beloved retro classics like Mortal Kombat and tetris to modern games such as vampire survivors Regular updates with new games and genres ensure there's always something fresh to play.
