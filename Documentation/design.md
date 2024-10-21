@@ -133,7 +133,7 @@ For ease of development and to reduce coupling, most transfering of variables, r
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 5. Arcade Scene (TODO) <a name="section5"></a>
+# 5. Arcade Scene <a name="section5"></a>
 
 The arcade scene will include all nodes that control it's environment as well as connections to builtin and imported arcade games. include:
 
