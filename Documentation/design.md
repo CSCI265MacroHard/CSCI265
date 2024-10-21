@@ -192,6 +192,10 @@ In order to send data as it launches it will send it within the launch arguement
 
 The main arcade will assume the external arcade game is running and pause itself. While paused it will only run a looping function that scans a temp file for updates. This temp file is how the arcade game sends data back to the main arcade application.
 
+![Communication Loop](pics/communication_loop.png)
+
+When it detects a change in the temp file it will copy the data and then clear the file and resume the main arcade simulation. The player score given will be converted and added to the player's ticket count. 
+
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
 # 9. Ticket Shop <a name="section9"></a>
