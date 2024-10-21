@@ -114,21 +114,22 @@ These design influences help shape how the game is built, keeping it simple, eff
 
 # 4. Architectural Design (TODO) <a name="section4"></a>
 
-Our program will be composed of many different scenes* that are responsible for different parts of the system. these components will be separated by scene and all will be contained within the main Arcade scene's tree
+Our program will be composed of many different scenes* that are responsible for different parts of the system. these components will be separated by scene and all will be contained within the main Arcade scene's tree.
 
-- The Arcade Scene
-- The Player Scene
-- NPC Template Scene
-- Arcade Game Template Scene
-- Ticket Shop Scene
-- Premade NPC Scenes
-- Premade Arcade Machine Scenes
-- Built-in Game Scenes
-- Externally Stored Arcade Games
-  
-(talk about how all these scenes are connected but each will have it's own chapter as well)
+Godot's Scenes are classes that store all functionality within them as children nodes to the scene's root node, nodes can represent any kind of funcitonality from a texture file to a material for the physics engine to a light source.
+All nodes can have scripts attached to them.
 
-text....
+For ease of development and to reduce coupling, most transfering of variables, references, and other data will propagate downwards within a scene's tree. since all scene trees are stored within the main arcade scene when they are being used any functions of the program that require pulling data from multiple child scenes should should be stored in the script at the root of the main arcade scene. The following will list the positions of all main scenes that constitute the program.
+
+- The Arcade Scene is the main scene that handles and stores all other scenes. it also hase nodes itself that handle the environment, its physics, and its rendering. 
+- The Player Scene is located as a child node of the arcade scene and mainly contains nodes with scripts for movement, and interaction with other objecst within the arcade
+- NPC Template Scene is only located and loaded from the rescources before compilation for us to create more NPCs quickly
+- Arcade Game Template Scene is only located in the resources before compilation and is instanced as needed by the program
+- Ticket Shop Scene is located within the main arcade scene.
+- Premade NPC Scenes are manually placed within the main arcade scene
+- Premade Arcade Machine Scenes are manually placed within the main arcade scene
+- Built-in Game Scenes are located within the resources and only loaded when the premade arcade machines are interacted with
+- Externally Stored Arcade Games are not loaded or stored within the arcade scene at any point since they are external executables they must be run separately from the arcade application.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
