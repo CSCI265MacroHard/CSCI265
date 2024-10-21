@@ -47,8 +47,14 @@ The following person has been designated the main contact person for questions f
 15. [ Glossary ](#section15)
 
 
-# 1. Known issues/omissions (TODO) <a name="section1"></a>
-text....
+# 1. Known issues/omissions <a name="section1"></a>
+
+In this section, we list any currently known errors, omissions, or other issues with the rest of this design document.
+
+- The feature list has yet to be finalized. Its introduction will mark a significant shift in the project’s workflow, bringing much more clarity to each design element outlined below.
+- The game development is still in the proof of concept/prototype phase. As a result, development has been highly decentralized and has not yet adopted the planned Git workflow. This causes problems for the design process, as many features are being implemented before they have been properly documented.
+- Several arcade games are already deep into development but have not yet been implemented in the arcade. This is due to the lack of a standardized process for game implementation, which reflects a flaw in the current prioritization of development tasks. This delay also affects the clarification of the token and ticket shop interactions, as both need to be implemented before a concrete statement can be made.
+- A standardized method for implementing games has yet to be decided, making it difficult to provide clear guidelines on what a developer needs to get their game running in the arcade.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
@@ -188,7 +194,7 @@ The main arcade will assume the external arcade game is running and pause itself
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 9. Ticket Shop (TODO) <a name="section9"></a>
+# 9. Ticket Shop <a name="section9"></a>
 
 - Ticket Shop will be implemented with BruceNPC, he will open a shop menu when interacted with.
 - The Ticket amount will go down upon making a purchase and Prices will be set by MacroHard
@@ -198,7 +204,7 @@ The main arcade will assume the external arcade game is running and pause itself
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
-# 10. Built In Games (TODO EVERYONE) <a name="section10"></a>
+# 10. Built In Games <a name="section10"></a>
 
 The Arcade will feature built-in games developed by us in our personal time. here we are providing a brief description of the games and their token cost/ticket reward but it is not our plan to document them in detail since they are all solo projects
 
