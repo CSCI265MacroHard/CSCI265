@@ -220,7 +220,59 @@ The steps to initializing the software will mostly serve to accomodate any games
   - Scanning the external "arcade_games" folder for any games to add to the arcade
   - generating unique instances of the arcade machine template scene for each game found in the folder
   - Generating A file path to each game and placing it in it's respective instanced arcade machine scene's interact() function
-  - generating a 2d array
+- Generating Arcade Layout
+  - Creating a 2D array of map layout with room for all arcade games detected
+  - Detecting borders and connections to correctly place wall meshes
+  - converting array positions and values to instanced meshes on Godot's gridmap
+
+## 12.1 Importing Arcade Games
+
+When the program first launches the initialization function will be called to start the process. the first operation will be to scan the external folder for Any valid games provided by developers (see requirements document for needed rescources for adding a game) should all necessary files be there, a 2D array of strings that each store paths to all assets for each game will be generated. We will refer to this as the Game Files Array. 
+
+![Game Files Array](pics/import_array.png)
+
+The next step in the initialization process is to generate the arcade machines using the Game Files Array. Each Arcade Machine will be an instance of a pre-defined Arcade Machine template scene. The program will go through each outer position of the Game Files Array and create an instance of the arcade machine template scene with the current position's array of strings as a parameter until the entire array has been traversed.
+
+The template scene will have a script that runs when it is instanced. 
+- The instanced script will assign the path to the game's executable as the behaviour for the arcade machine's interact function. 
+- The path to the arcade machine's skin.png will be imported then placed on the base arcade machine's mesh
+- The Upgrades text file (Which has not been decided if we will use xml, Json, ect..) will be read to add clauses to the interact function should relevant upgrades be detected. The upgrade information will be sent to the arcade via launch arguements. See Chapter 8
+- Upgrades icon.png path is not used by the arcade machine instance but will be used by the ticket shop.
+
+Because all instances are being created within the main Arcade scene they will all currently have an overlapping position. They will be moved later in the generating layout step.
+
+## 12.2 Generating Layout
+
+[Godot Gridmaps](https://docs.godotengine.org/en/stable/classes/class_gridmap.html#class-gridmap) will handle the arcade environment's collision, meshes, and mesh instancing. We only have to provide it with a base set of meshes in the form of a [Mesh Library](https://docs.godotengine.org/en/stable/classes/class_meshlibrary.html#class-meshlibrary). We must define what cells within the gridmap we want occupied, what mesh is within those cells, and optionally the rotation, and transform of those meshes. Usually this is done within the editor by "painting" levels with our pallete of meshes, however; this must be done manually and doesn't work at runtime, so the following solution is required.
+
+The parameter for generating the layout will be the same Game Files Array used in the previous step. 
+
+This function will take the number of positions within the array and create a matrix of 2 character arrays to represent the layout. In order for the player to be able to navigate between the arcade machines, there are several adjacency rules that must be conformed to.
+
+The first step will be determining the placement of all arcade machines. The first loop of the array with, for instance, two arcade machines will look something like this should it be printed out:
+
+    [U,U] = undefined spaces
+    [0,2] = arcade machine instance 0 with enum direction 0-3 (north,south,east,west)
+
+    [U,U][U,U][U,U][U,U][U,U]
+    [U,U][0,2][U,U][1,3][U,U]
+    [U,U][U,U][U,U][U,U][U,U]
+
+Adjacency rules are enforced by comparing all array positions immediately adjacent to an arcade machine postion and all postions within the previous and next array. All adjacent cells should contain undefined spaces and arcade machines should never be at an end of an array without an empty space between. If a position passes the checks it will assign it as an arcade machine position until all arcade machines have a position.
+
+The second pass will determine what mesh from the mesh library should be used in the cells. The rules are to only assign wall mesh pieces at the edges of the array and all along the final array as well
+
+    [-,+] = Wall mesh with Southern Wall(back along x axis) and eastern wall(forward to the z axis)
+    [+,E] = Wall mesh with wall on the positive x side and no other walls.
+    [E,E] = no walls only floor tiles
+
+    [-,E][E,E][E,E][E,E][+,E]
+    [-,E][0,2][E,E][1,3][+,U]
+    [-,-][E,-][E,-][E,-][+,-]
+
+The third pass will be reading each cell's data and converting it to a cell position and mesh ID to place on the gridmap. When it finds a cell with arcade machine data, which would be anything that has a number instead of a character, it will place a floor tile mesh with no walls, then move the respective arcade machine with matching instance number to that position. 
+
+The layout generation should be complete after this step and, should we end up using Godot's baked lighting now would be the time to do it.
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
