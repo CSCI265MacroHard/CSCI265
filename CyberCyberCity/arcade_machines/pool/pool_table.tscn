@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2txhnfrcgwk0"]
+
+[ext_resource type="Script" path="res://arcade_machines/pool/pool_table.gd" id="1_birwg"]
+[ext_resource type="PackedScene" uid="uid://xmxnr58m4ghx" path="res://arcade_machines/pool/Pooltable.glb" id="2_6oexk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r3he0"]
+size = Vector3(2, 1, 4)
+
+[node name="PoolTable" type="StaticBody3D"]
+script = ExtResource("1_birwg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("BoxShape3D_r3he0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+skeleton = NodePath("../Pooltable")
+
+[node name="Pooltable" parent="." instance=ExtResource("2_6oexk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

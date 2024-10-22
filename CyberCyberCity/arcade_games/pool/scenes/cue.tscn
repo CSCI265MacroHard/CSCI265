@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ktl26ofe5vd3"]
+
+[ext_resource type="Script" path="res://arcade_games/pool/scripts/cue.gd" id="1_h56f3"]
+[ext_resource type="Texture2D" uid="uid://245unwcy5q5u" path="res://arcade_games/pool/assets/textures/cue mark 1-6xBR.png" id="2_v2j7t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmys2"]
+size = Vector2(10, 16)
+
+[node name="Cue" type="CharacterBody2D"]
+collision_mask = 0
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_h56f3")
+
+[node name="CueSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-445, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_v2j7t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dmys2")
+disabled = true
