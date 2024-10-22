@@ -1,6 +1,4 @@
-﻿
-
-# CSCI 265 Initial Project Proposal
+﻿# CSCI 265 Initial Project Proposal
 
 ## Team name: MacroHard
 
@@ -54,7 +52,7 @@ They will walk around the arcade on set paths and occaisionally create lines in 
 
 The ticket shop will offer players progression that persists between arcade games played. The progression will take form in purchasable power-ups, games, and difficulties.
 
-## Preliminary interface sketches TODO
+## Preliminary interface sketches
 The arcade machines, ticket shop booth, NPCs will be scattered around the 3D arcade environment to complete the experience. There will be guides to follow to which directions or what keys to use (WASD). The player can move sideways (3D) or up/down and left/right (2D). 
 
 ### Arcade Map
@@ -67,7 +65,6 @@ The overall gameplay will be smooth and easy to follow to focus more on providin
 
 The Ticket shop will be a 2D overlayed menu with a search bar.
 It will be an itemized list with pricing on the right hand side of the screen with a scrollable menu. It will offer a wide variety of items in a 2D png form. It will be accessible through the shop-keeper within the ticket shop. The tickets will be golden tickets much like what was found in old arcades.
-
 
 ## Scaling options
 Since most of the team members are new to "Godot", the core aspects of the game are capped to a minimum. These points represent the features that should be achievable even if major problems arise.
@@ -115,4 +112,3 @@ Integrating multiple separate instances of game scenes into our main arcade envi
 With so many different potential tasks and side components to this project, keeping the team on track and on the same page may prove challenging. Balancing out the workload on side games and the main arcade environment project, and figuring out how to evaluate the individual contribution of work amongst multiple components also raises concerns and will need solid team agreements and communication.
 
 The team's general inexperience with group work this complex might make organizing and planning challenging.
-

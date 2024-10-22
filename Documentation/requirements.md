@@ -28,24 +28,24 @@ The following person has been designated the main contact person for questions f
 
 6. [ Game interface, screens, and menus ](#section6)
 
-7. [ Feature prioritization ](#section7)
+7. [ Non-functional requirements ](#section7)
 
-8. [ Non-functional requirements ](#section8)
+8. [ Feature prioritization ](#section8)
 
 9. [ Glossary ](#section9)
 
-## Known issues/ Ommisions <a name="section1"></a>
+## 1. Known issues/ Ommisions <a name="section1"></a>
 
 As movements are already pre-determined for the arcade, the actual interface of the booth itself has not been talked about yet. In addition, the implementation of the mini-games in the arcade has not been brought up, as well as the amount and type of games that each member will bring to the table are not yet finalized. Games such as Pool, Street Fighter, and Vampire Survivors, each have their own set of progress has not been set in motion. Hence, raising a concern about the visuals as well as the Godot process. All of these will be rectified once the phase of development starts, and the team is already focused on the project and programming. 
 
 No errors and changes to the plan and interface were raised, but the group made notes on blame, pull, and push on git in case a member did such corrupt a document.
 
 ## 2. Game Overview  <a name="section2"></a>
-**Cyber Cyber City** seeks to bring you back the the 80s/90s with a historically inaccurate, first person simulation of an arcade. While the early 80s hosted the golden age of [Video Game Arcades](https://en.wikipedia.org/wiki/Amusement_arcade) , the decline into the late 90s lead to the rise of the [Redemption Game](https://en.wikipedia.org/wiki/Redemption_game#:~:text=Redemption%20games%20are%20typically%20arcade,a%20central%20location%20for%20prizes.), where players could be awarded tickets proportional to their score and then redeem said tickets for prizes.
+**Cyber Cyber City** seeks to bring you back the the 80s/90s with a historically inaccurate, first person simulation of an arcade. While the early 80s hosted the golden age of [Video Game Arcades](https://en.wikipedia.org/wiki/Amusement_arcade), the decline into the late 90s lead to the rise of the [Redemption Game](https://en.wikipedia.org/wiki/Redemption_game#:~:text=Redemption%20games%20are%20typically%20arcade,a%20central%20location%20for%20prizes.), where players could be awarded tickets proportional to their score and then redeem said tickets for prizes.
  
- **Cyber Cyber City** brings ~~the best of~~ both eras together, taking the elegance of traditional arcade video games along with the excitement of the pseudo-gambling redemption games, blending them into a primitive, engaging, and immersive experience where players can enjoy classic-style video games while being awarded tickets based on performance.
+**Cyber Cyber City** brings ~~the best of~~ both eras together, taking the elegance of traditional arcade video games along with the excitement of the pseudo-gambling redemption games, blending them into a primitive, engaging, and immersive experience where players can enjoy classic-style video games while being awarded tickets based on performance.
 
-  Central within the  **Cyber Cyber City** arcade is the prize booth/ticket shop, where players will be able to spend their hard earned tickets for prizes, unlocks, and collectables. The over-arching objective for our players may be to try unlocking/collecting everything within the prize booth/ticket shop, however, motivating the player to just have fun and diversely explore all the games available will be our objective as developers.
+Central within the **Cyber Cyber City** arcade is the prize booth/ticket shop, where players will be able to spend their hard earned tickets for prizes, unlocks, and collectables. The over-arching objective for our players may be to try unlocking/collecting everything within the prize booth/ticket shop, however, motivating the player to just have fun and diversely explore all the games available will be our objective as developers.
 
 ## 3. Target audience and motivation <a name="section3"></a>
 
@@ -63,7 +63,7 @@ The arcade itself in its most base form could be described as a very intricate 3
 
 Starting up the software will place the user at the entryway of a 3D arcade environment with a prompt of the controls used to navigate and interact with objects.
 
-arcades will have a token cost to play that is displayed on the front. when you interact with the machine it will automatically subtract the cost from the player's balance.
+Arcades will have a token cost to play that is displayed on the front. when you interact with the machine it will automatically subtract the cost from the player's balance.
 
 The arcade will have various arcade machines the user can walk up to and interact with to start up the machine's respective game. 
 
@@ -131,7 +131,6 @@ The walls have collision so that users bump into them instead of walking through
 
 ambient sounds will play from the arcade machines and from the NPCs and jukebox. 
 
-
 ### Movement and controls
 Users are placed directly into the 3D environment upon launching the program so an initial popup will show the controls to navigate the map. The controls within the arcade will be WASD to move forward, back and strafe left and right with the mouse to look around and left click to interact. there will also be an alternative control scheme for if the user has a controller connected.
 
@@ -149,26 +148,7 @@ NPCs are an important part of the immersion. NPCs will have certain behaviours a
  - providing tips and tricks. "you have to shoot where they're going to be", "to get more tickets, do better!"
  - Bail the player out if they run out of tokens
 
-## Introduction and overview
-
-Provide the reader with an introduction to the product: its purpose, its core features, what audience it is aimed at and how they'll be using it, and what platform(s) it is targeting.
-
-If the product has limitations that the user wouldn't expect then those should be mentioned as well.  (For example, if we were building a calculator but it couldn't handle real number calculations then we should probably warn the reader about that.)
-
-## Product features and behaviour
-
-This might be much like our original proposal but in far greater detail: we want to thoroughly explain/describe all aspects of the product's functionality: all the features and every aspect of its behaviour.
-
-Here the reader should be able to find the answer to any question along the lines of
-- How do I use feature X?
-- How do I enter data value Y?
-- What are the limits (if any) on what I enter for Z?
-- What does the product do if I enter an incorrect value?
-- What happens when I select W?"
-
-This section should be intuitive to follow if the reader is simply reading through the document to learn about the product, but it should also make it easy for the reader to quickly look up the answer to any specific question.
-
-## User interface and navigation
+## 6. User interface and navigation <a name="section6"></a>
 
 ### GUI
 
@@ -194,13 +174,7 @@ The ticket shop interface will be a 2D dimensional grid of squares with a scroll
 
 The jukebox interface will be a simplified version of the ticket shop interface but instead of multiple rows and columns of boxes it will be a single column that can be scrolled through to select songs names that appear stacked on top of eachother.
 
-## Use cases/scenarios
-
-Provide use cases detailing the different ways someone might actually want to use the product (e.g. a "sign in" use case, a "check balance" use case, a "make a deposit" use case, etc).
-
-Provide scenarios that illustrate the use cases in a practical example.  (E.g. Bob has $30 to deposit and wants to deposit it, check the balance, and if there is enough then transfer $100 to his savings account, ... then walk through the Bob's actions from sign-in to sign-out.)
-
-## Non-functional requirements <a name="section8"></a>
+## 7. Non-functional requirements <a name="section7"></a>
 
 Since this project includes the works of multiple different games by different developers, there are a few restrictions and standards that the games within in the arcade must follow to ensure the systems of the arcade can be implemented correctly.
 
@@ -222,11 +196,11 @@ Other non-functional requirements to keep in mind include:
 - consistent 3D object model complexity
 - consistent audio file size
 
-## Feature prioritization <a name="section7"></a>
+## 8. Feature prioritization <a name="section8"></a>
 
 As the group presented our proposal from Phase 1, there's a lot to wrap around initiating an arcade environment. This includes building each component from scratch, but assets that are available online could also help. However, a great deal of uncertainty to what elements are able to complete in just a 4-month duration is still a problem.
 
-Core Aspects
+### Core Aspects
 As highlighted briefly from the last presentation on risks, we are scaling down the process to a point where the group found these aspects a success:
 
 - at least 3 games, 
@@ -234,19 +208,18 @@ As highlighted briefly from the last presentation on risks, we are scaling down 
 - a working booth for token exchange,
 - background retro music,
 - game progress is saved,
-- a workable arcade environment (2D).
+- a workable arcade environment (3D).
 
-Secondary Features
+### Secondary Features
 
 In case the group still have time to make more features:
 
 - more NPCs that could interact,
 - more games,
-- 3D arcade environment (this is being worked on, with progress already, but a falldown for a 2D is applicable),
 - a good UX for the game and booth, and
 - higher detailed character visuals for games (the group was thinking of lower bit).
 
-Stretch goals
+### Stretch goals
 
 As the project itself sounds like a stretch already for just one semester, these feature are a great addition to the initial version and provide more experience for users.
 
@@ -256,7 +229,7 @@ As the project itself sounds like a stretch already for just one semester, these
 - more prizes
 - chat box
 
-## Glossary
+## 9. Glossary <a name="section9"></a>
 
 The terms "User" and "player" are referring to the end user of the product, an audience who are using the final software combined with games, for the purposes of recreation or historical research.
 
@@ -269,6 +242,6 @@ The terms "developers" and "game developers" refer to the audience who will use 
 
 ## Appendices
 
- Godot Documentation: https://docs.godotengine.org/en/stable/index.html#
+Godot Documentation: [https://docs.godotengine.org/en/stable/index.html](https://docs.godotengine.org/en/stable/index.html)
 
-GDScript Coding Standards: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html
+GDScript Coding Standards: [https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html)

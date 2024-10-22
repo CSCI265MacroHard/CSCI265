@@ -27,7 +27,7 @@ Each section includes discussion of how those standards/processes will be enforc
 - All documents will be proofread by each member at least once to make it final.
 - Documents will be discussed by all members in due time and to avoid conflict all members must bring there concerns up immediatly.
 - Team will use the documentation "pics" folder to store images for documentation.
-- All presentations for the different phases are saved in the "presentation" folder
+- All presentations for the different phases are saved in the "presentation" folder.
 - The mechanism for submitting document content/revisions is via a 'Pull request', as described in the version controlsection later in this document.
 
 ### Processes
@@ -39,12 +39,14 @@ Each section includes discussion of how those standards/processes will be enforc
 ## Coding standards and processes
 ### Standards
 - Everyone will be working using the software Godot 4.3.
-- The team is going to work with the game engine named Godot(Link: https://godotengine.org ).
+- The team is going to work with the game engine named [Godot](https://godotengine.org).
 - The team will be using GDScript within Godot for all programming realted work.
 - We will be referencing the [GDScipt style guide](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html).
+- In addition the team will use exported properties in Godot, this simplifies the programming process. More infos can be found under [GDScript exported properties](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_exports.html)
 
-  ### Processes
+### Processes
 - The team will be referencing the [Godot documentation](https://docs.godotengine.org/en/stable/index.html) for all coding.
+- The file structure of the game files will be organized by function and not by file type.
 - The team will be working together on the 3D Arcade hub world and complete this within Godot.
 - The team will then split up and work separatly on each game within the arcade.
 - After each game is working as intended, the visual head will take over and create sprites and other front end work for each game.
@@ -71,4 +73,3 @@ Each section includes discussion of how those standards/processes will be enforc
 - Upon all tests being completed, the version will be sent to the Main/Master Branch and Development Branch for new features.
 - If the Main/Master Branch has a massive problem/bug it will be pulled into the Hotfix Branch and the fix will be made as soon as possible. After this, the new version will be pushed into both the main and Development Branch.
 - The Development Branch will now be taking the hotfix and incorporating this with any new features added.
-

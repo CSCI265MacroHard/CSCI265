@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://q0o0h8frk75o"]
+
+[ext_resource type="Script" path="res://arcade_environment/scripts/arcade.gd" id="1_o64ea"]
+[ext_resource type="PackedScene" uid="uid://dwja5xqxegwlj" path="res://player/scenes/player.tscn" id="2_pqau1"]
+[ext_resource type="MeshLibrary" uid="uid://dy1rhbvkhsf8s" path="res://arcade_environment/assets/meshLibArcade.tres" id="3_edx7e"]
+[ext_resource type="PackedScene" uid="uid://d1wcgrd7e86fn" path="res://npcs/bruce/npc.tscn" id="4_rp3cb"]
+[ext_resource type="PackedScene" uid="uid://b2txhnfrcgwk0" path="res://arcade_machines/pool/pool_table.tscn" id="5_fha27"]
+
+[sub_resource type="Environment" id="Environment_ha2rx"]
+ambient_light_source = 1
+volumetric_fog_density = 0.09
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_mstqf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_or4n1"]
+
+[node name="Arcade" type="Node3D"]
+script = ExtResource("1_o64ea")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ha2rx")
+camera_attributes = SubResource("CameraAttributesPractical_mstqf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.662228, 0, -0.749303, 0, 1, 0, 0.749303, 0, 0.662228, 0, 5.58145, -1.66806)
+shadow_enabled = true
+sky_mode = 1
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("3_edx7e")
+physics_material = SubResource("PhysicsMaterial_or4n1")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65535, 0, 1441792, 65534, 0, 1441792, 65534, 65535, 1441792, 65533, 65535, 1441792, 65533, 65534, 1441792, 65534, 65534, 1441792, 65535, 65534, 1441792, 0, 65534, 1441792, 0, 65535, 1441792, 0, 0, 1441792, 0, 1, 1441792, 65535, 1, 1441792, 65534, 1, 1441792, 65533, 1, 1441792, 65533, 0, 1441792, 65535, 65535, 1441792, 1, 65534, 1441792, 1, 65535, 1441792, 1, 0, 1441792, 0, 2, 1441792, 65535, 2, 1441792, 65534, 2, 1441792, 65533, 2, 1441792, 1, 65533, 1441792, 0, 65533, 1441792, 65535, 65533, 1441792, 65534, 65533, 1441792, 65533, 65533, 1441792, 65532, 2, 4, 65532, 1, 4, 65532, 0, 4, 65532, 65535, 4, 65532, 65534, 4, 65532, 65533, 4, 2, 65532, 5, 65532, 3, 8, 2, 65533, 3, 2, 65534, 3, 2, 65535, 3, 2, 0, 3, 2, 1, 3, 2, 2, 3, 65533, 65532, 1, 65534, 65532, 1, 65535, 65532, 1, 0, 65532, 1, 1, 65532, 1, 65532, 65532, 7, 65533, 4, 4, 65533, 5, 4, 65533, 6, 4, 65533, 3, 0, 65534, 4, 3, 65534, 5, 3, 65534, 6, 3, 65534, 3, 0, 65535, 3, 2, 0, 3, 2, 1, 1, 0, 1, 2, 0, 2, 3, 6, 1, 3, 2, 65534, 7, 6, 65533, 7, 8)
+}
+metadata/_editor_floor_ = Vector3(0, -5, 0)
+
+[node name="NPC" parent="." instance=ExtResource("4_rp3cb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92785, 2.12079, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_pqau1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35301, 0)
+
+[node name="PoolTable" parent="." instance=ExtResource("5_fha27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.76248)
