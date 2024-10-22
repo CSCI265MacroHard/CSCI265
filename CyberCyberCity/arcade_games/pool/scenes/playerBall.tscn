@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfikul3pqfy03"]
+
+[ext_resource type="Script" path="res://arcade_games/pool/scripts/playerBall.gd" id="1_cdmih"]
+[ext_resource type="Texture2D" uid="uid://bye636yb0jb6n" path="res://arcade_games/pool/assets/textures/poolball-6xBR (1).png" id="2_kakge"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fop1b"]
+bounce = 0.98
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwi41"]
+radius = 38.0
+
+[node name="playerBall" type="RigidBody2D"]
+mass = 0.16
+physics_material_override = SubResource("PhysicsMaterial_fop1b")
+gravity_scale = 0.0
+linear_damp_mode = 1
+linear_damp = 0.3
+script = ExtResource("1_cdmih")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kakge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rwi41")

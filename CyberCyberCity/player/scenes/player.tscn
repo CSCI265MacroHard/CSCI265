@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwja5xqxegwlj"]
+
+[ext_resource type="Script" path="res://player/scripts/player.gd" id="1_kj5dk"]
+[ext_resource type="Script" path="res://player/scripts/player_looking.gd" id="2_u3orc"]
+[ext_resource type="AudioStream" uid="uid://c8y3ruv6bxair" path="res://arcade_environment/assets/audio/error_sound-221445.mp3" id="3_1m578"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l3iwg"]
+
+[node name="Player" type="CharacterBody3D"]
+wall_min_slide_angle = 0.0
+script = ExtResource("1_kj5dk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_l3iwg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+target_position = Vector3(0, 0, -2)
+script = ExtResource("2_u3orc")
+
+[node name="Beep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1m578")
+pitch_scale = 2.44

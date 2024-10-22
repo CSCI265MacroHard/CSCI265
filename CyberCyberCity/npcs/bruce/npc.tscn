@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1wcgrd7e86fn"]
+
+[ext_resource type="Script" path="res://npcs/bruce/npc.gd" id="1_kghxl"]
+[ext_resource type="Texture2D" uid="uid://1uk2nwgm56ut" path="res://npcs/bruce/bruceGives.png" id="2_qi88x"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oka48"]
+friction = 0.6
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qmsac"]
+
+[node name="NPC" type="RigidBody3D"]
+mass = 0.011
+physics_material_override = SubResource("PhysicsMaterial_oka48")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -2, 0)
+script = ExtResource("1_kghxl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_qmsac")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+double_sided = false
+texture_filter = 2
+texture = ExtResource("2_qi88x")
