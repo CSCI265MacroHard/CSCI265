@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://q0o0h8frk75o"]
+[gd_scene load_steps=8 format=3 uid="uid://q0o0h8frk75o"]
 
-[ext_resource type="Script" path="res://arcade_environment/scripts/arcade.gd" id="1_o64ea"]
 [ext_resource type="PackedScene" uid="uid://dwja5xqxegwlj" path="res://player/scenes/player.tscn" id="2_pqau1"]
 [ext_resource type="MeshLibrary" uid="uid://dy1rhbvkhsf8s" path="res://arcade_environment/assets/meshLibArcade.tres" id="3_edx7e"]
 [ext_resource type="PackedScene" uid="uid://d1wcgrd7e86fn" path="res://npcs/bruce/npc.tscn" id="4_rp3cb"]
@@ -15,7 +14,6 @@ volumetric_fog_density = 0.09
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_or4n1"]
 
 [node name="Arcade" type="Node3D"]
-script = ExtResource("1_o64ea")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ha2rx")

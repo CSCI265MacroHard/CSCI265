@@ -81,7 +81,7 @@ func _jump(delta: float) -> Vector3:
 func _interact() -> void:
 	if $Camera3D/RayCast3D.is_colliding():
 		if $Camera3D/RayCast3D.get_collider().has_method("interact"):
-			print($Camera3D/RayCast3D.get_collider().interact())
+			$Camera3D/RayCast3D.get_collider().interact()
 		else:
 			$Beep.play()
 

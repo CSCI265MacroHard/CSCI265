@@ -11,4 +11,7 @@ func _process(delta):
 	pass
 
 func interact():
-	linear_velocity.y = 5
+	linear_velocity.y = 1
+	var output = []
+	print(Global.games["pool"]["game"])
+	OS.execute(Global.games["pool"]["game"], output)
