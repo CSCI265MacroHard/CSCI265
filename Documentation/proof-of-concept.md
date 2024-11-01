@@ -30,8 +30,14 @@ The 3D environment was the first hurdle in the game's implementation. Our main c
 ## 1.2 Video streaming Audio/Lighting (Nick TODO)
 Text...
 
-## 1.3 Ticket Shop UI (Jamie TODO)
-Text...
+## 1.3 Ticket Shop UI
+Since the team wanted to bring out a real arcade experience by implementing spatial sounds and interactable NPCs, the User Interface for the Ticket Shop would mainly focus on bringing that experience.
+
+Imagine you have a unrightful amount of ticket, and you wanted to see what you could buy from the shop from your tickets. You walked to the shop excited with the items you see. All those hardwork will paid off with a chocolate bar or a stuffie. The shop person assists you and ask if you wanted to purchase more ticket or exchange prizes. Those interaction with the shop keep, excitement, checking to see if you have the right amount of ticket, feeling the eagerness to buy something worthy but its too expensive, wanting to get back and play more, and happiness when you got what you wanted are the main objectives for the implementation. We would work on that case scenario, and build/define an interface. 
+
+### Technical challenge
+- This will become an issue when more items are put inside the shop. For the final shop, we would implement more of grid box, that expands on its own depends on the number of items. 
+
 
 ## 1.4 Communication loop and importing programs (Alister TODO)
 Text...
@@ -54,8 +60,12 @@ At the outset, we developed a backup plan in case we were unable to create the 3
 ## 2.2 Video streaming Audio/Lighting (Nick TODO)
 Text...
 
-## 2.3 Ticket Shop UI (Jamie TODO)
-Text...
+## 2.3 Ticket Shop UI
+To have a generative prizes to go on the shop rather than a manually putting it, we would touch on the basic of how the Tetris game was formed.
+
+- Would touch more on the implementation of the Tetris game, where blocks are populated inside the 2D game grid.
+- Define the shop grid with 5 columns (prizes icon in the same sizes) and a row integer that doubles when row capacity is reached.
+- Defining shop cells as grid slots with piece position,  create an add item node to the grid and set up the position logic.
 
 ## 2.4 Communication loop and importing programs (Alister TODO)
 Text...
@@ -79,8 +89,10 @@ Finally, we needed to test that the player could actually enter an arcade game t
 ## 3.2 Video streaming Audio/Lighting (Nick TODO)
 Text...
 
-## 3.3 Ticket Shop UI (Jamie TODO)
-Text...
+## 3.3 Ticket Shop UI 
+Since Godot supports User Interface, for the prototype we just implemented a scroll container, horizontal box, and a vertical box. Use hierarchy to make the shop grid and populate it with Godot icons, which will be later on replaced by the image itself. The shop keep was grabbed from an existing asset already available on our NPCs directory.
+
+Moving forward, we plan to develop additional assets specifically for the shop, including tickets for purchases, basic prize items, and a themed background that aligns with the shop's visual style. Our goal is to maintain a simple yet fully functional design that effectively demonstrates the shop’s concept and usability.
 
 ## 3.4 Communication loop and importing programs (Alister TODO)
 Text...
@@ -99,7 +111,9 @@ The proof of concept was a success, bringing the foundational features to life. 
 Text...
 
 ## 4.3 Ticket Shop UI (Jamie TODO)
-Text...
+As a proof of result, the image below shows a working protype composed of only containers. It doesn't have any functionality yet. 
+
+![Ticket Shop UI](pics/TicketShopUI-Prototype.png)
 
 ## 4.4 Communication loop and importing programs (Alister TODO)
 Text...
