@@ -196,6 +196,8 @@ Other non-functional requirements to keep in mind include:
 - consistent 3D object model complexity
 - consistent audio file size
 
+External developers will store their game files outside of the main game directory. The game executable will then access these files to integrate the games into the arcade. This approach is designed to protect the arcade's source code and simplify the process of adding new games to the arcade.
+
 ## 8. Feature prioritization <a name="section8"></a>
 
 As the group presented our proposal from Phase 1, there's a lot to wrap around initiating an arcade environment. This includes building each component from scratch, but assets that are available online could also help. However, a great deal of uncertainty to what elements are able to complete in just a 4-month duration is still a problem.
