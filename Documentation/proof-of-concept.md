@@ -27,16 +27,16 @@ Each of these aspects is essential for realizing the game's vision or plays a co
 
 The 3D environment was the first hurdle in the game's implementation. Our main concern was whether it would be possible to program a 3D game within the semester's timeframe. The focus of this issue was creating a 3D environment that allowed players to move around within it.
 
-## 1.2 Video streaming Audio/Lighting (Nick TODO)
-## Implementation of VideoStreamPlayer in Godot
+## 1.2 Video streaming Audio/Lighting
+Implementation of VideoStreamPlayer in Godot
 - Lack of built in functionality (no downscaling, video seeking, directional audio) 
 - Only supports ogg/ogv video format
-## Creating a process for obtaining optimized video previews in ogv format.
+Creating a process for obtaining optimized video previews in ogv format.
 - Recording in OBS in mp4 format, what are the best settings?
 - Best methods to convert? Ideal FPS? Ideal Resolution? 
 - What is our size limit? (2mb arbitrarily) How long of a preview does that give?
-## Preview video itself: Customizable UI for flashing "Press Start!" Or "Insert Coin!" 
-## Need a cabinet to put the preview on! (solidifies aspect ratio and scale)
+Preview video itself: Customizable UI for flashing "Press Start!" Or "Insert Coin!" 
+Need a cabinet to put the preview on! (solidifies aspect ratio and scale)
 
 ## 1.3 Ticket Shop UI
 Since the team wanted to bring out a real arcade experience by implementing spatial sounds and interactable NPCs, the User Interface for the Ticket Shop would mainly focus on bringing that experience.
@@ -46,8 +46,7 @@ Imagine you have a unrightful amount of ticket, and you wanted to see what you c
 ### Technical challenge
 - This will become an issue when more items are put inside the shop. For the final shop, we would implement more of grid box, that expands on its own depends on the number of items. 
 
-
-## 1.4 Communication loop and importing programs (Alister TODO)
+## 1.4 Communication loop and importing programs
 The importing of resources for games is done in the form of file paths as strings. This makes referencing them easier but adds complexity when we need to decide at what part of the process to convert the file path into an asset that can be used within the program. 
 
 The full communication loop is not setup because there is a lot involved in what data and how to send this data to an external application. further prototyping will require setting up an external application to be able to recieve launch arguements before we can test sending them from the main system. Concatination of string paths to the executables proves that sending information is possible.
@@ -55,7 +54,6 @@ The full communication loop is not setup because there is a lot involved in what
 ## 1.5 Arcade Layout Generation
 Arcade Layout will be generated based on the number of arcade games. It will be generated in the  grid format of Godot.
 The layout will be generated with the algorithm W = M * 2 + 2, Where W is the width of the grid map and M is the number of Arcade Machines. The height will be set by us the Developers as an arbitrary constant.
-
 
 # 2. Approach to meet each challenge
 
@@ -70,8 +68,6 @@ At the outset, we developed a backup plan in case we were unable to create the 3
 
 ## 2.2 Video streaming Audio/Lighting 
 
-
-
 ## 2.3 Ticket Shop UI
 To have a generative prizes to go on the shop rather than a manually putting it, we would touch on the basic of how the Tetris game was formed.
 
@@ -79,14 +75,13 @@ To have a generative prizes to go on the shop rather than a manually putting it,
 - Define the shop grid with 5 columns (prizes icon in the same sizes) and a row integer that doubles when row capacity is reached.
 - Defining shop cells as grid slots with piece position,  create an add item node to the grid and set up the position logic.
 
-## 2.4 Communication loop and importing programs (Alister TODO)
+## 2.4 Communication loop and importing programs
 Originally when collecting N amount of games within an external folder we planned to use a 2 dimensional array, however; multi-dimensional arrays in GDScript are unecessary and more complex than GDScript's built in dictionary type. After struggling with trying to type set arrays I discovered that it was actually only type hinting and completely unecessary. Dictionaries proved easier to implement, read, and interate on. Once this module was complete then the communication loop was setup after using the dictionary generated from the importing module as a base. 
 
 The main priority for the communication loop was ensuring that programs could be launched using OS commands, proving this was possible leads into launching with arguements. From there the recieving end of communication loops can be built off once a template game is created to send data to a shared-access temp file. The implementing writing to a file prototype will be heavily based off what was learned about reading and importing files earlier.
 
 ## 2.5 Arcade Layout Generation
 The Grid will be first in array form and converted into the grid map. The array will be encoded with cells in the form (+/-,+/-) + meaning North or East depending on which coordinate it is in. - meaning South or West Respectively. Each direction means the walls would be in that direction. If neither + nor - is used the tile will have no walls and instead just have a floor. Arcade machine tiles will have only the floor tile and arcade machine on them.
-
 
 # 3. Assets produced
 
@@ -114,7 +109,7 @@ Since Godot supports User Interface, for the prototype we just implemented a scr
 
 Moving forward, we plan to develop additional assets specifically for the shop, including tickets for purchases, basic prize items, and a themed background that aligns with the shop's visual style. Our goal is to maintain a simple yet fully functional design that effectively demonstrates the shop’s concept and usability.
 
-## 3.4 Communication loop and importing programs (Alister TODO)
+## 3.4 Communication loop and importing programs
 Currently the importing module and the First half of the communication loop have been produced connected to the original 3D environment.
 
 The importing module scans an internal "games" folder(or external one within a shared directory of the compiled program). It produces a dictionary list of all detected valid game folders as well as an array of paths stored as strings to each asset. it then traverses the entire dictionary and instatiates a template arcade machine that fills in it's generic executable path and image textures with assets imported using the respective paths. the instanced arcade machines are given random x,z positions currently but once connected to the layout generation module those positions will be set by that.
@@ -123,8 +118,6 @@ the communication loop module currently takes pre-defined strings as launch argu
 
 ## 3.5 Arcade Layout Generation 
 The Different tiles for the grid are opensource assets found online. the walls, floor and roof textures have been taken as such. The Arcade box Textures are made by our own developers and the external games made by other developers will require those developers to give textures for the arcade box.
-
-
 
 # 4. Results and implications
 
@@ -153,7 +146,7 @@ As a proof of result, the image below shows a working protype composed of only c
 
 ![Ticket Shop UI](pics/TicketShopUI-Prototype.png)
 
-## 4.4 Communication loop and importing programs (Alister TODO)
+## 4.4 Communication loop and importing programs 
 When scanning for specific file names to ensure a game's folder is setup correctly it is also possible to check the file extension type which further filters out incorrectly setup games folders, But Godot is unable to read certain file types so ensuring the files included are functional will require some further validity checks which i am unsure how to implement at this time. 
 
 Once the first portion of the communication loop was setup, it quickly became obvious there would need to be a lot of work converting the launching process to a foolproof finished product. There are several protocols to launch an external application. Be default, it launches an applicaiton on the same thread the main application is running on, in a blocking way, but the main application seems to still collect all inputs while the user waits for the external application to launch and then sends all those inputs once the application is closed. This usually results in many instances of the application launching as soon as the first one closes, effectively breaking the main application. The work around will have to modify many of the base application's behaviours when a user launches an application so the main challenge will be ensuring the fixes aren't too invasive as to cause their own problems.
