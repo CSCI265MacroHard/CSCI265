@@ -28,7 +28,15 @@ Each of these aspects is essential for realizing the game's vision or plays a co
 The 3D environment was the first hurdle in the game's implementation. Our main concern was whether it would be possible to program a 3D game within the semester's timeframe. The focus of this issue was creating a 3D environment that allowed players to move around within it.
 
 ## 1.2 Video streaming Audio/Lighting (Nick TODO)
-Text...
+## Implementation of VideoStreamPlayer in Godot
+- Lack of built in functionality (no downscaling, video seeking, directional audio) 
+- Only supports ogg/ogv video format
+## Creating a process for obtaining optimized video previews in ogv format.
+- Recording in OBS in mp4 format, what are the best settings?
+- Best methods to convert? Ideal FPS? Ideal Resolution? 
+- What is our size limit? (2mb arbitrarily) How long of a preview does that give?
+## Preview video itself: Customizable UI for flashing "Press Start!" Or "Insert Coin!" 
+## Need a cabinet to put the preview on! (solidifies aspect ratio and scale)
 
 ## 1.3 Ticket Shop UI
 Since the team wanted to bring out a real arcade experience by implementing spatial sounds and interactable NPCs, the User Interface for the Ticket Shop would mainly focus on bringing that experience.
@@ -57,8 +65,9 @@ At the outset, we developed a backup plan in case we were unable to create the 3
 - Designing NPCs that can be placed within the 3D world
 - Transitioning from the 3D world into gameplay using the player character and objects in the environment
 
-## 2.2 Video streaming Audio/Lighting (Nick TODO)
-Text...
+## 2.2 Video streaming Audio/Lighting 
+
+
 
 ## 2.3 Ticket Shop UI
 To have a generative prizes to go on the shop rather than a manually putting it, we would touch on the basic of how the Tetris game was formed.
@@ -86,8 +95,14 @@ Next, we aimed to include interactive elements in the world. We created an NPC b
 
 Finally, we needed to test that the player could actually enter an arcade game through the 3D environment. For this, we utilized a pool game that had already been developed by one of the group members. We created a mesh and textures for the pool table to place it within the 3D world, ensuring it had a collision box so that other elements could interact with it. Additionally, we implemented a script that switches the current game scene to the pool game scene when the player interacts with the pool table.
 
-## 3.2 Video streaming Audio/Lighting (Nick TODO)
-Text...
+## 3.2 Video streaming Audio/Lighting 
+## Started by searching for low poly arcade cabinets asset w/ UV maps.
+- Solidifies what aspect ratio and scale I made video previews in. (4:3  - 340x255p)
+## Found free pack on Itch.io by aurynsky called "Arcade Machines Lowpoly 3D Assets" that fit requirements
+- Easily modifiable UV template.
+- Low poly
+- Bonus: has separate buttons, coin inserts and panels in pack
+![Nick](pics/Nick_Prototype2.png)
 
 ## 3.3 Ticket Shop UI 
 Since Godot supports User Interface, for the prototype we just implemented a scroll container, horizontal box, and a vertical box. Use hierarchy to make the shop grid and populate it with Godot icons, which will be later on replaced by the image itself. The shop keep was grabbed from an existing asset already available on our NPCs directory.
@@ -107,10 +122,22 @@ Text...
 
 The proof of concept was a success, bringing the foundational features to life. This was the first major prototype we built to begin developing the actual game. As a result, the proof of concept served as the foundation for the rest of the game and was incorporated into the repository. Most major features planned for implementation are simply extensions of these core functionalities. The backup plan of creating a 2D arcade was discarded due to the successful realization of the 3D environment. Furthermore, additional smaller features, such as jumping and interacting with NPCs, were successfully implemented on top of the groundwork established by this proof of concept.
 
-## 4.2 Video streaming Audio/Lighting (Nick TODO)
-Text...
+## 4.2 Video streaming Audio/Lighting
+## Recording/Conversion Process
+- Godot project settings -> Display -> Window: select 4:3 ratio (340x255 in my case).
+- Make sure Godot is running at a high physics ticks per Second (and FPS) to reduce blur.
+- Recording in OBS: (10-15fps, same ratio) exporting as mp4 format.
+- Converting mp4 to ogg file format in VLC, (340x255, x2 scale, 800bitrate,10fps)
 
-## 4.3 Ticket Shop UI (Jamie TODO)
+## VideoStreamPlayer Implementation:
+- VideoStreamPlayer relatively simple to implement, casts viewport onto a flat plane mesh.
+- With this setup, can play any ogg/ogv video given to VideoStreamPlayer.
+- However, audio played from the VideoStreamPlayer node plays globally
+- Need to create a function that controls volume based on player location and cabinet location
+- Functions measurement can also then be used for shutting off/pausing videos
+![Nick](pics/Nick_Prototype.png)
+
+## 4.3 Ticket Shop UI 
 As a proof of result, the image below shows a working protype composed of only containers. It doesn't have any functionality yet. 
 
 ![Ticket Shop UI](pics/TicketShopUI-Prototype.png)
