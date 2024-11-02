@@ -46,6 +46,7 @@ Imagine you have a unrightful amount of ticket, and you wanted to see what you c
 ### Technical challenge
 - This will become an issue when more items are put inside the shop. For the final shop, we would implement more of grid box, that expands on its own depends on the number of items. 
 
+
 ## 1.4 Communication loop and importing programs
 The importing of resources for games is done in the form of file paths as strings. This makes referencing them easier but adds complexity when we need to decide at what part of the process to convert the file path into an asset that can be used within the program. 
 
@@ -147,6 +148,7 @@ As a proof of result, the image below shows a working protype composed of only c
 ![Ticket Shop UI](pics/TicketShopUI-Prototype.png)
 
 ## 4.4 Communication loop and importing programs 
+
 When scanning for specific file names to ensure a game's folder is setup correctly it is also possible to check the file extension type which further filters out incorrectly setup games folders, But Godot is unable to read certain file types so ensuring the files included are functional will require some further validity checks which i am unsure how to implement at this time. 
 
 Once the first portion of the communication loop was setup, it quickly became obvious there would need to be a lot of work converting the launching process to a foolproof finished product. There are several protocols to launch an external application. Be default, it launches an applicaiton on the same thread the main application is running on, in a blocking way, but the main application seems to still collect all inputs while the user waits for the external application to launch and then sends all those inputs once the application is closed. This usually results in many instances of the application launching as soon as the first one closes, effectively breaking the main application. The work around will have to modify many of the base application's behaviours when a user launches an application so the main challenge will be ensuring the fixes aren't too invasive as to cause their own problems.
