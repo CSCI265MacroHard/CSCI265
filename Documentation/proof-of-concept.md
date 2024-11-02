@@ -1,4 +1,4 @@
-# CSCI 265 update from Phase2 (Phase 3)
+# CSCI 265 Proof of concept
 ## Team name: MacroHard
 ## Project/product name: 'Cyber' Cyber City
 ## Contact person and email
@@ -112,7 +112,7 @@ The proof of concept was a success, bringing the foundational features to life. 
 ## 4.2 Video streaming Audio/Lighting (Nick TODO)
 Text...
 
-## 4.3 Ticket Shop UI (Jamie TODO)
+## 4.3 Ticket Shop UI 
 As a proof of result, the image below shows a working protype composed of only containers. It doesn't have any functionality yet. 
 
 ![Ticket Shop UI](pics/TicketShopUI-Prototype.png)
@@ -120,5 +120,5 @@ As a proof of result, the image below shows a working protype composed of only c
 ## 4.4 Communication loop and importing programs (Alister TODO)
 Text...
 
-## 4.5 Arcade Layout Generation (Bruce TODO)
+## 4.5 Arcade Layout Generation 
 We have made progress on the coding end and have made python based pseudocode for the array system in the layout generation. The final steps to incorporate the code in gdscript is the final step.
