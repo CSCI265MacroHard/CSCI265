@@ -27,16 +27,16 @@ Each of these aspects is essential for realizing the game's vision or plays a co
 
 The 3D environment was the first hurdle in the game's implementation. Our main concern was whether it would be possible to program a 3D game within the semester's timeframe. The focus of this issue was creating a 3D environment that allowed players to move around within it.
 
-## 1.2 Video streaming Audio/Lighting (Nick TODO)
-## Implementation of VideoStreamPlayer in Godot
+## 1.2 Video streaming Audio/Lighting
+Implementation of VideoStreamPlayer in Godot
 - Lack of built in functionality (no downscaling, video seeking, directional audio) 
 - Only supports ogg/ogv video format
-## Creating a process for obtaining optimized video previews in ogv format.
+Creating a process for obtaining optimized video previews in ogv format.
 - Recording in OBS in mp4 format, what are the best settings?
 - Best methods to convert? Ideal FPS? Ideal Resolution? 
 - What is our size limit? (2mb arbitrarily) How long of a preview does that give?
-## Preview video itself: Customizable UI for flashing "Press Start!" Or "Insert Coin!" 
-## Need a cabinet to put the preview on! (solidifies aspect ratio and scale)
+Preview video itself: Customizable UI for flashing "Press Start!" Or "Insert Coin!" 
+Need a cabinet to put the preview on! (solidifies aspect ratio and scale)
 
 ## 1.3 Ticket Shop UI
 Since the team wanted to bring out a real arcade experience by implementing spatial sounds and interactable NPCs, the User Interface for the Ticket Shop would mainly focus on bringing that experience.
@@ -56,7 +56,6 @@ The full communication loop is not setup because there is a lot involved in what
 Arcade Layout will be generated based on the number of arcade games. It will be generated in the  grid format of Godot.
 The layout will be generated with the algorithm W = M * 2 + 2, Where W is the width of the grid map and M is the number of Arcade Machines. The height will be set by us the Developers as an arbitrary constant.
 
-
 # 2. Approach to meet each challenge
 
 ## 2.1 3D Environment
@@ -69,8 +68,6 @@ At the outset, we developed a backup plan in case we were unable to create the 3
 - Transitioning from the 3D world into gameplay using the player character and objects in the environment
 
 ## 2.2 Video streaming Audio/Lighting 
-
-
 
 ## 2.3 Ticket Shop UI
 To have a generative prizes to go on the shop rather than a manually putting it, we would touch on the basic of how the Tetris game was formed.
@@ -87,7 +84,6 @@ The main priority for the communication loop was ensuring that programs could be
 ## 2.5 Arcade Layout Generation
 The Grid will be first in array form and converted into the grid map. The array will be encoded with cells in the form (+/-,+/-) + meaning North or East depending on which coordinate it is in. - meaning South or West Respectively. Each direction means the walls would be in that direction. If neither + nor - is used the tile will have no walls and instead just have a floor. Arcade machine tiles will have only the floor tile and arcade machine on them.
 
-
 # 3. Assets produced
 
 ## 3.1 3D Environment
@@ -101,9 +97,9 @@ Next, we aimed to include interactive elements in the world. We created an NPC b
 Finally, we needed to test that the player could actually enter an arcade game through the 3D environment. For this, we utilized a pool game that had already been developed by one of the group members. We created a mesh and textures for the pool table to place it within the 3D world, ensuring it had a collision box so that other elements could interact with it. Additionally, we implemented a script that switches the current game scene to the pool game scene when the player interacts with the pool table.
 
 ## 3.2 Video streaming Audio/Lighting 
-## Started by searching for low poly arcade cabinets asset w/ UV maps.
+### Started by searching for low poly arcade cabinets asset w/ UV maps.
 - Solidifies what aspect ratio and scale I made video previews in. (4:3  - 340x255p)
-## Found free pack on Itch.io by aurynsky called "Arcade Machines Lowpoly 3D Assets" that fit requirements
+### Found free pack on Itch.io by aurynsky called "Arcade Machines Lowpoly 3D Assets" that fit requirements
 - Easily modifiable UV template.
 - Low poly
 - Bonus: has separate buttons, coin inserts and panels in pack
@@ -124,8 +120,6 @@ the communication loop module currently takes pre-defined strings as launch argu
 ## 3.5 Arcade Layout Generation 
 The Different tiles for the grid are opensource assets found online. the walls, floor and roof textures have been taken as such. The Arcade box Textures are made by our own developers and the external games made by other developers will require those developers to give textures for the arcade box.
 
-
-
 # 4. Results and implications
 
 ## 4.1 3D Environment
@@ -133,13 +127,13 @@ The Different tiles for the grid are opensource assets found online. the walls, 
 The proof of concept was a success, bringing the foundational features to life. This was the first major prototype we built to begin developing the actual game. As a result, the proof of concept served as the foundation for the rest of the game and was incorporated into the repository. Most major features planned for implementation are simply extensions of these core functionalities. The backup plan of creating a 2D arcade was discarded due to the successful realization of the 3D environment. Furthermore, additional smaller features, such as jumping and interacting with NPCs, were successfully implemented on top of the groundwork established by this proof of concept.
 
 ## 4.2 Video streaming Audio/Lighting
-## Recording/Conversion Process
+### Recording/Conversion Process
 - Godot project settings -> Display -> Window: select 4:3 ratio (340x255 in my case).
 - Make sure Godot is running at a high physics ticks per Second (and FPS) to reduce blur.
 - Recording in OBS: (10-15fps, same ratio) exporting as mp4 format.
 - Converting mp4 to ogg file format in VLC, (340x255, x2 scale, 800bitrate,10fps)
 
-## VideoStreamPlayer Implementation:
+### VideoStreamPlayer Implementation:
 - VideoStreamPlayer relatively simple to implement, casts viewport onto a flat plane mesh.
 - With this setup, can play any ogg/ogv video given to VideoStreamPlayer.
 - However, audio played from the VideoStreamPlayer node plays globally
@@ -153,7 +147,8 @@ As a proof of result, the image below shows a working protype composed of only c
 
 ![Ticket Shop UI](pics/TicketShopUI-Prototype.png)
 
-## 4.4 Communication loop and importing programs
+## 4.4 Communication loop and importing programs 
+
 When scanning for specific file names to ensure a game's folder is setup correctly it is also possible to check the file extension type which further filters out incorrectly setup games folders, But Godot is unable to read certain file types so ensuring the files included are functional will require some further validity checks which i am unsure how to implement at this time. 
 
 Once the first portion of the communication loop was setup, it quickly became obvious there would need to be a lot of work converting the launching process to a foolproof finished product. There are several protocols to launch an external application. Be default, it launches an applicaiton on the same thread the main application is running on, in a blocking way, but the main application seems to still collect all inputs while the user waits for the external application to launch and then sends all those inputs once the application is closed. This usually results in many instances of the application launching as soon as the first one closes, effectively breaking the main application. The work around will have to modify many of the base application's behaviours when a user launches an application so the main challenge will be ensuring the fixes aren't too invasive as to cause their own problems.
