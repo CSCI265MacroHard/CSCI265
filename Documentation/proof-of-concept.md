@@ -48,7 +48,9 @@ Imagine you have a unrightful amount of ticket, and you wanted to see what you c
 
 
 ## 1.4 Communication loop and importing programs (Alister TODO)
-Text...
+The importing of resources for games is done in the form of file paths as strings. This makes referencing them easier but adds complexity when we need to decide at what part of the process to convert the file path into an asset that can be used within the program. 
+
+The full communication loop is not setup because there is a lot involved in what data and how to send this data to an external application. further prototyping will require setting up an external application to be able to recieve launch arguements before we can test sending them from the main system. Concatination of string paths to the executables proves that sending information is possible.
 
 ## 1.5 Arcade Layout Generation
 Arcade Layout will be generated based on the number of arcade games. It will be generated in the  grid format of Godot.
@@ -78,7 +80,9 @@ To have a generative prizes to go on the shop rather than a manually putting it,
 - Defining shop cells as grid slots with piece position,  create an add item node to the grid and set up the position logic.
 
 ## 2.4 Communication loop and importing programs (Alister TODO)
-Text...
+Originally when collecting N amount of games within an external folder we planned to use a 2 dimensional array, however; multi-dimensional arrays in GDScript are unecessary and more complex than GDScript's built in dictionary type. After struggling with trying to type set arrays I discovered that it was actually only type hinting and completely unecessary. Dictionaries proved easier to implement, read, and interate on. Once this module was complete then the communication loop was setup after using the dictionary generated from the importing module as a base. 
+
+The main priority for the communication loop was ensuring that programs could be launched using OS commands, proving this was possible leads into launching with arguements. From there the recieving end of communication loops can be built off once a template game is created to send data to a shared-access temp file. The implementing writing to a file prototype will be heavily based off what was learned about reading and importing files earlier.
 
 ## 2.5 Arcade Layout Generation
 The Grid will be first in array form and converted into the grid map. The array will be encoded with cells in the form (+/-,+/-) + meaning North or East depending on which coordinate it is in. - meaning South or West Respectively. Each direction means the walls would be in that direction. If neither + nor - is used the tile will have no walls and instead just have a floor. Arcade machine tiles will have only the floor tile and arcade machine on them.
@@ -111,7 +115,11 @@ Since Godot supports User Interface, for the prototype we just implemented a scr
 Moving forward, we plan to develop additional assets specifically for the shop, including tickets for purchases, basic prize items, and a themed background that aligns with the shop's visual style. Our goal is to maintain a simple yet fully functional design that effectively demonstrates the shop’s concept and usability.
 
 ## 3.4 Communication loop and importing programs (Alister TODO)
-Text...
+Currently the importing module and the First half of the communication loop have been produced connected to the original 3D environment.
+
+The importing module scans an internal "games" folder(or external one within a shared directory of the compiled program). It produces a dictionary list of all detected valid game folders as well as an array of paths stored as strings to each asset. it then traverses the entire dictionary and instatiates a template arcade machine that fills in it's generic executable path and image textures with assets imported using the respective paths. the instanced arcade machines are given random x,z positions currently but once connected to the layout generation module those positions will be set by that.
+
+the communication loop module currently takes pre-defined strings as launch arguements which works but does not produce any special results except when areguements like no audio are put in since we don't have any game that is programmed to recieve specific arguements yet.
 
 ## 3.5 Arcade Layout Generation 
 The Different tiles for the grid are opensource assets found online. the walls, floor and roof textures have been taken as such. The Arcade box Textures are made by our own developers and the external games made by other developers will require those developers to give textures for the arcade box.
@@ -146,7 +154,9 @@ As a proof of result, the image below shows a working protype composed of only c
 ![Ticket Shop UI](pics/TicketShopUI-Prototype.png)
 
 ## 4.4 Communication loop and importing programs (Alister TODO)
-Text...
+When scanning for specific file names to ensure a game's folder is setup correctly it is also possible to check the file extension type which further filters out incorrectly setup games folders, But Godot is unable to read certain file types so ensuring the files included are functional will require some further validity checks which i am unsure how to implement at this time. 
+
+Once the first portion of the communication loop was setup, it quickly became obvious there would need to be a lot of work converting the launching process to a foolproof finished product. There are several protocols to launch an external application. Be default, it launches an applicaiton on the same thread the main application is running on, in a blocking way, but the main application seems to still collect all inputs while the user waits for the external application to launch and then sends all those inputs once the application is closed. This usually results in many instances of the application launching as soon as the first one closes, effectively breaking the main application. The work around will have to modify many of the base application's behaviours when a user launches an application so the main challenge will be ensuring the fixes aren't too invasive as to cause their own problems.
 
 ## 4.5 Arcade Layout Generation 
 We have made progress on the coding end and have made python based pseudocode for the array system in the layout generation. The final steps to incorporate the code in gdscript is the final step.
