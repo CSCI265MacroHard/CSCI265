@@ -42,8 +42,9 @@ Imagine you have a unrightful amount of ticket, and you wanted to see what you c
 ## 1.4 Communication loop and importing programs (Alister TODO)
 Text...
 
-## 1.5 Arcade Layout Generation (Bruce TODO)
-Text...
+## 1.5 Arcade Layout Generation
+Arcade Layout will be generated based on the number of arcade games. It will be generated in the  grid format of Godot.
+The layout will be generated with the algorithm W = M * 2 + 2, Where W is the width of the grid map and M is the number of Arcade Machines. The height will be set by us the Developers as an arbitrary constant.
 
 
 # 2. Approach to meet each challenge
@@ -70,8 +71,8 @@ To have a generative prizes to go on the shop rather than a manually putting it,
 ## 2.4 Communication loop and importing programs (Alister TODO)
 Text...
 
-## 2.5 Arcade Layout Generation (Bruce TODO)
-Text...
+## 2.5 Arcade Layout Generation
+The Grid will be first in array form and converted into the grid map. The array will be encoded with cells in the form (+/-,+/-) + meaning North or East depending on which coordinate it is in. - meaning South or West Respectively. Each direction means the walls would be in that direction. If neither + nor - is used the tile will have no walls and instead just have a floor. Arcade machine tiles will have only the floor tile and arcade machine on them.
 
 
 # 3. Assets produced
@@ -97,8 +98,9 @@ Moving forward, we plan to develop additional assets specifically for the shop, 
 ## 3.4 Communication loop and importing programs (Alister TODO)
 Text...
 
-## 3.5 Arcade Layout Generation (Bruce TODO)
-Text...
+## 3.5 Arcade Layout Generation 
+The Different tiles for the grid are opensource assets found online. the walls, floor and roof textures have been taken as such. The Arcade box Textures are made by our own developers and the external games made by other developers will require those developers to give textures for the arcade box.
+
 
 
 # 4. Results and implications
@@ -119,4 +121,4 @@ As a proof of result, the image below shows a working protype composed of only c
 Text...
 
 ## 4.5 Arcade Layout Generation (Bruce TODO)
-Text...
+We have made progress on the coding end and have made python based pseudocode for the array system in the layout generation. The final steps to incorporate the code in gdscript is the final step.
