@@ -96,9 +96,9 @@ Next, we aimed to include interactive elements in the world. We created an NPC b
 Finally, we needed to test that the player could actually enter an arcade game through the 3D environment. For this, we utilized a pool game that had already been developed by one of the group members. We created a mesh and textures for the pool table to place it within the 3D world, ensuring it had a collision box so that other elements could interact with it. Additionally, we implemented a script that switches the current game scene to the pool game scene when the player interacts with the pool table.
 
 ## 3.2 Video streaming Audio/Lighting 
-## Started by searching for low poly arcade cabinets asset w/ UV maps.
+### Started by searching for low poly arcade cabinets asset w/ UV maps.
 - Solidifies what aspect ratio and scale I made video previews in. (4:3  - 340x255p)
-## Found free pack on Itch.io by aurynsky called "Arcade Machines Lowpoly 3D Assets" that fit requirements
+### Found free pack on Itch.io by aurynsky called "Arcade Machines Lowpoly 3D Assets" that fit requirements
 - Easily modifiable UV template.
 - Low poly
 - Bonus: has separate buttons, coin inserts and panels in pack
@@ -126,13 +126,13 @@ The Different tiles for the grid are opensource assets found online. the walls, 
 The proof of concept was a success, bringing the foundational features to life. This was the first major prototype we built to begin developing the actual game. As a result, the proof of concept served as the foundation for the rest of the game and was incorporated into the repository. Most major features planned for implementation are simply extensions of these core functionalities. The backup plan of creating a 2D arcade was discarded due to the successful realization of the 3D environment. Furthermore, additional smaller features, such as jumping and interacting with NPCs, were successfully implemented on top of the groundwork established by this proof of concept.
 
 ## 4.2 Video streaming Audio/Lighting
-## Recording/Conversion Process
+### Recording/Conversion Process
 - Godot project settings -> Display -> Window: select 4:3 ratio (340x255 in my case).
 - Make sure Godot is running at a high physics ticks per Second (and FPS) to reduce blur.
 - Recording in OBS: (10-15fps, same ratio) exporting as mp4 format.
 - Converting mp4 to ogg file format in VLC, (340x255, x2 scale, 800bitrate,10fps)
 
-## VideoStreamPlayer Implementation:
+### VideoStreamPlayer Implementation:
 - VideoStreamPlayer relatively simple to implement, casts viewport onto a flat plane mesh.
 - With this setup, can play any ogg/ogv video given to VideoStreamPlayer.
 - However, audio played from the VideoStreamPlayer node plays globally
