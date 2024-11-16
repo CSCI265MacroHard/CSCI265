@@ -23,7 +23,7 @@ Nanaimo used to have a beloved arcade, but it was closed for good on December 31
 The product also adds value by being an homage to an important piece of history. Immortalizing the arcade experience onto code allows future generations to appreciate an accurate depiction of a 1980s recreational activity.
 
 ## Key features and discussion
-As mentioned in the proposal, it would implement, if goes right, a 3D arcade to host games. It would be just single-player games but the thought of multiplayer games is currently being discussed as another option for scaling up. It will include retro and nostalgic games that we used to play back then. 
+As mentioned in the proposal, it would implement, if goes right, a 3D arcade to host games. Game developers will be able to setup their games to be imported as the main method of populating the arcade. It would be just single-player games but the thought of multiplayer games is currently being discussed as another option for scaling up. It will be tailored to retro and nostalgic games that we used to play back then. 
 
 The environment was created to offer the same experience as it was back then when the arcade was still popular.  An overall breakdown of key features of the programs is listed below:
 
@@ -32,6 +32,7 @@ The environment was created to offer the same experience as it was back then whe
  - Completing one game will take you back to the arcade and award tickets based on performance.
  - Will have a booth where you can spend the tickets to purchase things.
  - Non-player characters (NPC) that comment on the player's performance and interact with the arcade machines.
+ - System to populate the arcade with arcade machines that host user created games 
 
 ### Interactables objects
 
@@ -76,16 +77,17 @@ Stretch goals represent additional features that may be implemented if time stil
 ### Core aspects
 - Implement a 2D hub world in which the player may control a character from a top-down view (if implementation of a 3D world fails).
 - The player can start games within the hub world by moving to certain objects in the hub world and interacting with them.
-- Implementation of the game "Snake."
-- Implementation of the game "Pong."
-- Implementation of the game "Pool."
+- an arcade game importing system  to populate the arcade with user generated content.
+- Implementation of sample game "Tetris."
 - The player receives reward tickets based on their score in a game.
 
 ### Secondary features
 - Implement a 3D hub world where the player controls a first-person view and navigates a character to go up to different games and access them.
-- Implementation of the game "Space Invader."
-- Implementation of the game "Pac-Man."
-- Implementation of the game "Tetris."
+- Implementation of sample game "Snake."
+- Implementation of sample game "Pong."
+- Implementation of sample game "Space Invader."
+- Implementation of sample game "Pac-Man."
+- Implementation of sample game "Pool."
 - The player needs to use tickets to start playing a game.
 - Hub world scoreboard (total of all game scores).
 - Scoreboard for each game.
@@ -94,9 +96,9 @@ Stretch goals represent additional features that may be implemented if time stil
 
 ### Stretch goals
 - NPCs to interact with.
-- Implementation of the game "Vampire Survivors clone."
-- Implementation of the game "2D platformer."
-- Implementation of the game "Street Fighter
+- Implementation of the sample game "Vampire Survivors clone."
+- Implementation of the sample game "2D platformer."
+- Implementation of the sample game "Street Fighter
 - Secrets within the hub world.
 - Expansion of the hub world.
 
