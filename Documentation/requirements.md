@@ -1,5 +1,5 @@
 # CSCI 265 Requirements and specifications (Phase 2)
-
+Version 1.5
 ## Team name: MacroHard
 
 ## Project/product name: 'Cyber' Cyber City
@@ -8,12 +8,8 @@
 
 The following person has been designated the main contact person for questions from the reader:
 
- - Alister Lawson, AlisterLawson64@gmail.com *main contact*
- - Bruce Fernandes, bruce2005.ind@gmail.com *secondary contact*
- - Jamie Mano, jamieysabelmano1018@gmail.com
- - Marek Bettzig, bettzig@hotmail.de
- - Nick Biagioni, viud2l_1061684@d2l.viu.ca
-
+ - Alister Lawson, AlisterLawson64@gmail.com
+ - 
 # Table of Contents
 
 1. [ Known issues/omissions ](#section1)
@@ -22,7 +18,7 @@ The following person has been designated the main contact person for questions f
 
 3. [ Target audience and motivation ](#section3)
 
-4. [ Game flow, objectives, and plot-line ](#section4)
+4. [ Product Perspective ](#section4)
 
 5. [ Key features, with detailed requirements for each ](#section5)
 
@@ -36,106 +32,187 @@ The following person has been designated the main contact person for questions f
 
 ## 1. Known issues/ Ommisions <a name="section1"></a>
 
-As movements are already pre-determined for the arcade, the actual interface of the booth itself has not been talked about yet. In addition, the implementation of the mini-games in the arcade has not been brought up, as well as the amount and type of games that each member will bring to the table are not yet finalized. Games such as Pool, Street Fighter, and Vampire Survivors, each have their own set of progress has not been set in motion. Hence, raising a concern about the visuals as well as the Godot process. All of these will be rectified once the phase of development starts, and the team is already focused on the project and programming. 
+Measurements used for environment and player use the real world metric system but must be changed to the scale of the geometry of the program within design.
 
-No errors and changes to the plan and interface were raised, but the group made notes on blame, pull, and push on git in case a member did such corrupt a document.
+Jukebox location is difficult to decide on with a spatial audio system since, in theory, a user could add enough games that you can't hear the music from the end of the hallway. We will return to this decision once we have a wokring prototype since it will be easy to relocate it and adjust volume and range variables of the music to get a feel for what sounds best and perhaps tie the range to the amount of games imported.
 
-## 2. Game Overview  <a name="section2"></a>
+Currently the config file's only use is to define upgrades for a game but it could be important for collecting other unforseen necessary data about the executable, testing more executable types in phase 5 should help us determine if it is necessary.
+
+## 2. Product Overview  <a name="section2"></a>
 **Cyber Cyber City** seeks to bring you back the the 80s/90s with a historically inaccurate, first person simulation of an arcade. While the early 80s hosted the golden age of [Video Game Arcades](https://en.wikipedia.org/wiki/Amusement_arcade), the decline into the late 90s lead to the rise of the [Redemption Game](https://en.wikipedia.org/wiki/Redemption_game#:~:text=Redemption%20games%20are%20typically%20arcade,a%20central%20location%20for%20prizes.), where players could be awarded tickets proportional to their score and then redeem said tickets for prizes.
- 
-**Cyber Cyber City** brings ~~the best of~~ both eras together, taking the elegance of traditional arcade video games along with the excitement of the pseudo-gambling redemption games, blending them into a primitive, engaging, and immersive experience where players can enjoy classic-style video games while being awarded tickets based on performance.
 
 Central within the **Cyber Cyber City** arcade is the prize booth/ticket shop, where players will be able to spend their hard earned tickets for prizes, unlocks, and collectables. The over-arching objective for our players may be to try unlocking/collecting everything within the prize booth/ticket shop, however, motivating the player to just have fun and diversely explore all the games available will be our objective as developers.
 
+### Scope
+
+The program's base functionality is a library of executables, presented as an arcade, for creators to populate with arcade-style games, for a player to browse and play.
+
+It is a single player offline application. No internet connection is required.
+
+The program is compatible with Windows operating systems that are version 10 or newer.
+
 ## 3. Target audience and motivation <a name="section3"></a>
 
-The arcade will attempt to replicate the feeling of 90s arcades without explicitly copying the floor plan and decor of a specific location. Instead we will be drawing inspiration from many images, memories, and references to create a general "vibe" of a 90s arcade that could have existed. This way we can appeal to individuals nostalgic for old arcades without them scrutinizing the accuracy of a specific location.
+The arcade will attempt to replicate the feeling of 90s arcades without explicitly copying the floor plan and decor of a specific location. Instead we will be drawing inspiration from many images, memories, and references to create a general "vibe" of a 90s arcade that could have existed. This way we can appeal to individuals nostalgia for old arcades without them scrutinizing the accuracy of a specific location.
 
 Since we have limited time and resources to complete the project, the program won't be a hyper-realistic representation of an arcade. Instead, we plan on going for low-resolution textures and low polygon-count models. This lends itself to an aesthetic that should still appeal to our nostalgic audience while also making it more accessible to those with lower-end hardware.
 
-The arcade itself is our product so we are dealing with two target audiences; the users who want to go to an arcade to play games, and the arcade game developers who will be placing their games within the hub world we create. Since we are also developing games in our spare time we are hoping to ship the arcade with a base catalogue of games to play.
+The arcade itself is our product so we are dealing with two target audiences; the users who want to go to an arcade to play games, and the arcade game developers who will be placing their games within the hub world we create. Since we are also developing games in our spare time we are hoping to ship the arcade with a base catalogue of games to play; however, only one is needed for testing, development, and initial launch.
 
-The individuals in our group are all interested in game development and with the recent drama surrounding what was considered by many to be the most accessible game engine, unity, we decided to take a risk investing time into learning a much more experimental software to develop on: the Godot game engine. There are many drawbacks to using software that hasn't matured or been around long enough to have a lot of 3rd party support, but, there is a lot of freedom that comes with the open source nature of the software. 
+The individuals in our group are all interested in game development and with the recent drama surrounding what was considered by many to be the most accessible game engine, Unity, we decided to take a risk investing time into learning a much more experimental software to develop on, the Godot game engine. There are many drawbacks to using software that hasn't matured or been around long enough to have a lot of 3rd party support, but, there is a lot of freedom that comes with the open source nature of the software. 
 
-## 4. Game flow, objectives, and plot-line <a name="section4"></a>
+Developing a large amount of games to populate the arcade with is not the goal but rather to provide a platform for users to curate and generate games in a single place. In order to make this platform accessible though we must provide basic examples to build off of. Making at least one example game is within the scope of the project and more games are encouraged so long as it does not cut into the development of the main software.
 
-The arcade itself in its most base form could be described as a very intricate 3-dimensional video-game browser and launcher.
+## 4. Product Perspective <a name="section4"></a>
 
-Starting up the software will place the user at the entryway of a 3D arcade environment with a prompt of the controls used to navigate and interact with objects.
+When a player launches the program they will be placed into the arcade environment. There will be one map that looks like the interior of an arcade. It will have one floor and only one main room that expands to accomodate all imported arcade game's machines. The room may look different depending on the amount of arcade games in a user's collection, but the arcade always contains a shop, an exit door and, so long as the template game is not removed, at least one game. The player navigates from a first person perspective and may walk up and interact with a game they wish to play. The player may interact with the exit door which will close the program.
 
-Arcades will have a token cost to play that is displayed on the front. when you interact with the machine it will automatically subtract the cost from the player's balance.
+The user can walk up to and interact with an arcade machine to start up the machine's respective game. Playing arcade games will have a token cost. When you interact with the machine it will automatically subtract the cost from the player's balance.
 
-The arcade will have various arcade machines the user can walk up to and interact with to start up the machine's respective game. 
+To encourage sharing of arcade games between users, games will be bundled so they can be easily copied and pasted. into other player's libraries. We will create a game (tetris) as an example resource for creators to use to setup the correct files for their game.
 
-Ideally the arcade layout will be easy to adjust to accomodate more game machines and various historical arcade recreations but that would be done by game developers with access to the documentation, not the end user.
+The final product will be compiled in a portable format (all assets within a single folder that can be moved) so that someone can carry their arcade of games with them and slowly build up their collection. 
 
-Initially, we will ship the program with various arcade machine styles that launch into games: we plan to include example games with basic sprites and features as a starting point for prospective arcade game developers as well as to practice developing in the godot engine. planned games to ship with include but aren't limited to:
- - A street fighter clone:
-    - 2D sprites made from cropped images of dev team members to represent game characters.
-    - 2-player support with a controller connected or shared keyboard.
- - Pool (or snooker)
-   - experimentation of Godot's built-in physics engine.
-   - demonstration that arcade game machines can also represent physical games instead of just video games
+Individual arcade game experiences are great but what made arcade-goers want to keep playing and come back every time was how all the games were tied together by a universal form of progression: tickets. Ticket count will be tracked. Tickets will be awarded to the player once they have completed an arcade game and returned to the arcade. While the arcade games are the main draw for a player there are other aspects for them to engage with as well such as:
 
-Individual games are great but what made arcade-goers want to keep playing and come back every time was how all the games were tied together by a universal form of progression: tickets. Ticket count will be tracked. Tickets will be awarded to the player once they have completed an arcade game and returned to the arcade.
+- Navigating to the jukebox object and interact with it to play or pause ambient music.
+- Talking to NPCS placed within the arcade with various functionalities
+- Using the shop and spend their tickets on upgrades to the arcade machine games.
 
-The player may optionally navigate to the jukebox object and interact with it to select ambient music.
+A high level model of core components and their relationships is provided below.
 
-The player may then navigate to the shop and spend their tickets on upgrades to the arcade upgrades include but are not limited to:
- - Energy drinks which slow down the gamespeed of arcade games for greater accuracy and time to react.
- - Alcoholic Beverages to increase game speed and add random inputs (goodbye E rating)
- - Unlocking new arcade machines
- - Cheat codes to input into certain games for configured effects
- - New tracks to play on the jukebox.
- - more tokens to play more games.
-
-The player has complete agency over which features they want to interact with within the program just as arcade goers have agency to play whatever arcade games they desire. then when the arcade goers are done they leave and go home. when the player attempts to leave the arcade through the door they will be prompted asking if they would like to close the program and if they select yes it will end.
+![Components Sketch](pics/high_level_overview.png)
 
 ## 5. Key features, with detailed requirements for each <a name="section5"></a>
 
+### Player character, movement, and controls
+
+Since we are selling our product as an immersive experience the player character is designed to feel like the player is in the acrade when they pilot it. Users are placed directly into the 3D environment upon launching the program so an initial pop-up will show the controls to navigate the map.
+The player character has the following characteristics:
+
+- The point of view will be first person. The FOV (Field of view) will be 90 degrees
+- There won't be any vertical movement so jumping and gravity aren't necessary.
+- The player speed will be about 1.4 meters per second (rounded, average walking speed of a person)
+- The player is a circle shape with a 0.5 meter diameter, height isn't necessary since there's no vertical movement
+- The camera is positioned 1.6 meters from the ground
+- The camera will be moved in the direction the mouse is dragged 
+- The camera can rotate infinitely left and right but locks rotation looking down and up 90 degrees from the horizon
+- Controls to move the character will be W,A,S,D to go forward, back, and strafe left, and right
+- Pressing left click interacts with and object that:
+    - has defined behaviour when interacted with
+    - is within 2 meters of the player
+    - intersects with the center point of the screen
+
+### Ticket and Token Economy
+
+**Tickets** are the rescource used to purchase upgrades from the shop, they are a reward for scoring in an arcade game. The only way a player can have tickets is after they have played a game. Tickets are kept track of as a global "ticket_count" variable with the following properties:
+
+- It can never be a negative value.
+- It can never exceed the maximum value of 100,000
+- It gets reduced by a shop item's cost when:
+  - an upgrade has been selected to purchase from the shop
+  - the ticket_count is at least equal to the cost of the item
+- It is increased by a game's given score when a game is completed
+- Nate will give you 10,000 tickets and take 10 tokens if you interact with him while you have 10 or more tokens
+
+**Tokens** are the resource used as a toll to access the arcade games. Tokens adds stakes to losing a game that is expensive to play but can also become restrictive if a player runs out. Tokens will be stored as a global "token_count" variable with the following properties:
+
+- It can never be a negative value
+- It can never exceed 100
+- It is reduced by an arcade machine's cost to play when:
+  - the arcade machine is interacted with
+  - token_count is at least the cost to play
+- Tokens can be purchased from the shop for 1000 tickets each
+- NPCs will give you a token when you interact with them and your token count is 0. this means a player is never locked out of playing games if they run out of tokens.
+- There is a 100*e^-(final_score/2000)%​​ chance to get a token when completing a game. This means your chance decays from 100% at 0 score to effectively 0% chance at 10,000 score.
+
+### Arcade Environment
+
+The arcade itself is a 3-dimensional room populated with various objects. The player must be able to navigate the map without obstruction in order to access the rest of the programs features. The characteristics and details of the arcade map are outlined below:
+
+This image represents an arcade that a user has added one game to since the game already ships with one sample game.
+
+- The walls have collision so that users bump into them instead of walking through them. 
+- The floor has collision so that users don't fall into the infinite.
+- The room has a pre-built section that doesn't is the same so there is always a place for the built-in interactible objects The objects within the map and where they are placed is listed below:
+  - NPCS: Alister in the south-west corner, Nate in the south-east corner, and Bruce behind the ticket shop counter
+  - Ticket Shop in the north-west corner
+  - Jukebox location will be wherever provides the best immersive audio when the audio system has been prototyped but it must be somewhere centra where it can be at least faintly heard.
+- There are arcade machines placed in the hallway instanced from the games a user has added.
+- To have room for an ever-expanding library of games there will be an infinite expanding hallway protruding from the east wall.
+- The room will be lit enough to see
+
+Here is a mockup bird's eye view of the arcade map:
+
+![Arcade Map Sketch](pics/arcade_map_mockup.png)
+
+
 ### Arcade Machines
 
-Arcade machines are the key piece of this program and they have several functions for both end users and game developers. All arcade machines will have designs to best represent the games that they launch into and ambient sounds taken from samples within the game.
- 
-As an end user, the purpose is that they may visually see on the arcade machine's design what game it hosts. from there they may decide to navigate to the machine to interact with it. Interacting with the machine will take them into the game to play until they reach a game ended screen which will put them back into the arcade with tickets. the tickets will be awarded based on the performance of the game which will scale differently depending on the difficulty of the game.
+Arcade machines are the key piece of this program and they have several functions for both end users and game developers. All arcade machines will have designs to best represent the games that they launch into and ambient sounds taken from samples within the game. Intended behaviour and characteristics of all arcade machines are as follows:
 
-As a game developer, there are 2 pieces of functionality that are important, the arcade machine launches into whatever game they have created with optional parameters to modify the game based on what progress the user has made through ticket purchases.
-once in the game, the developer must have an end screen that returns the player to the arcade with a single variable that contains the player's performance that can be converted into tickets for the player.
+- There will be a clear, unique, visual indicator of what game will launch when the cabinet is interacted with. This will be a skin for the arcade cabinet in most cases
+- cabinets are unique with no duplicates
+- collision footprint no larger than 1 square meter
+- Interacting with an arcade machine will launch the game represented in it's decals
+- Prevent launching the game if the player doesn't have the required tokens and make a buzzing sound to indicate this.
+- Remove the correct amount of tokens that the game requires to play before launching a game
+- Disabled interaction once game is launched until the arcade game has given the player a score.
+
+### Game Importing
+
+The success of the product relies on user generated content, so the process of making games compatible and importing them should be simple. In order to keep it intuitive, creators will provide files bundled within a folder. The folder should be the name of their game. (case sensitivty depends on what is readable within implemenation but consistent rule will be necessary.) A correct folder setup will include files with the following names:
+
+- "game" a ".exe" of the software that will launch when the arcade machine is interacted with.
+- "skin" a ".png" texture for the program to use to repesent the game's arcade cabinet within the arcade.
+- "config" is a ".txt" file with various properties used by program when instancing the arcade machine. it will define what upgrades the game will support to populate the shop with.
+- "icon" is a ".svg" icon file used as a base icons for the upgrades that have been  added to the shop for this game.
+
+any other files within the game folder will be ignored. The game folder will not be rejected if there are extra files included since they could be necessary for the game to function. 
+
+Setup requirements of a game file for it to be imported includes accepting launch arguements. **Upgrades** defined in a game's config file can have whatever effect a creator impliments within their game. For example, a pool arcade game could have a "tubro cue" that makes your pool cue hit the ball with 4 times the force. In order to make that upgrade work within the ecosystem, the developer would have to: First, define their turbo upgrade in their config file so that it shows up in the ticket shop. Second, Add a way for their game to catch the "turbo" arguement to change the game to turbo cue mode. 
+Upgrades have a few characterists noted below:
+- Any number of upgrades can be defined per game
+- All upgrades are displayed in the shop with the same icon the creator provides in their game package
+- All upgrades for a single game must have unique names and launch arguements
+- a ticket cost. Recommended ticket costs are as follows but they are only a guideline since the value of an upgrade is highly dependant on the game and the upgrade:
+  - Small impact on gameplay: 8,000 to 10,000 tickets
+  - Medium impact on gameplay: 15,000 to 20,000 tickets
+  - Large impact on gameplay: 30,000 to 50,000 tickets
+
+If a creator wants a player to recieve tickets for winning they must have their game return a score value as an interger to the main application upon game completion. the suggested scores for developers are: 
+- between 0 and 1,000 for poor performance
+- between 1,000 and 5,000 for average performance
+- between 5,000 and 10,000 for excellent performance
+- greater than 10,000 sparingly for extremely exceptional performance
+
+Setting up the icon and skin files is fairly simple. The icon must have a 1:1 aspect ratio. The skin must be the same aspect ratio as the provided example arcade skin. These are both suggestions. Any svg or png will be accepted by the program since rejection of those files based on aspect ratios is above our skill level.
+
+From there once the game is correctly packaged within the folder, the creators can leave the rest up to the software to scan, import and instance arcade machines. The importing system behaviours and characteristics are outlined below.
+
+- It will ignore folders that are not correctly set up or are missing files
+- It will not ignore a folder with extra files since some may be necessary for the application
+- It will only accept directories as valid game packages
+- It will create an arcade machine for each valid game found and place it's defined skin onto the mesh.
+- it will expand the arcade environment to accomodate all created arcade machines
+- it will evenly distribute the arcade machines within the environment in a way that doesn't block access to any portion of the map
+- it will connect the arcade machine to it's external game application
+- it will populate the ticket shop with all upgrades defined by each game and give them the correct names, icons, and ticket costs.
 
 ### Audio system
 Chaotic environmental sounds are a pivotal part of arcade experiences.​ To replicate this, Cyber Cyber City uses a proximity-based sound system.​ Any noise-emitting object within the scene will have a detection radius that plays sound louder as the player gets closer.​ To keep this effect from becoming overwhelming/disorientating, only the absolute closest emitter of any given type can output at max (emulating sensory focus on a single object),  and linear interpolation will be used to smooth out transitions between sounds within the space.​ If such an environmental/directional audio system proves too much, we will opt to use static ambience.​	
-The arcade will contain a jukebox that plays music. More music can be unlocked through the ticket shop. The music present will be outsourced, either from online libraries or from other VIU students not in the class. 
 
 ![Audio System Diagram](pics/audio_system.png)
 
 ### Ticket Shop
 The ticket shop is accessible at all times, however; there isn't much point in visiting it until the player has earned tickets to spend.
 
-since the amount of games within the arcade is dynamic and the ticket shop sells cheat codes and unlocks for each one the ticket shop will also need to accommodate a wide range of stock. to do this the ticket shop will have a simple, scalable design that is familiar.
+Since the amount of games within the arcade is dynamic and the ticket shop can sell upgrades for each one, the ticket shop will also need to accommodate a wide range of stock. to do this the ticket shop will have a simple and scalable design. The shop's features are outlined below.
 
-The shop user interface will feature a scroll bar that appears when the shop contains too many items to fit on the screen this way the icons for shop items do not have to be scaled down to fit.
-
-The shop user interface can be navigated entirely with a keyboard or by clicking with a mouse. When the user is prepared to purchase an item there will be a pop-up to confirm their decision. 
-
-Game developers will be able to add generic purchasable upgrades based on templates so they can quickly integrate their games into the arcade's ecosystem.
-generic upgrades will include:
- - (insert game name) Score doubler
- - (insert game name) Rapid fire
- - (insert game name) Extra lives
-
-### Arcade Environment
-
-the arcade itself is a 3-dimensional room filled with arcade machines the room will be lit just enough to easily navigate and see objects but also dim enough to replicate those dingy 90s arcades. it's a careful balance.
-
-The walls have collision so that users bump into them instead of walking through them. there won't be any vertical movement so jumping and gravity aren't necessary unless support for multi-floor arcades is needed.
-
-ambient sounds will play from the arcade machines and from the NPCs and jukebox. 
-
-### Movement and controls
-Users are placed directly into the 3D environment upon launching the program so an initial popup will show the controls to navigate the map. The controls within the arcade will be WASD to move forward, back and strafe left and right with the mouse to look around and left click to interact. there will also be an alternative control scheme for if the user has a controller connected.
-
-Once the user has interacted with an arcade machine and entered a game, it is up to the game developer to inform the user of the game's controls, this will be displayed through a controls screen accessible within the arcade game. The control layout on the keyboard/controller for the arcade games should also be consistent between games, for example, the primary "A button" should be the same assigned key across all games. If the arcade game is multiplayer the other player may use a second controller connected or both players may share a keyboard for controls.
-
+- The shop user interface will feature a scroll bar that appears when the shop contains too many items to fit on the screen this way the icons for shop items do not have to be scaled down to fit
+- The shop user interface can be navigated entirely with a keyboard or by clicking with a mouse
+- When the user is prepared to purchase an item there will be a pop-up to confirm their decision
+- Game developers will be able to define upgrades and their cost so they can integrate their games into the arcade's ecosystem
 
 ### Non-Player Characters 
 NPCs are an important part of the immersion. NPCs will have certain behaviours and interactions. These behaviours include:
@@ -165,14 +242,6 @@ The token and ticket displays will not be visible when the player has entered a 
 Navigation to interact with features will be physically represented by walking up to and looking at a feature then pressing a select button.
 
 Exiting the program will have a similar method by walking up to the entrance doorway of the arcade and interacting with it. 
-
-### Ticket shop interface
-
-The ticket shop interface will be a 2D dimensional grid of squares with a scroll bar. Within each square will be a display of a product and it's price in tickets. The user can interact with a box purchase the item within. if there are more items than can be fit on one page a scroll bar will be automatically enabled.
-
-### Jukebox interface
-
-The jukebox interface will be a simplified version of the ticket shop interface but instead of multiple rows and columns of boxes it will be a single column that can be scrolled through to select songs names that appear stacked on top of eachother.
 
 ## 7. Non-functional requirements <a name="section7"></a>
 
