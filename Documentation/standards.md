@@ -114,7 +114,7 @@ By adhering to these coding standards and processes, the team aims to maintain a
 
 ---
 ## Version control standards and processes
-The team's GitHub repository (TEAM_REPO_NAME_GOES_HERE) will be established and managed by the version control lead, Marek, and his understudy, Bruce, both of whom will have admin access. This repository will follow a structured 5-branch system to facilitate efficient development, testing, and deployment, while maintaining high-quality code and collaboration. Additionally, all code merges into the repository will require peer review to ensure that the team maintains consistent standards and avoids introducing errors.
+The team's GitHub repository CSCI265 will be established and managed by the version control lead, Marek, and his understudy, Bruce, both of whom will have admin access. This repository will follow a structured 5-branch system to facilitate efficient development, testing, and deployment, while maintaining high-quality code and collaboration. Additionally, all code merges into the repository will require peer review to ensure that the team maintains consistent standards and avoids introducing errors.
 
 ### Standards
 The following version control standards have been agreed upon by the team:
