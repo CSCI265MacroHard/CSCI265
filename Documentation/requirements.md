@@ -22,7 +22,7 @@ The following person has been designated the main contact person for questions f
 
 5. [ Key features, with detailed requirements for each ](#section5)
 
-6. [ Game interface, screens, and menus ](#section6)
+6. [ Example Game Requirements ](#section6)
 
 7. [ Non-functional requirements ](#section7)
 
@@ -225,23 +225,19 @@ NPCs are an important part of the immersion. NPCs will have certain behaviours a
  - providing tips and tricks. "you have to shoot where they're going to be", "to get more tickets, do better!"
  - Bail the player out if they run out of tokens
 
-## 6. User interface and navigation <a name="section6"></a>
-
-### GUI
-
-The inclusion of GUIs will be kept to a minumum to ensure the user's immersion isn't ruined with popups. The exception to this will be the ticket shop since accomodating a dynamic stock of items will be easier to represent with a 2D interface that overlays the screen. 
-
 ### Currencies information display
 
 Within the main arcade scene there the player will have their ticket count displayed in the top right corner of the screen. The player's token count will be displayed in the top left corner.
 
 The token and ticket displays will not be visible when the player has entered a game.
 
-### Navigation
+## 6. Example Game Requirements <a name="section6"></a>
 
-Navigation to interact with features will be physically represented by walking up to and looking at a feature then pressing a select button.
+### Jetris
 
-Exiting the program will have a similar method by walking up to the entrance doorway of the arcade and interacting with it. 
+**Overview**
+
+**Requirements**
 
 ## 7. Non-functional requirements <a name="section7"></a>
 
