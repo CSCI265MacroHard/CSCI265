@@ -235,9 +235,55 @@ The token and ticket displays will not be visible when the player has entered a 
 
 ### Jetris
 
-**Overview**
+#### Overview
+**The Jetris** is a modern, pixelated take on the classic Tetris game that many of us grew up playing. Designed for a single-player experience, it brings the familiar challenge of stacking and clearing lines to a simple, retro-styled interface. Players control the tetrominoes using the following keys:
 
-**Requirements**
+- Q: Rotate counterclockwise
+- R: Rotate clockwise
+- A: Move left
+- S: Move down
+- D: Move right
+- Space Bar: Hard drop
+  
+The core mechanics remain true to the original Tetris. Players earn points by completing horizontal lines, which are cleared from the grid. Cleared lines create room for new tetrominoes to fall, allowing the player to keep playing and earn higher scores. However, the game ends when the stack of uncleared lines reaches the top of the grid.
+
+One unique twist in Jetris is the absence of a "ghost piece" or drop guide, making it more challenging to calculate where a tetromino will land after a hard drop. The game grid consists of 20 rows and 10 columns. The seven classic tetromino shapes (I, J, L, O, S, T, and Z) spawn randomly.
+
+**The objective is simple**: survive as long as possible, rack up points, and develop precision in placing blocks to optimize space.
+
+#### Requirements
+**Game Flow, Objectives, and Plot-Line**
+The Jetris offers a straightforward yet engaging gameplay loop:
+
+- Start Screen
+   - The game begins with a clean, pixelated interface, offering a simple start menu where players can begin the game or view basic controls.
+- Gameplay
+   - Once the game starts, tetrominoes begin to drop from the top of the grid. Players must manipulate these shapes to form complete lines while avoiding gaps that might block future moves.   
+- Scoring: Points are awarded as follows:
+   - 20+ points per cleared line.
+- Endgame
+   - The game ends when the blocks stack up to the top of the grid. A game-over screen displays the player’s final score and offers the option to restart. While there is no narrative plot-line, the game provides a timeless challenge of skill, strategy, and reflexes, with the main goal being to achieve the highest score possible.
+
+**Key Features**
+Jetris brings a mix of classic Tetris mechanics and modern tweaks, making it both nostalgic and refreshing.
+- Wall Kicks:
+   - Tetrominoes can rotate without moving outside the grid boundaries, ensuring smooth gameplay.
+   - This feature eliminates frustration caused by shapes getting stuck at the edges.
+- Line Clearing
+   - Lines disappear seamlessly once completed.
+   - Each cleared line awards 20+ points, encouraging players to optimize their stacking strategies.
+   - Multiple lines cleared in a single move (Tetris) grant bonus points.   
+- Next Piece Preview:
+   - A preview window shows the next tetromino, allowing players to plan their moves ahead.
+- Sound Effects
+   - The game includes immersive sound effects for actions like rotations, line clears, and game overs.
+   - Sounds enhance player engagement without being overwhelming.
+- Pixelated Art Style
+   - The game adopts a retro, pixel-art aesthetic, appealing to fans of classic gaming.
+   - The grid, tetrominoes, and UI elements are simple yet visually charming.
+- Simple UI
+   - Features a clean start menu and a clear game-over screen.
+   - The interface focuses on functionality and ease of use, keeping players immersed in the gameplay.
 
 ## 7. Non-functional requirements <a name="section7"></a>
 
