@@ -263,11 +263,101 @@ When it detects a change in the temp file it will copy the data and then clear t
 
 # 10. Built In Games <a name="section10"></a>
 
-The Arcade will feature built-in games developed by us in our personal time. here we are providing a brief description of the games and their token cost/ticket reward but it is not our plan to document them in detail since they are all solo projects
+The Arcade will feature built-in games developed by us in our personal time. here we are providing a brief description of the games and their token cost/ticket reward.
 
 ### Jetris / The Pinaytrix
-Jetris is a clone of the classic Tetris, featuring falling tetromino blocks that players rotate and move to create complete horizontal lines. When a line is cleared, it disappears, and the blocks above shift down. As the game progresses, the speed increases, challenging players to keep up. The game ends when the blocks stack up to the top. Jetris includes classic features like score-based line clears and a next-piece preview. More features will be added once the implementation of the game is done like background music and cool animations.
+The board oversees the core gameplay mechanics and flow of the game. It ensures proper sequencing of tetromino spawns, player input handling, and game state updates. It communicates with the UI module for visual updates and uses the game logic process to resolve all actions and events.
 
+**The Game Logic Process**
+The game logic process manages all moment-to-moment gameplay. Below is the action sequence for this module:
+
+- Initialization
+	- Load the grid and boundaries (20 rows × 10 columns).
+	- Initialize tetromino nodes (.tres), rotation indices, and stack logic.
+- Define controls
+	- Q/R: Rotate counterclockwise/clockwise.
+	- A/D: Move left/right.
+	- S: Soft drop.
+	- Space Bar: Hard drop.
+-Gameplay Loop
+	- Repeat the following until the game ends:
+	- Increment game time (ticks).
+- Check player input via func _input(_event) to trigger:
+	- Rotation: Adjust rotation indices.
+	- Movement: Validate against boundaries and implement wall kicks for edge handling.
+	- Manage tetromino spawns and movements.
+	- Detect collisions (ground, stack, or grid edges).
+	- Resolve line clears and score updates.
+	- Trigger sound effects (downloaded from online resources).
+- Game Over
+	- Detect when the stack reaches the grid's top.
+	- Display the game-over screen.
+	- Reset the global score (scores are not saved after the session ends).
+
+**UI Module**
+The UIX module handles all player interaction and visual feedback. It captures input and updates the display dynamically based on the game's state.
+
+- Input Handling
+	- Captures keyboard inputs using func _input(_event).
+	- Maps input to corresponding actions (movement, rotation, hard drop).
+- Output Process
+	- Processes display updates:
+		- Tetromino Movements: Adjust grid positions for active pieces.
+		- Line Clears: Highlight and remove cleared rows.
+		- Score Display: Update global score dynamically.
+		- Game State: Transition between start, active play, and game-over screens.
+- Menu Navigation:
+	- Start menu: Launches the game.
+	- Game-over screen: Displays the final score and provides a restart option.
+	- Minimalist Design Philosophy:
+	- The UI is designed for simplicity, allowing players to focus entirely on gameplay.
+
+**Spawn and Input Modules**
+- Tetromino Piece Spawner
+	- This script handles the spawning of tetrominoes based on pre-defined resource nodes (.tres).
+- Randomly selects one of the seven classic shapes (I, J, L, O, S, T, Z).
+- Ensures that new pieces spawn at the top of the grid without overlapping existing stacks.
+- Input Handler
+	- Player input is managed through the Godot Engine’s event system:
+		- Movements and rotations are validated against the grid logic to prevent invalid placements.
+
+
+**Grid Logic and Precision**
+- The grid and gameplay mechanics are mathematically defined to ensure consistency:
+- Rotation Handling
+	- Rotation indices are mapped to grids, enabling precise adjustments during player input.
+	- Wall kicks ensure tetrominoes stay within bounds after rotation.
+- Line Clearing
+	- A completed line triggers a clear animation and removes the line from the grid.
+	- Cleared lines shift the stack downward, opening new space.
+- Scoring System
+	- Points are awarded for each cleared line (+20 per line).
+- Sound Module
+	- Sound effects are integrated into key game events:
+	- Piece rotations and drops.
+	- Line clears.
+	- Game-over chime.
+	- These effects are simple and enhance player feedback without distracting from the gameplay.
+
+**Anticipated Action Sequence**
+- Start Game
+	- Load the main menu and await player input to start the game.
+	- Initialize the grid, score, and tetromino spawner.
+- Gameplay Loop
+	- Spawn a new tetromino.
+	- Handle player input to rotate or move the active piece.
+	- Detect collisions or line completions.
+	- Resolve scoring and update the display.
+	- End the game when the grid fills to the top.
+- Game Over
+	- Display the final score and game-over screen.
+	- Allow the player to restart or exit.
+
+**Core Design Decisions**
+- Godot Engine: Jetris was built from scratch in Godot, leveraging its node-based architecture for efficient implementation of tetrominoes and grid logic.
+- Mathematical Grid Logic: The gameplay relies on precise calculations for movement, rotation, and stacking, ensuring smooth mechanics.
+- Global Scoring: The score is tracked globally for the session but resets when the game ends, aligning with the arcade-like design.
+  
 ### 2Cool4Pool
 2Cool4Pool is a bird's eye view recreation of pool. With an easy to understand set of rules but deceptively complex physics, there is a low skill floor but a high skill ceiling. The token cost to play pool will be 1 and the amount of tickets earned will be based on how many turns it took you to sink all the balls.
 
