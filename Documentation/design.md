@@ -51,10 +51,7 @@ The following person has been designated the main contact person for questions f
 
 In this section, we list any currently known errors, omissions, or other issues with the rest of this design document.
 
-- The feature list has yet to be finalized. Its introduction will mark a significant shift in the project’s workflow, bringing much more clarity to each design element outlined below.
-- The game development is still in the proof of concept/prototype phase. As a result, development has been highly decentralized and has not yet adopted the planned Git workflow. This causes problems for the design process, as many features are being implemented before they have been properly documented.
-- Several arcade games are already deep into development but have not yet been implemented in the arcade. This is due to the lack of a standardized process for game implementation, which reflects a flaw in the current prioritization of development tasks. This delay also affects the clarification of the token and ticket shop interactions, as both need to be implemented before a concrete statement can be made.
-- A standardized method for implementing games has yet to be decided, making it difficult to provide clear guidelines on what a developer needs to get their game running in the arcade.
+- 
 
 [//]: # (////////////////////CHAPTER ENDS////////////////////)
 
