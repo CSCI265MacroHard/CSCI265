@@ -1,5 +1,5 @@
 # CSCI 265 Requirements and specifications (Phase 2)
-Version 1.5
+
 ## Team name: MacroHard
 
 ## Project/product name: 'Cyber' Cyber City
@@ -9,7 +9,7 @@ Version 1.5
 The following person has been designated the main contact person for questions from the reader:
 
  - Alister Lawson, AlisterLawson64@gmail.com
- - 
+
 # Table of Contents
 
 1. [ Known issues/omissions ](#section1)
