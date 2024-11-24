@@ -111,7 +111,7 @@ All testing tools and utilities will be integrated within the Godot Editor, leve
 	- Include prerequisites, precise instructions, and result assessments.
 	- Ensure reliability and clarity in validating product features.
 	
-### Sample Script
+### Player Movement and Interactions
 **Step 1: Verify the First-Person Point of View**
 - Observe the screen. Ensure the Field of View (FOV) is set to 90 degrees.
 - Move the camera left, right, up, and down by dragging the mouse.
@@ -143,6 +143,47 @@ All testing tools and utilities will be integrated within the Godot Editor, leve
 - Press Left Click to attempt interaction.
 - **Expected Result**: 
 	- No interaction occurs.
+
+#### Implementing external Game
+**Step 1: Validate Game Folder Structure**
+- Action: Create a folder named InfitePizza containing the following files:
+	- game.exe
+	- skin.png
+	- config.txt
+	- icon.svg
+	- An extra file README.md.
+- **Expected Result:**
+	- The folder is recognized as valid, despite the presence of an extra file.
+	- The program does not reject the folder.
+
+**Step 2: Test Import of a Game Folder**
+- Action: Place the InfitePizza folder in the designated Games directory and launch the program.
+- **Expected Result:**
+	- The folder is scanned and recognized as a valid game package.
+	- An arcade machine is created for SpaceRacer.
+	- The skin.png texture is applied to the arcade machine.
+	- The machine is connected to the game.exe file.
+
+**Step 3: Validate Upgrade Integration**
+- Action: Populate config.txt with the following upgrade definitions:
+	- turbo_cue: Turbo mode for pool game (ticket cost: 15,000) 
+	- fast_mode: Speed up game (ticket cost: 10,000)
+- **Expected Result:**
+	- Upgrades turbo_cue and fast_mode are added to the ticket shop.
+	- Upgrades appear with the icon from icon.svg.
+	- Correct ticket costs (15,000 and 10,000) are displayed.
+
+**Step 4: Validate Ticket and Score Return**
+- Action: Play InfinitePizza and ensure the game returns the following scores upon completion:
+	- Poor performance: 500.
+	- Average performance: 3,000.
+	- Excellent performance: 7,500.
+- **Expected Result:**
+	- Tickets are awarded based on returned scores:
+	- 500 tickets for poor performance.
+	- 3,000 tickets for average performance.
+  	- 7,500 tickets for excellent performance.
+	- Scores exceeding 10,000 are awarded sparingly and align with the design guidelines.
 
 ## 3.3 Executables <a name="section3.3"></a>
 - Test scripts  written in gdscript
