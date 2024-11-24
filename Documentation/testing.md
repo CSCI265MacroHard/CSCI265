@@ -16,13 +16,28 @@ The following person has been designated the main contact person for questions f
  - Nick Biagioni, viud2l_1061684@d2l.viu.ca
 
 # Table of Contents
-1. [Test Plan](#section1)
-2. [Test Components](#section2)
-3. [Test Files and Resources](#section3)
+1. [Known issues](#section1)
+2. [Test Plan](#section2)
+2.1 [Testing Overview](#section2.1)
+2.2 [Key Testing Challenges](#section2.2)
+2.3 [Testing Timeline](#section2.3)
+2.4 [Testing Cases and Process](#section2.4)
+3. [Test infrastructure](#section3)
+3.1 [Software Tools and Environment](#section3.1)
+3.2 [User Action Scripts](#section3.2)
+3.3 [Executables](#section3.3)
+4. [Test File and Resources](#section4)
+4.1 [Version control and branch structure](#section4.1)
+4.2 [Test Directory Structure](#section4.2)
+5. [Testing Dependencies](#section5)
 
-# 1. Test Plan <a name="section1"></a>
+# 1. Known issues <a name="section1"></a>
 
-## Key Testing Challenges
+# 2. Test Plan <a name="section2"></a>
+
+## 2.1 Testing Overview <a name="section2.1"></a>
+
+## 2.2 Key Testing Challenges <a name="section2.2"></a>
 "Cyber  Cyber  City's  base  functionality  is a library  of  executables, presented  as an arcade. It  is  made so creators  may  populate  it  with  arcade-style games, for a player  to browse and play."
 
 - Player's perspective versus Creator's perspective
@@ -32,8 +47,7 @@ The following person has been designated the main contact person for questions f
   - To enhance the speed and accuracy of testing, it is critical to automate the verification of game states and interactions, especially when handling user-generated files. By automating tests for various game states, we can quickly identify and address issues related to file loading, game state transitions, and resource management, ensuring a more stable and responsive environment for players.
 - Poor DirAccess Documentation
 
-
-## Testing Timeline
+## 2.3 Testing Timeline <a name="section2.3"></a>
 - Bottom-up priority for test creation
   - To ensure comprehensive test coverage, the process begins at the lowest level, focusing on individual components before moving on to higher-level integrations.
 	- "Design" tests first to ensure base program functionality
@@ -47,7 +61,7 @@ The following person has been designated the main contact person for questions f
 - Final run of all combined tests
   - After the design and requirements tests are complete, all tests will be run together to validate the system as a whole.
 
-## Testing Cases and Process
+## 2.4 Testing Cases and Process <a name="section2.4"></a>
 - Creator" and "Player" roles
   - Testing will focus on tools and workflows that support the import, modification, and management of games within the arcade. This includes game file handling, import workflows, and the ability to test and debug games inside the arcade environment.
   - Tests for players will ensure that they can easily navigate the arcade, find games, and experience seamless gameplay. These tests will include arcade navigation, game launching, and player interactions.
@@ -58,8 +72,9 @@ The following person has been designated the main contact person for questions f
 	- Parameters and return values
 	- Components in the program where correct behaviour can be measured with scripts
 
-# 2. Test Component <a name="section2"></a>
-## Software Tools and Environment
+# 3. Test infrastructure <a name="section3"></a>
+
+## 3.1 Software Tools and Environment <a name="section3.1"></a>
 - Within Godot Editor
 	- Windows 11 and File Explorer will be used for some of the manual testing steps, such as verifying file paths and managing test files.
 - Godot Unit Tester (GUT) Plugin
@@ -71,9 +86,7 @@ The following person has been designated the main contact person for questions f
 - We will test using gdscripts (GUT) stub for specific parts like functions.
 - Tools and Utilities will remain under the Godot Editor and the use of GUT Plug-in.
 
-
-## User Action Scripts
-
+## 3.2 User Action Scripts <a name="section3.2"></a>
 - Used for multi-tool actions performed by creators (game file manipulation)
 - Used for player character behaviour tests
 
@@ -116,21 +129,18 @@ The following person has been designated the main contact person for questions f
 - **Expected Result**: 
 	- No interaction occurs.
 
-
-
-## Executables
+## 3.3 Executables <a name="section3.3"></a>
 - Test scripts  written in gdscript
 ![Executable](pics/exe.png)
 
+# 4. Test File and Resources<a name="section4"></a>
 
-# 3. Test File and Resources<a name="section3"></a>
-
-## Version control and branch structure
+## 4.1 Version control and branch structure <a name="section4.1"></a>
 - Testing files directory treated like a "feature" in version control
 - All files included in project directory, but will be excluded from final program compilation
 - Done on same branch as Dev but each test is branched as a feature
 
-## Test Directory Structure 
+## 4.2 Test Directory Structure <a name="section4.2"></a>
 - All within development branch game directory
 - Separated by user scripts and test programs
 - Test games setup for test cases from both
@@ -139,7 +149,8 @@ The following person has been designated the main contact person for questions f
 
 ![test_structure](pics/test_structure.png)
 
-## Testing Dependencies
+# 5. Testing Dependencies <a name="section5"></a>
+
 - Windows 10-11 operating system
 - A file explorer or command shell
 - Project imported into Godot editor (GUT addon bundled in dev branch project folder)
