@@ -16,78 +16,56 @@ The following person has been designated the main contact person for questions f
  - Nick Biagioni, viud2l_1061684@d2l.viu.ca
 
 # Table of Contents
-1. [ Project Updates ](#section1)
-2. [Test Plan](#section2)
-3. [Test Components](#section3)
-4. [Test Files and Resources](#section4)
+1. [Test Plan](#section1)
+2. [Test Components](#section2)
+3. [Test Files and Resources](#section3)
 
-# 1. Project Updates <a name="section1"></a>
-## Changes in Standard
-- Overall improvement to the document
-	- Introduction to each section
-	- Converted bulletpoints into fulltext
-- Added peer review step before merging to development process
-- Align documentation of branch model to existing repo
-
-## Changes in Requirements
-- Global document renovations
-	- Better describes project to team and clients
-	- Elaboration on high-priority components
-	- GUI merged into other chapters, chapter 6 now describes example game requirements
-- Revamped lists of feature behaviours for all components
-	- More detail added to sections that were lacking
-	- Standardised summary then bullet-points structure
-- Removal of extraneous information
-	- Scope creep
-
-## Changes in Design
-- Global document renovations
-	- Structural changes to better fit object orientented implementation
-	- Removal of information that didn't belong in design
-- Elaboration of each component's logical design
-	- Diagrams added to clarify designs
-	- Abstraction level lowered to functions with parameters
-- High level full-program ERD
-	- Relationship between all nodes (objects) in the main scene and mainline data path
-	- Hierarchy displayed to clarify efforts in reduced coupling
-
-# 2. Test Plan <a name="section2"></a>
+# 1. Test Plan <a name="section1"></a>
 
 ## Key Testing Challenges
 "Cyber  Cyber  City's  base  functionality  is a library  of  executables, presented  as an arcade. It  is  made so creators  may  populate  it  with  arcade-style games, for a player  to browse and play."
 
 - Player's perspective versus Creator's perspective
+  - Players expect a smooth, engaging experience with easy navigation and responsive gameplay. It's essential to test not only the playability of the games but also how well the arcade interface supports browsing, searching, and launching games.
+  - On the other hand, creators rely on intuitive tools to import, manage, and test their games. Ensuring that creators can easily add and modify their games within the arcade without encountering bugs or limitations is a core focus. Testing these perspectives will help identify potential friction points between the two user roles.
 - Automation of tesing states based on user-generated files
+  - To enhance the speed and accuracy of testing, it is critical to automate the verification of game states and interactions, especially when handling user-generated files. By automating tests for various game states, we can quickly identify and address issues related to file loading, game state transitions, and resource management, ensuring a more stable and responsive environment for players.
 - Poor DirAccess Documentation
 
 
 ## Testing Timeline
 - Bottom-up priority for test creation
+  - To ensure comprehensive test coverage, the process begins at the lowest level, focusing on individual components before moving on to higher-level integrations.
 	- "Design" tests first to ensure base program functionality
 		- Split test creation by component to each member
 		- One complete pass of all component's tests prior to moving to second part
+    		- Validate the core program functionality, ensuring that the base features work as intended
+        	- Testing individual components like game imports, file handling, and arcade navigation.
 	- "Requirements" test second to ensure any unexpected behaviour isn't from lower level issues
 		- Split test creation by component to each member
 		- Review of previous test cases based on requirements tests
 - Final run of all combined tests
+  - After the design and requirements tests are complete, all tests will be run together to validate the system as a whole.
 
 ## Testing Cases and Process
 - Creator" and "Player" roles
-- Subjective cases
+  - Testing will focus on tools and workflows that support the import, modification, and management of games within the arcade. This includes game file handling, import workflows, and the ability to test and debug games inside the arcade environment.
+  - Tests for players will ensure that they can easily navigate the arcade, find games, and experience seamless gameplay. These tests will include arcade navigation, game launching, and player interactions.
+- Subjective cases: primarily focused on usability and experience, assessing how intuitive and engaging the arcade is for users.
 	- Inspections of arcade elements
 	- Navigation of arcade
-- Objective cases
+- Objective cases: tests provide measurable outcomes, helping to ensure that the arcade's technical features perform as expected.
 	- Parameters and return values
 	- Components in the program where correct behaviour can be measured with scripts
 
-# 3. Test Component <a name="section3"></a>
+# 2. Test Component <a name="section2"></a>
 ## Software Tools and Environment
 - Within Godot Editor
-	- some of the test will use window's file explorer
-	- We are using Windows 11
+	- Windows 11 and File Explorer will be used for some of the manual testing steps, such as verifying file paths and managing test files.
 - Godot Unit Tester (GUT) Plugin
 	- It allows you to write tests for your gdscript in gdscript.
-	- What's included in the class: setup/teardown, assertion, utilities, and GUT utilities
+	- The GUT plugin provides useful features, including assertions for checking values, setup/teardown methods for initializing and cleaning up before/after tests, and a wide array of utilities for streamlining test execution. This allows us to easily automate and organize tests.
+
 ![GUT Plug in](pics/GUT.png)
 - Automated  and manual testing will be performed using user action scripts to ensure consistent test coverage. 
 - We will test using gdscripts (GUT) stub for specific parts like functions.
@@ -145,7 +123,7 @@ The following person has been designated the main contact person for questions f
 ![Executable](pics/exe.png)
 
 
-# 4. Test File and Resources<a name="section4"></a>
+# 3. Test File and Resources<a name="section3"></a>
 
 ## Version control and branch structure
 - Testing files directory treated like a "feature" in version control
