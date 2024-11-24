@@ -36,7 +36,40 @@ The following person has been designated the main contact person for questions f
 
 # 2. Test Plan <a name="section2"></a>
 
+This chapter outlines the testing framework for Cyber Cyber City, focusing on ensuring the platform's functionality, usability, and reliability. The testing process is designed to address the needs of both players, who interact with the arcade to browse and play games, and creators, who rely on intuitive tools to import, manage, and test their games.
+
+Key components of this chapter include a description of the testing environment, an overview of the testing process and priorities, and a detailed timeline for executing tests. The challenges encountered, such as balancing the dual perspectives of players and creators, automating tests for user-generated files, and addressing gaps in documentation, are also highlighted. Together, these elements establish a comprehensive foundation for user acceptance testing and ensure a smooth development and testing process for the project.
+
 ## 2.1 Testing Overview <a name="section2.1"></a>
+
+The testing process for Cyber Cyber City is designed to ensure a seamless experience for both players and creators. The project functions as an arcade where players can browse and play games, while creators use it as a platform to manage and showcase their creations. The testing environment relies on the Godot Editor, Windows 11, and the Godot Unit Tester (GUT) plugin, enabling automated and manual test cases for comprehensive coverage.
+Testing Process
+
+Testing follows a bottom-up approach, beginning with individual components (e.g., game imports, file handling) and progressing to system-wide tests. Automated tests verify game states, resource management, and file handling, while manual tests focus on usability, navigation, and gameplay.
+Test Cases
+
+- Player-Focused: Validates smooth navigation, game discovery, and responsive gameplay.
+- Creator-Focused: Ensures robust tools for importing, managing, and testing games.
+- Subjective Usability Tests: Assess intuitiveness and user experience.
+- Objective Technical Tests: Verify performance metrics, parameters, and outputs.
+
+Key Challenges
+
+- Balancing the needs of players and creators.
+- Automating tests for user-generated files to ensure consistency.
+- Addressing gaps in DirAccess documentation for file handling.
+
+Testing Timeline
+
+The timeline includes five phases:
+
+- Test Infrastructure Setup: Prepare scripts and data for component testing.
+- Documentation Completion: Finalize "Design" test cases.
+- Component Testing: Validate core functionalities.
+- Requirements Testing: Confirm system-wide reliability.
+- Final Combined Test Pass: Ensure full system integrity.
+
+This structured approach provides a clear framework to ensure Cyber Cyber City meets its technical and user experience goals.
 
 ## 2.2 Key Testing Challenges <a name="section2.2"></a>
 "Cyber  Cyber  City's  base  functionality  is a library  of  executables, presented  as an arcade. It  is  made so creators  may  populate  it  with  arcade-style games, for a player  to browse and play."
