@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1wcgrd7e86fn"]
+[gd_scene load_steps=5 format=3 uid="uid://dvwqxf4vsxlau"]
 
 [ext_resource type="Script" path="res://npcs/bruce/npc.gd" id="1_kghxl"]
-[ext_resource type="Texture2D" uid="uid://1uk2nwgm56ut" path="res://npcs/bruce/bruceGives.png" id="2_qi88x"]
+[ext_resource type="Texture2D" uid="uid://1uk2nwgm56ut" path="res://npcs/bruce/bruceGives.png" id="2_jgcvd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oka48"]
 friction = 0.6
@@ -23,4 +23,4 @@ shape = SubResource("CapsuleShape3D_qmsac")
 billboard = 2
 double_sided = false
 texture_filter = 2
-texture = ExtResource("2_qi88x")
+texture = ExtResource("2_jgcvd")

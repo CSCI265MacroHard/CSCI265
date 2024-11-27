@@ -29,15 +29,17 @@ func _ready():
 		else:
 			print("Found invalid file: " + file_name)
 		file_name = dir.get_next()
-		
+	
 	#TESTING
 	print(games.keys())
 	print(games.size())
 	
+	build_machines(games)	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): #NOTE most likely won't be used but if something needs to be run on the physics server globally put it here.
 	pass
-	
+
 func fetch_files(folder) -> PackedStringArray: #DEPRECATED
 	return DirAccess.get_files_at(folder)
 
@@ -47,10 +49,9 @@ func get_games_folder_path(): #Uses internally stored games folder when editing,
 	else:
 		return OS.get_executable_path().get_base_dir().path_join("games")
 
-func valid_game(folder) -> bool:
+func valid_game(game_folder) -> bool:
 	#TODO
-	var dir = DirAccess.open(folder)
-	print(folder)
+	var dir = DirAccess.open(game_folder)
 	#ensures all files are present
 	var file_attendance = [
 		dir.file_exists("game.exe"),
@@ -59,3 +60,16 @@ func valid_game(folder) -> bool:
 		dir.file_exists("icon.svg")
 		]
 	return !file_attendance.has(false)
+
+func build_machines(imported_games) -> void:
+	print(imported_games)
+	for key in imported_games:
+		print(imported_games[key])
+		var arcade_machine_template = load("res://arcade_machines/arcade_machine_template/arcade_machine_template.tscn")
+		var new_machine = arcade_machine_template.instantiate()
+		new_machine._instatiate(imported_games[key])
+		get_parent().get_node("Arcade").add_child(new_machine)
+	return
+
+func generate_grid() -> void:
+	pass
