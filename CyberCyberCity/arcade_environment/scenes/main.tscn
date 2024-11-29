@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://q0o0h8frk75o"]
+[gd_scene load_steps=10 format=3 uid="uid://q0o0h8frk75o"]
 
 [ext_resource type="Script" path="res://arcade_environment/scripts/arcade.gd" id="1_o64ea"]
 [ext_resource type="PackedScene" uid="uid://dwja5xqxegwlj" path="res://player/scenes/player.tscn" id="2_pqau1"]
 [ext_resource type="MeshLibrary" uid="uid://dy1rhbvkhsf8s" path="res://arcade_environment/assets/meshLibArcade.tres" id="3_edx7e"]
-[ext_resource type="PackedScene" uid="uid://d1wcgrd7e86fn" path="res://npcs/bruce/npc.tscn" id="4_rp3cb"]
+[ext_resource type="PackedScene" uid="uid://dvwqxf4vsxlau" path="res://npcs/bruce/npc.tscn" id="4_rp3cb"]
 [ext_resource type="PackedScene" uid="uid://b2txhnfrcgwk0" path="res://arcade_machines/pool/pool_table.tscn" id="5_fha27"]
+[ext_resource type="PackedScene" uid="uid://cmuxqbbnlqxp1" path="res://ticket_shop/scenes/control.tscn" id="6_xnckn"]
 
 [sub_resource type="Environment" id="Environment_ha2rx"]
 ambient_light_source = 1
@@ -43,3 +44,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35301, 0)
 
 [node name="PoolTable" parent="." instance=ExtResource("5_fha27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.76248)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("6_xnckn")]
