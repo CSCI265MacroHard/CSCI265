@@ -1,7 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvwqxf4vsxlau"]
 
+<<<<<<< HEAD:CyberCyberCity/npcs/bruce/bruce.tscn
 [ext_resource type="Script" path="res://npcs/bruce/bruce.gd" id="1_kghxl"]
 [ext_resource type="Texture2D" uid="uid://1uk2nwgm56ut" path="res://npcs/bruce/bruceGives.png" id="2_qi88x"]
+=======
+[ext_resource type="Script" path="res://npcs/bruce/npc.gd" id="1_kghxl"]
+[ext_resource type="Texture2D" uid="uid://1uk2nwgm56ut" path="res://npcs/bruce/bruceGives.png" id="2_jgcvd"]
+>>>>>>> 5ebc6198f98e59b353e4f9f811a87ac228da3786:CyberCyberCity/npcs/bruce/npc.tscn
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oka48"]
 friction = 0.6
@@ -21,4 +26,4 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
 billboard = 2
 double_sided = false
 texture_filter = 2
-texture = ExtResource("2_qi88x")
+texture = ExtResource("2_jgcvd")

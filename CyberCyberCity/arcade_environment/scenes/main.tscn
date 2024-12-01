@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 [gd_scene load_steps=14 format=3 uid="uid://q0o0h8frk75o"]
+=======
+[gd_scene load_steps=8 format=3 uid="uid://q0o0h8frk75o"]
+>>>>>>> 5ebc6198f98e59b353e4f9f811a87ac228da3786
 
-[ext_resource type="Script" path="res://arcade_environment/scripts/arcade.gd" id="1_o64ea"]
 [ext_resource type="PackedScene" uid="uid://dwja5xqxegwlj" path="res://player/scenes/player.tscn" id="2_pqau1"]
 [ext_resource type="MeshLibrary" uid="uid://dy1rhbvkhsf8s" path="res://arcade_environment/assets/meshLibArcade.tres" id="3_edx7e"]
 [ext_resource type="PackedScene" uid="uid://dvwqxf4vsxlau" path="res://npcs/bruce/bruce.tscn" id="4_rp3cb"]
@@ -20,7 +23,6 @@ volumetric_fog_density = 0.09
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_or4n1"]
 
 [node name="Arcade" type="Node3D"]
-script = ExtResource("1_o64ea")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ha2rx")
@@ -40,7 +42,7 @@ cell_center_y = false
 data = {
 "cells": PackedInt32Array(65535, 0, 1441792, 65534, 0, 1441792, 65534, 65535, 1441792, 65533, 65535, 1441792, 65533, 65534, 1441792, 65534, 65534, 1441792, 65535, 65534, 1441792, 0, 65534, 1441792, 0, 65535, 1441792, 0, 0, 1441792, 0, 1, 1441792, 65535, 1, 1441792, 65534, 1, 1441792, 65533, 1, 1441792, 65533, 0, 1441792, 65535, 65535, 1441792, 1, 65534, 1441792, 1, 65535, 1441792, 1, 0, 1441792, 0, 2, 1441792, 65535, 2, 1441792, 65534, 2, 1441792, 65533, 2, 1441792, 1, 65533, 1441792, 0, 65533, 1441792, 65535, 65533, 1441792, 65534, 65533, 1441792, 65533, 65533, 1441792, 65532, 2, 4, 65532, 1, 4, 65532, 0, 4, 65532, 65535, 4, 65532, 65534, 4, 65532, 65533, 4, 2, 65532, 5, 65532, 3, 8, 2, 65533, 3, 2, 65534, 3, 2, 65535, 3, 2, 0, 3, 2, 1, 3, 2, 2, 3, 65533, 65532, 1, 65534, 65532, 1, 65535, 65532, 1, 0, 65532, 1, 1, 65532, 1, 65532, 65532, 7, 65533, 4, 4, 65533, 5, 4, 65533, 6, 4, 65533, 3, 0, 65534, 4, 3, 65534, 5, 3, 65534, 6, 3, 65534, 3, 0, 65535, 3, 2, 0, 3, 2, 1, 1, 0, 1, 2, 0, 2, 3, 6, 1, 3, 2, 65534, 7, 6, 65533, 7, 8)
 }
-metadata/_editor_floor_ = Vector3(0, -5, 0)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Bruce" parent="." instance=ExtResource("4_rp3cb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.65609, 1.86327, -0.181259)

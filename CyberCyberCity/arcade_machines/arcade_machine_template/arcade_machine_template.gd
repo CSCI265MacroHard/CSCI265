@@ -4,11 +4,18 @@ var executable
 var skin
 var config
 var icon
+<<<<<<< HEAD
 var game_name
 
 var texture
 
 func init(importedGame = {}):
+=======
+
+var texture
+
+func _instatiate(importedGame = {}):
+>>>>>>> 5ebc6198f98e59b353e4f9f811a87ac228da3786
 	var game = importedGame
 	
 	executable = game["game"]
@@ -31,6 +38,7 @@ func _process(delta):
 	pass
 
 func interact():
+<<<<<<< HEAD
 	if Global.tokens >= 1:
 		Global.tokens -= 1
 		$GameOverlay.visible = true
@@ -63,3 +71,7 @@ func interact():
 		$Beep.play()
 		return
 		
+=======
+	var output = []
+	OS.execute(executable, output)
+>>>>>>> 5ebc6198f98e59b353e4f9f811a87ac228da3786
