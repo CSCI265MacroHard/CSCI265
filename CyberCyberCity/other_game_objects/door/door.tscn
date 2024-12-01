@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds1b7l4obuabb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_766b1"]
+load_path = "res://.godot/imported/door.png-0876e312b463782259792846cee31ae4.s3tc.ctex"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bkunp"]
+size = Vector3(5.49408, 2.37012, 1)
+
+[node name="Door" type="StaticBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transparent = false
+double_sided = false
+texture = SubResource("CompressedTexture2D_766b1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0301819, 0.124512, 0)
+shape = SubResource("BoxShape3D_bkunp")

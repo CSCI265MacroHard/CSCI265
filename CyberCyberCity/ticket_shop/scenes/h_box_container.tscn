@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://70046kelm30"]
+
+[ext_resource type="Script" path="res://ticket_shop/scripts/h_box_container.gd" id="1_nj31e"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+size_flags_vertical = 2
+script = ExtResource("1_nj31e")

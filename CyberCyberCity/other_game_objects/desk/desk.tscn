@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5hcqnsi8e4c3"]
+
+[ext_resource type="Texture2D" uid="uid://di05mld3bl87f" path="res://other_game_objects/desk/desk.png" id="1_nvb6e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bkunp"]
+size = Vector3(5.49408, 1.94177, 0.360779)
+
+[node name="Desk" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0301819, -0.0263058, -0.152191)
+shape = SubResource("BoxShape3D_bkunp")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_nvb6e")

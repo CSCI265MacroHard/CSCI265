@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmuxqbbnlqxp1"]
+
+[ext_resource type="Script" path="res://ticket_shop/scripts/v_box_container.gd" id="1_ri0fe"]
+[ext_resource type="Script" path="res://ticket_shop/scenes/ticket_shop.gd" id="1_whonh"]
+[ext_resource type="PackedScene" uid="uid://70046kelm30" path="res://ticket_shop/scenes/h_box_container.tscn" id="2_r4ngy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xvcoe"]
+font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="TicketShop" type="CanvasLayer"]
+layer = -1
+visible = false
+script = ExtResource("1_whonh")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.1875
+anchor_top = 0.12963
+anchor_right = 0.8125
+anchor_bottom = 0.87037
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+horizontal_scroll_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+script = ExtResource("1_ri0fe")
+
+[node name="HBoxContainer" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_r4ngy")]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.0421875
+anchor_top = 0.862037
+anchor_right = 0.193229
+anchor_bottom = 0.939815
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="Button" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/Exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Close shop"
+label_settings = SubResource("LabelSettings_xvcoe")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="PanelContainer/Exit" to="." method="_on_exit_pressed"]

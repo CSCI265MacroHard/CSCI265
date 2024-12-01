@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://66lelrxsenf0"]
+
+[ext_resource type="Texture2D" uid="uid://g2818vp1sh1r" path="res://other_game_objects/plant/plant.png" id="1_7dx11"]
+
+[node name="Plant" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+texture = ExtResource("1_7dx11")

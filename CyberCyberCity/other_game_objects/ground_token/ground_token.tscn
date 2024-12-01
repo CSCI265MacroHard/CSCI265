@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb20uly25i4ht"]
+
+[ext_resource type="Script" path="res://other_game_objects/ground_token/ground_token.gd" id="1_t0svd"]
+[ext_resource type="Texture2D" uid="uid://tgg4bmboi5p0" path="res://other_game_objects/ground_token/ground_token.png" id="2_o8nqk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_oefk1"]
+radius = 0.1
+
+[node name="GroundToken" type="StaticBody3D"]
+script = ExtResource("1_t0svd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_oefk1")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0, 0)
+double_sided = false
+texture_filter = 2
+texture = ExtResource("2_o8nqk")
