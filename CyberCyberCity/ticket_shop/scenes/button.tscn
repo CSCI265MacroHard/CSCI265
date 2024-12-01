@@ -1,16 +1,93 @@
-[gd_scene load_steps=2 format=3 uid="uid://btmcclenolfo7"]
+[gd_scene load_steps=7 format=3 uid="uid://btmcclenolfo7"]
 
 [ext_resource type="Texture2D" uid="uid://djp10s7g5o53n" path="res://ticket_shop/assets/upgrade_star.png" id="1_5luwe"]
+[ext_resource type="Texture2D" uid="uid://pskb7fj35h8i" path="res://ticket_shop/assets/icon.svg" id="1_iu403"]
+[ext_resource type="Script" path="res://ticket_shop/scenes/button.gd" id="1_uti5m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qr7dd"]
+font_size = 24
+font_color = Color(1, 1, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7cnwd"]
+font_size = 32
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_utye7"]
+font_size = 200
+font_color = Color(1, 0, 0, 1)
+outline_size = 50
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Button" type="Button"]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = -1
+anchor_right = 0.133333
+anchor_bottom = 0.237037
+offset_right = -56.0
+offset_bottom = -56.0
+icon = ExtResource("1_iu403")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1_uti5m")
+metadata/_edit_use_anchors_ = true
+
+[node name="PipTexture" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 77.0
+offset_bottom = 77.0
+texture = ExtResource("1_5luwe")
+
+[node name="cost" type="Label" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = 6.0
+offset_right = 2.0
+offset_bottom = -90.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 0.261799
+text = "300 Tickets"
+label_settings = SubResource("LabelSettings_qr7dd")
+horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_5luwe")
+[node name="name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 106.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Upgrade"
+label_settings = SubResource("LabelSettings_7cnwd")
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="bought" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0332031
+anchor_right = 1.0
+anchor_bottom = 1.0332
+offset_top = 8.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "X"
+label_settings = SubResource("LabelSettings_utye7")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

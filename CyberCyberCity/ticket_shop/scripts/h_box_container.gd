@@ -2,34 +2,22 @@ extends HBoxContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# add a button if something is imported
-	if something_is_imported():
-		var new_button = Button.new()
-		new_button.text = "New Imported Item"
-		add_child(new_button)
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func something_is_imported() -> bool:
-	return true  # Replace with your actual condition
-	
-	var json = JSON.new()
-	var json_string = JSON.stringify("data_to_send")
-	var error = json.parse("json_string")
-	if error == OK:
-		var data_received = json.data
-		if typeof(data_received) == TYPE_ARRAY:
-			print(data_received) # Prints array
-		else:
-			print("Unexpected data")
-	else:
-		print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
-
-
-func add_button(upgrade):
-	var button = Button.new()
-	button.text = upgrade["name"]
-	button
+#called when a button needs to be added
+func add_button(game: String, upgrade : Dictionary, icon : String):
+	var button_scene = load("res://ticket_shop/scenes/button.tscn")
+	var button = button_scene.instantiate()
+	button.game_name = game
+	button.arg = upgrade["arg"]
+	button.upgrade_name = str(upgrade["name"])
+	button.cost = upgrade["cost"]
+	button.get_node("name").text = upgrade["name"]
+	button.get_node("cost").text = var_to_str(int(upgrade["cost"])) + " Tickets"
+	button.icon = load(icon)
+	button.add_pip(upgrade["pip"])
 	add_child(button)

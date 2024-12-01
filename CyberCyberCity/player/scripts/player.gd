@@ -7,7 +7,8 @@ class_name Player extends CharacterBody3D
 @export_range(0.1, 3.0, 0.1) var Jump_height: float = 1 # m
 @export_range(0.1, 3.0, 0.1, "or_greater") var camera_sens: float = 3
 
-var jumping: bool = false
+var in_menu = false
+
 var mouse_captured: bool = false
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -19,25 +20,27 @@ var walk_vel: Vector3 # Walking velocity
 var grav_vel: Vector3 # Gravity velocity 
 var jump_vel: Vector3 # Jumping velocity
 
-@onready var camera: Camera3D = $Camera3D
+
+
+@onready var camera: Camera3D = $Camera
 
 func _ready() -> void:
 	capture_mouse()
 
+func _process(delta):
+	$HUD/TokenPanel/TokenContainer/TokenLabel.text = var_to_str(int(Global.tokens))
+	$HUD/TicketPanel/TicketContainer/TicketLabel.text = var_to_str(int(Global.tickets))
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		look_dir = event.relative * 0.001
 		if mouse_captured: _rotate_camera()
 	if Input.is_action_just_pressed("interact"): _interact()
-	if Input.is_action_just_pressed("jump"): jumping = true
 	if Input.is_action_just_pressed("exit"): get_tree().quit()
 
 func _physics_process(delta: float) -> void:
 	if mouse_captured: _handle_joypad_camera_rotation(delta)
-	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
-	if $Camera3D/RayCast3D.is_colliding():
-		if $Camera3D/RayCast3D.get_collider().has_method("hover"):
-			$Camera3D/RayCast3D.get_collider().hover()
+	velocity = _walk(delta) + _gravity(delta)
 	move_and_slide()
 
 func capture_mouse() -> void:
@@ -70,28 +73,18 @@ func _gravity(delta: float) -> Vector3:
 	grav_vel = Vector3.ZERO if is_on_floor() else grav_vel.move_toward(Vector3(0, velocity.y - gravity, 0), gravity * delta)
 	return grav_vel
 
-func _jump(delta: float) -> Vector3:
-	if jumping:
-		if is_on_floor(): jump_vel = Vector3(0, sqrt(4 * Jump_height * gravity), 0)
-		jumping = false
-		return jump_vel
-	jump_vel = Vector3.ZERO if is_on_floor() else jump_vel.move_toward(Vector3.ZERO, gravity * delta)
-	return jump_vel
-
 func _interact() -> void:
-	if $Camera3D/RayCast3D.is_colliding():
-		if $Camera3D/RayCast3D.get_collider().has_method("interact"):
-			print($Camera3D/RayCast3D.get_collider().interact())
+	if $Camera/RayCast3D.is_colliding():
+		if $Camera/RayCast3D.get_collider().has_method("interact"):
+			$Camera/RayCast3D.get_collider().interact()
 		else:
 			$Beep.play()
 
 func _shaderSwap() -> void:
-	if $Camera3D/RayCast3D.is_colliding():
+	if $Camera/RayCast3D.is_colliding():
 		#change shader to outline, change back when done
 		pass
 		
 func exit() -> void:
-	if $Camera3D/RayCast3D.is_colliding():
+	if $Camera/RayCast3D.is_colliding():
 		get_tree().quit()
-		
-		
