@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfhnpo86b0dtx"]
+[gd_scene load_steps=5 format=3 uid="uid://co2gvg6k8nsyg"]
 
 [ext_resource type="Script" path="res://arcade_machines/arcade_machine_template/arcade_machine_template.gd" id="1_gw6et"]
 [ext_resource type="AudioStream" uid="uid://c8y3ruv6bxair" path="res://arcade_environment/assets/audio/error_sound-221445.mp3" id="2_c1jwu"]
@@ -17,7 +17,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_sigaf")
 
 [node name="Skin" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
 billboard = 2
 texture_filter = 2
 
