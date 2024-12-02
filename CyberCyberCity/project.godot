@@ -28,11 +28,7 @@ window/size/borderless=true
 
 [editor_plugins]
 
-<<<<<<< HEAD
 enabled=PackedStringArray()
-=======
-enabled=PackedStringArray("res://addons/gut/plugin.cfg")
->>>>>>> 5ebc6198f98e59b353e4f9f811a87ac228da3786
 
 [input]
 

@@ -74,15 +74,9 @@ func _gravity(delta: float) -> Vector3:
 	return grav_vel
 
 func _interact() -> void:
-<<<<<<< HEAD
 	if $Camera/RayCast3D.is_colliding():
 		if $Camera/RayCast3D.get_collider().has_method("interact"):
 			$Camera/RayCast3D.get_collider().interact()
-=======
-	if $Camera3D/RayCast3D.is_colliding():
-		if $Camera3D/RayCast3D.get_collider().has_method("interact"):
-			$Camera3D/RayCast3D.get_collider().interact()
->>>>>>> 5ebc6198f98e59b353e4f9f811a87ac228da3786
 		else:
 			$Beep.play()
 
