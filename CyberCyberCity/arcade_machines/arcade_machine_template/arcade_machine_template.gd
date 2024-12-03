@@ -12,11 +12,12 @@ func init(importedGame = {}):
 	var game = importedGame
 	
 	executable = game["game"]
-	skin = load(game["skin"])
+	skin = Image.load_from_file(game["skin"])
 	config = game["config"]
 	icon = game["icon"]
 	
-	$Skin.texture = skin
+	$Skin.texture = ImageTexture.create_from_image(skin)
+
 	
 	#TODO position placement random for testing
 # Called when the node enters the scene tree for the first time.
@@ -40,8 +41,8 @@ func interact():
 		await get_tree().create_timer(1).timeout
 		var output = []
 		OS.execute(executable, launch_args, output)
-		var temp_file_path = "res://games/temp.dat"
-		#var temp_file_path = OS.get_executable_path().get_base_dir().path_join("games/temp.dat")
+		#var temp_file_path = "res://games/temp.dat"
+		var temp_file_path = OS.get_executable_path().get_base_dir().path_join("games/temp.dat")
 		var file = FileAccess.open(temp_file_path, FileAccess.READ)
 		var final_score = file.get_var()
 		

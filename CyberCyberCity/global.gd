@@ -3,7 +3,7 @@ extends Node
 var games = {}
 
 var tokens = 3
-var tickets = 69696969
+var tickets = 5000
 
 var upgrades_bought = {}
 var games_generated = -1
@@ -76,14 +76,11 @@ func populate_gridmap(array: Array) -> void:
 				Grid.set_cell_item(position, tile_index, 0)  # Place at (x, 0, y)
 			elif tile_index == 9:
 				Grid.set_cell_item(position,0,0)
-				var cell_position = Vector3i(x*2.111112,1.1000002,y+1)
+				var cell_position = Grid.to_global(Grid.map_to_local(position))
 				build_machines(cell_position)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): #NOTE most likely won't be used but if something needs to be run on the physics server globally put it here.
 	pass
-
-func fetch_files(folder) -> PackedStringArray: #DEPRECATED
-	return DirAccess.get_files_at(folder)
 
 func get_games_folder_path(): #Uses internally stored games folder when editing, but external one once compiled and exported.
 	if OS.has_feature("editor"):
@@ -104,16 +101,16 @@ func valid_game(game_folder) -> bool:
 	return !file_attendance.has(false)
 
 func build_machines(cell_location) -> void:
+	cell_location.y = 1
 	games_generated += 1
 	#loop through all folders that were imported
 	print(games)
-	var current_game = games["Jetris"]
+	var current_game = games[games_generated]
 	var arcade_machine_template = load("res://arcade_machines/arcade_machine_template/arcade_machine_template.tscn")
 	var new_machine = arcade_machine_template.instantiate()
 	
 	new_machine.init(current_game)
 	new_machine.game_name = current_game["name"]
-	
 	
 	get_parent().get_node("Arcade").add_child(new_machine)
 	new_machine.position = cell_location
@@ -121,6 +118,7 @@ func build_machines(cell_location) -> void:
 	return
 	
 func fetch_game_paths(file_name, dir):
+	var game_num = -1
 	while file_name != "":
 		if dir.current_is_dir():
 			var game_path = dir.get_current_dir().path_join(file_name)
@@ -128,7 +126,8 @@ func fetch_game_paths(file_name, dir):
 			if valid_game(game_path):
 				print("currently writing to key " + file_name)
 				upgrades_bought[file_name] = {}
-				games[file_name] = {
+				game_num += 1
+				games[game_num] = {
 					"name": file_name,
 					"game": ProjectSettings.globalize_path(game_path.path_join("game.exe")),
 					"skin": ProjectSettings.globalize_path(game_path.path_join("skin.png")),
@@ -141,11 +140,3 @@ func fetch_game_paths(file_name, dir):
 		else:
 			print("Found invalid file: " + file_name)
 		file_name = dir.get_next()
-
-func generate_grid() -> void:
-	
-	pass
-
-func place_tile(x_wall, y_wall, xpos, ypos) -> void:
-	
-	pass

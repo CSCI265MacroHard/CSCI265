@@ -1,11 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmuxqbbnlqxp1"]
+[gd_scene load_steps=11 format=3 uid="uid://cmuxqbbnlqxp1"]
 
 [ext_resource type="Script" path="res://ticket_shop/scripts/v_box_container.gd" id="1_ri0fe"]
-[ext_resource type="Script" path="res://ticket_shop/scenes/ticket_shop.gd" id="1_whonh"]
+[ext_resource type="Script" path="res://ticket_shop/scripts/ticket_shop.gd" id="1_whonh"]
 [ext_resource type="PackedScene" uid="uid://70046kelm30" path="res://ticket_shop/scenes/h_box_container.tscn" id="2_r4ngy"]
+[ext_resource type="Script" path="res://ticket_shop/scripts/token_button.gd" id="4_q3h2l"]
+[ext_resource type="Texture2D" uid="uid://sp5g7usmk5yh" path="res://ticket_shop/assets/token_icon.png" id="5_km1i0"]
+[ext_resource type="Texture2D" uid="uid://ukkl4mpmlqps" path="res://ticket_shop/assets/ticket_icon.png" id="6_5a1nm"]
+[ext_resource type="Script" path="res://ticket_shop/scenes/ticket_button.gd" id="6_kcu3j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xvcoe"]
 font_size = 48
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oof2i"]
+font_size = 24
+font_color = Color(1, 1, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_167kj"]
+font_size = 32
 outline_size = 16
 outline_color = Color(0, 0, 0, 1)
 
@@ -67,5 +82,113 @@ label_settings = SubResource("LabelSettings_xvcoe")
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 200)
+offset_left = 81.0
+offset_top = 285.0
+offset_right = 281.0
+offset_bottom = 485.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("4_q3h2l")
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_km1i0")
+metadata/_edit_use_anchors_ = true
+
+[node name="cost" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = 6.0
+offset_right = 2.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.261799
+text = "1000 Tickets"
+label_settings = SubResource("LabelSettings_oof2i")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="name" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 106.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Token"
+label_settings = SubResource("LabelSettings_167kj")
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="Button2" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 200)
+offset_left = 81.0
+offset_top = 521.0
+offset_right = 281.0
+offset_bottom = 721.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("6_kcu3j")
+
+[node name="TextureRect" type="TextureRect" parent="Button2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5a1nm")
+metadata/_edit_use_anchors_ = true
+
+[node name="cost" type="Label" parent="Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = 6.0
+offset_right = 2.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.261799
+text = "1 Token"
+label_settings = SubResource("LabelSettings_oof2i")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="name" type="Label" parent="Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 106.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "500 Tickets"
+label_settings = SubResource("LabelSettings_167kj")
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
 
 [connection signal="pressed" from="PanelContainer/Exit" to="." method="_on_exit_pressed"]

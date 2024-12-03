@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwbtyi16sp8wi"]
+
+[ext_resource type="Script" path="res://other_game_objects/juke_box/juke_box.gd" id="1_581mn"]
+[ext_resource type="Texture2D" uid="uid://drjffn6uo4wvu" path="res://other_game_objects/juke_box/juke_box.png" id="2_u06ac"]
+[ext_resource type="AudioStream" uid="uid://j58g28f5v43i" path="res://other_game_objects/juke_box/Music1.mp3" id="3_st8nt"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2m73s"]
+
+[node name="JukeBox" type="StaticBody3D"]
+script = ExtResource("1_581mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_2m73s")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+texture_filter = 2
+texture = ExtResource("2_u06ac")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_st8nt")
