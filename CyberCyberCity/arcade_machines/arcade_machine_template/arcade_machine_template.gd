@@ -19,8 +19,6 @@ func init(importedGame = {}):
 	$Skin.texture = skin
 	
 	#TODO position placement random for testing
-	position.x = randf_range(5, -5)
-	position.z = randf_range(5, -5)
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
