@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://djp10s7g5o53n" path="res://ticket_shop/assets/upgrade_star.png" id="1_5luwe"]
 [ext_resource type="Texture2D" uid="uid://pskb7fj35h8i" path="res://ticket_shop/assets/icon.svg" id="1_iu403"]
-[ext_resource type="Script" path="res://ticket_shop/scenes/button.gd" id="1_uti5m"]
+[ext_resource type="Script" path="res://ticket_shop/scripts/button.gd" id="1_uti5m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qr7dd"]
 font_size = 24

@@ -18,6 +18,7 @@ func add_button(game: String, upgrade : Dictionary, icon : String):
 	button.cost = upgrade["cost"]
 	button.get_node("name").text = upgrade["name"]
 	button.get_node("cost").text = var_to_str(int(upgrade["cost"])) + " Tickets"
-	button.icon = load(icon)
+	var button_icon = Image.load_from_file(icon)
+	button.icon = ImageTexture.create_from_image(button_icon)
 	button.add_pip(upgrade["pip"])
 	add_child(button)
