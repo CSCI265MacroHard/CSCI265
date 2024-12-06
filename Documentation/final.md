@@ -81,7 +81,7 @@ A jukebox has been added to a corner of the arcade. Players can interact with it
 	- Godot dictionary
 
  
-<strong> Cut Features </strong>
+## Cut Features 
 Some planned features, primarily aimed at enhancing the arcade's atmosphere and creating a more lively and immersive environment, were ultimately cut from the final game. These included:
 **Additional NPCs**
 
@@ -118,9 +118,33 @@ The project lasted at least 5 months, during which the team handled a large scop
 - Importing games worked with Infinite Pizza, so the ability to import external games became our main focus.
 - The pool game worked as a built-in feature, so adding 2-3 more games would provide a well-rounded arcade experience.
 
+## Reflections on Team Charter and Standards
+
+**Godot**
+
 If given a do-over, it would have been beneficial for all team members to learn the Godot system from the start, enabling everyone to contribute more effectively. This would also speed up the development process, creating more space for additional features.
 
+**Changes to Team Member Roles**
 
+The adjustments to team member roles made mid-project proved effective and should have been implemented from the start. Specifically:
+
+- A dedicated role for visuals was unnecessary, as the team exclusively used external free-to-use visual assets. Creating original assets alongside programming created excessive workload with minimal impact on project progress.
+
+**Improving Team Meetings**
+
+The team struggled to maintain the initial goal of meeting twice weekly throughout the project's duration. In hindsight:
+
+- A shared calendar should be established at the project's outset to streamline scheduling and accommodate everyone’s availability.
+    Greater flexibility in meeting times might have improved consistency and attendance.
+
+**Enforcing Standards in GitHub Usage**
+
+- The team needs to ensure proper use of GitHub by enforcing smaller, more frequent commits. For instance, team members could be required to commit to the repository at least once after working on any task to prevent overly large commits.
+- The branch model could be simplified. While a detailed branch structure was partially dictated by the class’s project guidelines, a less intricate model would have sufficed for a project of this scope.
+
+**Summary**
+
+These adjustments—establishing a shared calendar, simplifying the branch model, and enforcing more granular GitHub commits—along with role assignments tailored to actual project needs, could significantly enhance team efficiency and collaboration in future projects.
 
 # 4. Review the Technical Aspects of the Project <a name="section4"></a>
 
