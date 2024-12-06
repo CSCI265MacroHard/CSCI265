@@ -23,10 +23,21 @@ The following person has been designated the main contact person for questions f
 
 
 # 1. Final Updates <a name="section1"></a>
-- Worked towards completion and updating Design and Requirements based on features we scaled down.
+- Ticket Shop and Ticket/Token Economy
+	- Upgrades to Buy
+- Improvements to the Hub World
+	- Visuals
+	- More arcade machines (3D model)
+	- Exit door
+	- Shop
+- Improvements to Arcade Games
+	- Interaction with upgrades
+	- Exit function
+- Jukebox
+	- Plays music (Sweet Caroline)
 
 # 2. End State of the Product <a name="section2"></a>
-- The group successfully made an arcade environment that had 3 working games on it such as 2Cool4Pool, Scrap, and Jetris. 
+- The group successfully made an arcade environment that had 2 working games on it such as 2Cool4Pool and Jetris. 
 - Second, we also had a working 3D environment to host our arcade, in which you can move inside and interact with the objects.
 - Cutting of features such as Audio System and other games (Blutsauger Superschlager).
 	- Estimated time to implement this would take at least another month, a semester for a stretch, since the group needs to learn the Audio System and make another game which also requires assets and resources.
@@ -36,6 +47,36 @@ The following person has been designated the main contact person for questions f
 	- Import feature would still allow players to upload custom-made games to your arcade platform.
 	- Arcade Environment Generation still involves creating dynamic arcade environments, likely a variety of rooms and layouts.
 	- A new working Ticket Shop is populated with each game's config folders that a creator sets up with this format (name, pip, argument, cost).
+ - 
+<strong> Player Gameplay Loop </stong>
+- The game starts with the user spawning inside the arcade with limited amount of tickets.
+- Movements are WASD and interaction between each element is by clicking it with the trackpad/mouse.
+- There are 2 built-in games you could play, Pool and Tetris.
+- Earn as many tickets by playing each game to afford upgrades within the ticket shop.
+- You could return the upgrades bought in the ticket shop.
+- You could also play the jukebox to set up some background music.
+- Exiting within the game is by walking out the door.
+
+<strong> Creator Loop </strong>
+- Icon
+- Skin, 128x256, pixels, .png
+	- Argument handling 
+- Any argument the game accepts as a string
+- Upgrade config
+	- .json
+	- Godot dictionary
+
+ 
+<strong> Cut Features </strong>
+- Alister NPC
+- Nate NPC
+- Jukebox simplified
+- 3D Audio System 
+- Ticket shop simplified
+- NPC interactions / behaviour
+- Additional games
+- Save and Load mechanic
+
 
 # 3. Review the Organizational Aspects of the Project <a name="section3"></a>
 
@@ -46,7 +87,20 @@ The project lasted at least 5 months, during which the team handled a large scop
 - The pool game worked as a built-in feature, so adding 2-3 more games would provide a well-rounded arcade experience.
 
 If given a do-over, it would have been beneficial for all team members to learn the Godot system from the start, enabling everyone to contribute more effectively. This would also speed up the development process, creating more space for additional features.
+<strong>Mostly features to improve environmental detail</strong>:
+- Improved/Directional Audio
+- Proper Lighting and Shadows
+- VideoStreamPlayer Previews/ more machine detail
+- Full juke box w/ menu and multiple songs
+- Pixelation Shader?
 
 # 4. Review the Technical Aspects of the Project <a name="section4"></a>
 
 The implementation with Godot has proven to be smooth and efficient, with the engine's flexibility allowing us to build complex mechanics without unnecessary complications. The flexibility of Godot has allowed us to focus on building a great arcade experience without getting bogged down by technical limitations. Additionally, the possibility of extending the project further, either with additional games or by refining existing systems, makes Godot a compelling choice for our team.
+
+<strong> Maintenance </strong>
+- With the end of the project here we basically do not have much to maintain,
+- As you saw, the project auto enlarges with increase in the number of games.
+- There will be need for minor bugfixes when necessary but otherwise the need for maintenance is minimal.
+- We hope to bring some amount of updates which will simply add new features even after this class but the main takeaway is that we learnt a great deal through this course in terms of team management, coding and godot in specific.
+
