@@ -61,7 +61,7 @@ A jukebox has been added to a corner of the arcade. Players can interact with it
 	- Import feature would still allow players to upload custom-made games to your arcade platform.
 	- Arcade Environment Generation still involves creating dynamic arcade environments, likely a variety of rooms and layouts.
 	- A new working Ticket Shop is populated with each game's config folders that a creator sets up with this format (name, pip, argument, cost).
- - 
+ 
 <strong> Player Gameplay Loop </stong>
 - The game starts with the user spawning inside the arcade with limited amount of tickets.
 - Movements are WASD and interaction between each element is by clicking it with the trackpad/mouse.
@@ -82,15 +82,33 @@ A jukebox has been added to a corner of the arcade. Players can interact with it
 
  
 <strong> Cut Features </strong>
-- Alister NPC
-- Nate NPC
-- Jukebox simplified
-- 3D Audio System 
-- Ticket shop simplified
-- NPC interactions / behaviour
-- Additional games
-- Save and Load mechanic
+Some planned features, primarily aimed at enhancing the arcade's atmosphere and creating a more lively and immersive environment, were ultimately cut from the final game. These included:
+**Additional NPCs**
 
+- Alister and Nate NPCs: Originally, two additional NPCs were planned to give the arcade a "lived-in" feeling.
+- Expanded NPC functionality:
+  - NPCs were intended to feature canned voice lines triggered by player actions.
+  - NPCs were designed to walk around the arcade, interact with dummy arcade machines (which players couldn't interact with), and generally enhance the environment.
+  - NPCs were also planned to engage in minor interactions with the player.
+
+**Audio System**
+
+- A dynamic audio system was planned, where arcade machines would emit localized sound effects in a radius. Players would hear the sound of different machines depending on their position in the hub world.
+
+**Simplifications to Existing Features**
+
+- Jukebox:
+  - Initially designed to include multiple soundtracks and a menu, allowing players to select, skip, or rewind tracks.
+- Shop:
+  - The shopkeeper was originally planned to switch sprites and display purchased items in hand for added interaction.
+
+**Save and Load System**
+
+- A general save and load mechanic was planned but cut due to time constraints, limiting the player's ability to preserve progress.
+
+**Future Considerations**
+
+If the team had more development time, the priority would be adding these features alongside programming new arcade games. Implementing the cut features (excluding new games) would require an estimated two weeks of programming time.
 
 # 3. Review the Organizational Aspects of the Project <a name="section3"></a>
 
@@ -101,12 +119,8 @@ The project lasted at least 5 months, during which the team handled a large scop
 - The pool game worked as a built-in feature, so adding 2-3 more games would provide a well-rounded arcade experience.
 
 If given a do-over, it would have been beneficial for all team members to learn the Godot system from the start, enabling everyone to contribute more effectively. This would also speed up the development process, creating more space for additional features.
-<strong>Mostly features to improve environmental detail</strong>:
-- Improved/Directional Audio
-- Proper Lighting and Shadows
-- VideoStreamPlayer Previews/ more machine detail
-- Full juke box w/ menu and multiple songs
-- Pixelation Shader?
+
+
 
 # 4. Review the Technical Aspects of the Project <a name="section4"></a>
 
