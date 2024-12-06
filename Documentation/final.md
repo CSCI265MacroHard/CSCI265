@@ -23,18 +23,32 @@ The following person has been designated the main contact person for questions f
 
 
 # 1. Final Updates <a name="section1"></a>
-- Ticket Shop and Ticket/Token Economy
-	- Upgrades to Buy
-- Improvements to the Hub World
-	- Visuals
-	- More arcade machines (3D model)
-	- Exit door
-	- Shop
-- Improvements to Arcade Games
-	- Interaction with upgrades
-	- Exit function
-- Jukebox
-	- Plays music (Sweet Caroline)
+## Ticket Shop and Ticket / Token Economy
+A ticket shop has been introduced to the game, managed by the NPC Bruce, who serves as the shopkeeper. Players can interact with Bruce to access the shop and purchase items from a predefined list. Available options include upgrading various arcade games or converting tokens into additional tickets.
+
+Additionally, a Ticket/Token economy has been implemented. Players now earn tokens and tickets by playing arcade games, with rewards based on their high scores. Tickets are used to start games at arcade machines, while tokens function as the in-game currency for shop transactions. Tickets can also be found scattered throughout the arcade hub world for players to collect.
+
+## Improvements to the Hub World
+The Arcade Hub World has undergone several visual and functional enhancements. Key updates include:
+
+- Improved visuals, such as redesigned windows, plants, arcade machine models, a jukebox, a shop counter, and a door.
+- Arcade machines have been upgraded from 2D sprites to textured 3D models for a more immersive experience.
+- The hub now features additional arcade games, which players can find and play.
+- The shop NPC, positioned behind a counter, clearly signals that items can be purchased here.
+
+On one side of the arcade, players will now find a door. Interacting with the door allows players to exit and close the game.
+
+## Improvements to Arcade Games
+Arcade games now integrate upgrades that players can purchase from the shop. These upgrades modify various aspects of gameplay, such as:
+
+- Adjusting game speed.
+- Providing bonuses to high scores.
+- Other gameplay enhancements.
+
+Additionally, arcade games now offer the option to exit directly back to the hub world. Previously, players were stuck in the game environment even after completing gameplay.
+
+## Jukebox
+A jukebox has been added to a corner of the arcade. Players can interact with it to play music, adding a lively atmosphere to the hub world.
 
 # 2. End State of the Product <a name="section2"></a>
 - The group successfully made an arcade environment that had 2 working games on it such as 2Cool4Pool and Jetris. 
