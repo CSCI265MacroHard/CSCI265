@@ -156,3 +156,4 @@ The implementation with Godot has proven to be smooth and efficient, with the en
 - There will be need for minor bugfixes when necessary but otherwise the need for maintenance is minimal.
 - We hope to bring some amount of updates which will simply add new features even after this class but the main takeaway is that we learnt a great deal through this course in terms of team management, coding and godot in specific.
 
+For better skalebility the programming of the features should be done object oriented instead of the now mainly funktion based design.
