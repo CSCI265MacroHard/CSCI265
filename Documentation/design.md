@@ -232,6 +232,7 @@ Premade Arcade Machines Will have built-in games (See chapter 10) and built-in t
 Premade Arcade Machines will be defined during development and use a completely different interact function that loads a new godot scene that contains the built-in game, since it is loading a new scene, the main arcade simulation ends, so we will store the player's data within the temp file. When the game is complete and the player is send back to the arcade the arcade will load the player's data from the temp file. The player data stored will include; position, ticket count, token count, and purchased upgrades.
 
 ### 8.2 Instanced Arcade Machines
+
 Instanced arcade machines will use imported games and assets (see chapter 12). 
 
 Because the games that are played on the instanced arcade machines are stored externally as an executable, they will be run as a separate program. in order to communicate between the two programs we have developed a two way communication loop.
@@ -394,6 +395,12 @@ The steps to initializing the software will mostly serve to accomodate any games
   - Creating a 2D array of map layout with room for all arcade games detected
   - Detecting borders and connections to correctly place wall meshes
   - converting array positions and values to instanced meshes on Godot's gridmap
+ 
+A list off all games imported and the rescources for each of those games is created. the following diagram shows process for importing the games into a game list.
+
+![Game list Sketch](pics/game_list_generator.png)
+
+This list is iterated over to generate the arcade machine instances for each arcade game.
 
 ## 12.1 Importing Arcade Games
 
