@@ -30,6 +30,12 @@ window/size/borderless=true
 
 enabled=PackedStringArray()
 
+[importer_defaults]
+
+animation_library={
+"fbx/importer": 1
+}
+
 [input]
 
 move_left={
