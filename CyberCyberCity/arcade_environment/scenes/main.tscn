@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://q0o0h8frk75o"]
+[gd_scene load_steps=15 format=3 uid="uid://q0o0h8frk75o"]
 
 [ext_resource type="Script" path="res://arcade_environment/scripts/arcade.gd" id="1_o64ea"]
 [ext_resource type="PackedScene" uid="uid://dwja5xqxegwlj" path="res://player/scenes/player.tscn" id="2_pqau1"]
 [ext_resource type="MeshLibrary" uid="uid://dy1rhbvkhsf8s" path="res://arcade_environment/assets/meshLibArcade.tres" id="3_edx7e"]
 [ext_resource type="Script" path="res://arcade_environment/scenes/arcade_map.gd" id="3_nwrk8"]
 [ext_resource type="PackedScene" path="res://npcs/bruce/bruce.tscn" id="4_rp3cb"]
-[ext_resource type="PackedScene" uid="uid://b2txhnfrcgwk0" path="res://arcade_machines/pool/pool_table.tscn" id="5_fha27"]
 [ext_resource type="PackedScene" uid="uid://bb20uly25i4ht" path="res://other_game_objects/ground_token/ground_token.tscn" id="6_hrym3"]
 [ext_resource type="PackedScene" uid="uid://ds1b7l4obuabb" path="res://other_game_objects/door/door.tscn" id="7_67d4c"]
 [ext_resource type="PackedScene" uid="uid://dwyhpo8x0xy7p" path="res://other_game_objects/window/window.tscn" id="7_82by0"]
@@ -50,9 +49,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.65609, 1.86327, -0.181259)
 
 [node name="Player" parent="." instance=ExtResource("2_pqau1")]
 transform = Transform3D(0.99993, 0.0118331, 0, -0.0118331, 0.99993, 0, 0, 0, 1, -0.022754, 2.35301, 0.0094716)
-
-[node name="PoolTable" parent="." instance=ExtResource("5_fha27")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6288, 0.0180119, 8.95074)
 
 [node name="GroundToken" parent="." instance=ExtResource("6_hrym3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.63792, 0.0439166, 7.58599)

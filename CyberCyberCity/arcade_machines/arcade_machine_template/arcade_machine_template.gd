@@ -16,14 +16,23 @@ func init(importedGame = {}):
 	config = game["config"]
 	icon = game["icon"]
 	
-	$Skin.texture = ImageTexture.create_from_image(skin)
+	print(game["skin"])
+	
+	#$Skin.texture = ImageTexture.create_from_image(skin)
+	var new_mat = StandardMaterial3D.new()
+	new_mat.albedo_texture = ImageTexture.create_from_image(skin)
+	new_mat.disable_receive_shadows = true
+	new_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	#new_mat.albedo_texture_force_srgb = true
+	$Model.material_overlay = new_mat
 
 	
 	#TODO position placement random for testing
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
-	pass # Replace with function body.
+	rotate_y(PI + randf_range(-0.3, 0.3))
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -38,25 +47,40 @@ func interact():
 		var launch_args = PackedStringArray([""])
 		for key in Global.upgrades_bought[game_name]:
 			launch_args.append(Global.upgrades_bought[game_name][key])
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.2).timeout
 		var output = []
 		OS.execute(executable, launch_args, output)
-		#var temp_file_path = "res://games/temp.dat"
-		var temp_file_path = OS.get_executable_path().get_base_dir().path_join("games/temp.dat")
-		var file = FileAccess.open(temp_file_path, FileAccess.READ)
-		var final_score = file.get_var()
 		
-		if randf() < pow(100.0*2.718282, -(float(final_score)/2000)):
-			$GameOverlay/TokenFound.visible = true
-			await get_tree().create_timer(3).timeout
-			$GameOverlay/TokenFound.visible = false
-			Global.tokens += 1
+		#switches to internal games folder path for testing
+		var temp_file_path = ""
+		if OS.has_feature("editor"):
+			temp_file_path = "res://games/temp.dat"
+		else:
+			temp_file_path = OS.get_executable_path().get_base_dir().path_join("games/temp.dat")
 			
-		Global.tickets += final_score
+		var file = FileAccess.open(temp_file_path, FileAccess.READ_WRITE)
+
+		#fixes invalid data stored in the temp.dat file
+		var final_score = 0.0
+		
+		var score = file.get_var()
+		if score != null:
+			final_score = score
+
+		file.store_var(0.0)
+
+		Global.tickets += float(final_score)
 		$GameOverlay.visible = false
 		$GameOverlay.layer = -1
-		file = FileAccess.open(temp_file_path, FileAccess.WRITE)
-		file.store_var(0)
+		
+		#random decaying chance to get a token based on score[ 0 score = 100% chance, 10,000 score =~ 0% chance ]
+		if randf() < pow(100.0*2.718282, (-1 * (float(final_score)/2000.0))):
+			$TokenFound.visible = true
+			await get_tree().create_timer(3).timeout
+			$TokenFound.visible = false
+			Global.tokens += 1
+
+
 		return
 	else:
 		$Beep.play()

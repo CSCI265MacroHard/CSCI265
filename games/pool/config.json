@@ -1,0 +1,30 @@
+{
+	"power_upgrade": 
+		{
+			"name": "2x Score",
+			"pip": 0,
+			"arg": "-score",
+			"cost": 10000
+		},
+	"speed_upgrade": 
+		{
+			"name": "5x Speed",
+			"pip": 1,
+			"arg": "-speed",
+			"cost": 5000
+		},
+		"speed_upgrade2": 
+		{
+			"name": "EXPENSIVE",
+			"pip": 1,
+			"arg": "-speed",
+			"cost": 5000000000
+		},
+		"speed_upgrade1": 
+		{
+			"name": "wadeasfrsaf",
+			"pip": 1,
+			"arg": "-speed",
+			"cost": 5000
+		}
+}

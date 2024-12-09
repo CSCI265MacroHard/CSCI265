@@ -3,7 +3,7 @@ extends Node
 var games = {}
 
 var tokens = 3
-var tickets = 5000
+var tickets = 5000.0
 
 var upgrades_bought = {}
 var games_generated = -1
@@ -21,11 +21,14 @@ func _ready():
 	fetch_game_paths(file_name, dir)
 	#Loops through all files to...
 
-	_create_array(games.size())
+	
+	populate_gridmap(_create_array(games.size()))
 	
 	#get_parent().get_node("Arcade").get_node("Player/TicketShop").get_node("ScrollContainer/VBoxContainer").import_init(games)
 func _create_array(arcade_machines: int) -> Array:
 	# Calculate the number of columns
+	if arcade_machines ==  0:
+		arcade_machines = 1
 	var columns = 2 + arcade_machines * 2
 	var H = 6
 	# Create a 2D array with H rows and `columns` columns
@@ -59,7 +62,7 @@ func _create_array(arcade_machines: int) -> Array:
 		if position < columns and array[middle_row][position]==0:  # Ensure we don't go out of bounds
 			array[middle_row][position] = 9
 			
-	populate_gridmap(array)
+
 	
 	print(array)
 	
@@ -101,19 +104,23 @@ func valid_game(game_folder) -> bool:
 	return !file_attendance.has(false)
 
 func build_machines(cell_location) -> void:
-	cell_location.y = 1
+	#if games_generated == -1:
+		#return
+		#
+	
 	games_generated += 1
 	#loop through all folders that were imported
 	print(games)
-	var current_game = games[games_generated]
-	var arcade_machine_template = load("res://arcade_machines/arcade_machine_template/arcade_machine_template.tscn")
-	var new_machine = arcade_machine_template.instantiate()
-	
-	new_machine.init(current_game)
-	new_machine.game_name = current_game["name"]
-	
-	get_parent().get_node("Arcade").add_child(new_machine)
-	new_machine.position = cell_location
+	if !games.is_empty():
+		var current_game = games[games_generated]
+		var arcade_machine_template = load("res://arcade_machines/arcade_machine_template/arcade_machine_template.tscn")
+		var new_machine = arcade_machine_template.instantiate()
+		
+		new_machine.init(current_game)
+		new_machine.game_name = current_game["name"]
+		
+		get_parent().get_node("Arcade").add_child(new_machine)
+		new_machine.position = cell_location
 	
 	return
 	
