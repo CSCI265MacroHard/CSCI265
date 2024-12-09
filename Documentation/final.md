@@ -23,10 +23,35 @@ The following person has been designated the main contact person for questions f
 
 
 # 1. Final Updates <a name="section1"></a>
-- Worked towards completion and updating Design and Requirements based on features we scaled down.
+## Ticket Shop and Ticket / Token Economy
+A ticket shop has been introduced to the game, managed by the NPC Bruce, who serves as the shopkeeper. Players can interact with Bruce to access the shop and purchase items from a predefined list. Available options include upgrading various arcade games or converting tokens into additional tickets.
+
+Additionally, a Ticket/Token economy has been implemented. Players now earn tokens and tickets by playing arcade games, with rewards based on their high scores. Tickets are used to start games at arcade machines, while tokens function as the in-game currency for shop transactions. Tickets can also be found scattered throughout the arcade hub world for players to collect.
+
+## Improvements to the Hub World
+The Arcade Hub World has undergone several visual and functional enhancements. Key updates include:
+
+- Improved visuals, such as redesigned windows, plants, arcade machine models, a jukebox, a shop counter, and a door.
+- Arcade machines have been upgraded from 2D sprites to textured 3D models for a more immersive experience.
+- The hub now features additional arcade games, which players can find and play.
+- The shop NPC, positioned behind a counter, clearly signals that items can be purchased here.
+
+On one side of the arcade, players will now find a door. Interacting with the door allows players to exit and close the game.
+
+## Improvements to Arcade Games
+Arcade games now integrate upgrades that players can purchase from the shop. These upgrades modify various aspects of gameplay, such as:
+
+- Adjusting game speed.
+- Providing bonuses to high scores.
+- Other gameplay enhancements.
+
+Additionally, arcade games now offer the option to exit directly back to the hub world. Previously, players were stuck in the game environment even after completing gameplay.
+
+## Jukebox
+A jukebox has been added to a corner of the arcade. Players can interact with it to play music, adding a lively atmosphere to the hub world.
 
 # 2. End State of the Product <a name="section2"></a>
-- The group successfully made an arcade environment that had 3 working games on it such as 2Cool4Pool, Scrap, and Jetris. 
+- The group successfully made an arcade environment that had 2 working games on it such as 2Cool4Pool and Jetris. 
 - Second, we also had a working 3D environment to host our arcade, in which you can move inside and interact with the objects.
 - Cutting of features such as Audio System and other games (Blutsauger Superschlager).
 	- Estimated time to implement this would take at least another month, a semester for a stretch, since the group needs to learn the Audio System and make another game which also requires assets and resources.
@@ -36,6 +61,54 @@ The following person has been designated the main contact person for questions f
 	- Import feature would still allow players to upload custom-made games to your arcade platform.
 	- Arcade Environment Generation still involves creating dynamic arcade environments, likely a variety of rooms and layouts.
 	- A new working Ticket Shop is populated with each game's config folders that a creator sets up with this format (name, pip, argument, cost).
+ 
+<strong> Player Gameplay Loop </stong>
+- The game starts with the user spawning inside the arcade with limited amount of tickets.
+- Movements are WASD and interaction between each element is by clicking it with the trackpad/mouse.
+- There are 2 built-in games you could play, Pool and Tetris.
+- Earn as many tickets by playing each game to afford upgrades within the ticket shop.
+- You could return the upgrades bought in the ticket shop.
+- You could also play the jukebox to set up some background music.
+- Exiting within the game is by walking out the door.
+
+<strong> Creator Loop </strong>
+- Icon
+- Skin, 128x256, pixels, .png
+	- Argument handling 
+- Any argument the game accepts as a string
+- Upgrade config
+	- .json
+	- Godot dictionary
+
+ 
+## Cut Features 
+Some planned features, primarily aimed at enhancing the arcade's atmosphere and creating a more lively and immersive environment, were ultimately cut from the final game. These included:
+**Additional NPCs**
+
+- Alister and Nate NPCs: Originally, two additional NPCs were planned to give the arcade a "lived-in" feeling.
+- Expanded NPC functionality:
+  - NPCs were intended to feature canned voice lines triggered by player actions.
+  - NPCs were designed to walk around the arcade, interact with dummy arcade machines (which players couldn't interact with), and generally enhance the environment.
+  - NPCs were also planned to engage in minor interactions with the player.
+
+**Audio System**
+
+- A dynamic audio system was planned, where arcade machines would emit localized sound effects in a radius. Players would hear the sound of different machines depending on their position in the hub world.
+
+**Simplifications to Existing Features**
+
+- Jukebox:
+  - Initially designed to include multiple soundtracks and a menu, allowing players to select, skip, or rewind tracks.
+- Shop:
+  - The shopkeeper was originally planned to switch sprites and display purchased items in hand for added interaction.
+
+**Save and Load System**
+
+- A general save and load mechanic was planned but cut due to time constraints, limiting the player's ability to preserve progress.
+
+**Future Considerations**
+
+If the team had more development time, the priority would be adding these features alongside programming new arcade games. Implementing the cut features (excluding new games) would require an estimated two weeks of programming time.
 
 # 3. Review the Organizational Aspects of the Project <a name="section3"></a>
 
@@ -45,8 +118,42 @@ The project lasted at least 5 months, during which the team handled a large scop
 - Importing games worked with Infinite Pizza, so the ability to import external games became our main focus.
 - The pool game worked as a built-in feature, so adding 2-3 more games would provide a well-rounded arcade experience.
 
+## Reflections on Team Charter and Standards
+
+**Godot**
+
 If given a do-over, it would have been beneficial for all team members to learn the Godot system from the start, enabling everyone to contribute more effectively. This would also speed up the development process, creating more space for additional features.
+
+**Changes to Team Member Roles**
+
+The adjustments to team member roles made mid-project proved effective and should have been implemented from the start. Specifically:
+
+- A dedicated role for visuals was unnecessary, as the team exclusively used external free-to-use visual assets. Creating original assets alongside programming created excessive workload with minimal impact on project progress.
+
+**Improving Team Meetings**
+
+The team struggled to maintain the initial goal of meeting twice weekly throughout the project's duration. In hindsight:
+
+- A shared calendar should be established at the project's outset to streamline scheduling and accommodate everyone’s availability.
+    Greater flexibility in meeting times might have improved consistency and attendance.
+
+**Enforcing Standards in GitHub Usage**
+
+- The team needs to ensure proper use of GitHub by enforcing smaller, more frequent commits. For instance, team members could be required to commit to the repository at least once after working on any task to prevent overly large commits.
+- The branch model could be simplified. While a detailed branch structure was partially dictated by the class’s project guidelines, a less intricate model would have sufficed for a project of this scope.
+
+**Summary**
+
+These adjustments—establishing a shared calendar, simplifying the branch model, and enforcing more granular GitHub commits—along with role assignments tailored to actual project needs, could significantly enhance team efficiency and collaboration in future projects.
 
 # 4. Review the Technical Aspects of the Project <a name="section4"></a>
 
 The implementation with Godot has proven to be smooth and efficient, with the engine's flexibility allowing us to build complex mechanics without unnecessary complications. The flexibility of Godot has allowed us to focus on building a great arcade experience without getting bogged down by technical limitations. Additionally, the possibility of extending the project further, either with additional games or by refining existing systems, makes Godot a compelling choice for our team.
+
+<strong> Maintenance </strong>
+- With the end of the project here we basically do not have much to maintain,
+- As you saw, the project auto enlarges with increase in the number of games.
+- There will be need for minor bugfixes when necessary but otherwise the need for maintenance is minimal.
+- We hope to bring some amount of updates which will simply add new features even after this class but the main takeaway is that we learnt a great deal through this course in terms of team management, coding and godot in specific.
+
+For better skalebility the programming of the features should be done object oriented instead of the now mainly funktion based design.
