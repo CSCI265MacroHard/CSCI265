@@ -150,10 +150,10 @@ These adjustments—establishing a shared calendar, simplifying the branch model
 
 The implementation with Godot has proven to be smooth and efficient, with the engine's flexibility allowing us to build complex mechanics without unnecessary complications. The flexibility of Godot has allowed us to focus on building a great arcade experience without getting bogged down by technical limitations. Additionally, the possibility of extending the project further, either with additional games or by refining existing systems, makes Godot a compelling choice for our team.
 
-<strong> Maintenance </strong>
-- With the end of the project here we basically do not have much to maintain,
-- As you saw, the project auto enlarges with increase in the number of games.
-- There will be need for minor bugfixes when necessary but otherwise the need for maintenance is minimal.
-- We hope to bring some amount of updates which will simply add new features even after this class but the main takeaway is that we learnt a great deal through this course in terms of team management, coding and godot in specific.
+**Maintenance**
 
-For better skalebility the programming of the features should be done object oriented instead of the now mainly funktion based design.
+Due to our inexperience in software development many components were not designed in ways that allowed for easy maintenance or future feature development. Should maintenance and porting be neccessary in the future, it would be beneficial to perform an entire refactoring of the project's code and repositories. Refactoring would likely take one member roughly 20-30 hours to do, given the current size of the project. The refactor would shift the logical design to an object oriented approach. Initially it seemed that using an object oriented approach would cause greater coupling than if functional methods were used, but, because of how much data must be stored and accessed by multiple scripts with the importer, an object oriented approach would streamline the process. Godot itself is designed to be used for object oriented programming as well so using a functional approach felt like "going against the grain" in many aspects. This version of the software provided valueable insights into the requirements of the data handling this project needs. The refactor's success relies on an extended design phase examining specifically the flow of data after it is imported and how the data is stored.
+
+Porting to other operating systems, in theory, should be as simple as using different export templates for the Godot Engine, however a more robust testing system should be implimented to maintain parity.
+
+An important feature that must be implemented during the software's lifetime is allowing height and width expansion of the arcade hallway. Currently the hallway only extends in one direction. As more games are created for the software, and players' arcade game libraries grow, the hallway will get too long to reasonably traverse, expecially when navigating from then end of the hallway to the shop. Making the hallway expand in width would allow for a greater amount of arcades to be within a closer walking distance of the ticket shop, exit, and NPCs.
